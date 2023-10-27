@@ -19,13 +19,16 @@ const config = {
 };
 
 // Funktion zum Ausführen des SQL-Skripts
-async function executeSQLScript() {
+async function executeSQLScript(searchParameter) {
   try {
     // Verbindung zum SQL Server herstellen
     await sql.connect(config);
 
     // SQL-Abfrage aus der Datei lesen
-    const query = fs.readFileSync('HiveSQLQuery.sql', 'utf8');
+    const queryTemplate = fs.readFileSync('HiveSQLQuery.sql', 'utf8');
+
+    // Parameter in der Vorlage ersetzen
+    const query = queryTemplate.replace(/!CHARY/g, searchParameter);
 
     // SQL-Abfrage ausführen
     const result = await sql.query(query);
@@ -167,7 +170,7 @@ async function main() {
   try {
     if (datasource == 'sql') {
       // SQL-Skript ausführen
-      recordset = await executeSQLScript();
+      recordset = await executeSQLScript("Hammurabi");
       fs.writeFileSync('exampleRecordSet.json', JSON.stringify(recordset));
     }
     else {
@@ -180,7 +183,7 @@ async function main() {
     //const dateFilteredRecordset = datefilter(dateRange, recordset);
 
     // URL, Account und CharyNumber extrahieren und anhängen:
-    await dataExtractAndAppend(dateFilteredRecordset);
+    //await dataExtractAndAppend(dateFilteredRecordset);
 
     // Filtern, dass anobel (und später weitere Peronen) nicht ausgewertet werden
   //  var blacklistFilteredRecordset = blackList('anobel', dateFilteredRecordset);
