@@ -140,18 +140,22 @@ async function calculateCharyScore(charyNumber, stakedChary, authorReputation) {
 
 // URL, Account und CharyNumber extrahieren und anhängen:
 async function dataExtractAndAppend(dateFilteredRecordset) {
-  dateFilteredRecordset.forEach(async (item) => {
-    item.charyNumber = extractNumberFromChary(item.body);
+  for (const item of dateFilteredRecordset) {
+    //item.charyNumber = extractNumberFromChary(item.body);
     item.account = extractAccountFromUrl(item.url);
     item.weburl = modifyUrl(item.url);
-    console.log("dataExtractAndAppend - Author der !CHARY-Meldung:", item.author);
-    item.stakedChary = await getStakedChary(item.author)
+    console.log("dataExtractAndAppend - Author der Meldung:", item.author);
+    //item.stakedChary = await getStakedChary(item.author)
     const [firstImageUrl, authorReputation] = await getMetaData(item.url);
+    if (!firstImageUrl) return "";
+    console.log("dataExtractAndAppend - First Image Url:", firstImageUrl);
     item.originAuthorReputation = authorReputation;
     item.firstImageUrl = firstImageUrl
-    item.charyScore = await calculateCharyScore(item.charyNumber, item.stakedChary, authorReputation);
-  });
+    //item.charyScore = await calculateCharyScore(item.charyNumber, item.stakedChary, authorReputation);
+    console.log("dataExtractAndAppend - item", item);
+  }
 }
+
 
 // Filtern, dass anobel (und später weitere Peronen) nicht ausgewertet werden
 function blackList(blackListedAccount, dateFilteredRecordset) {
@@ -168,9 +172,9 @@ async function main() {
   let recordset; // Variable initialisieren für die If-Klausel
 
   try {
-    if (datasource == 'sql') {
+    if (datasource == 'file') {
       // SQL-Skript ausführen
-      recordset = await executeSQLScript("Hammurabi");
+      recordset = await executeSQLScript("follow @achimmertens");
       fs.writeFileSync('exampleRecordSet.json', JSON.stringify(recordset));
     }
     else {
@@ -180,19 +184,19 @@ async function main() {
     }
 
     // Datensatz auf dateRange Tage begrenzen
-    //const dateFilteredRecordset = datefilter(dateRange, recordset);
+    const dateFilteredRecordset = datefilter(dateRange, recordset);
 
     // URL, Account und CharyNumber extrahieren und anhängen:
-    //await dataExtractAndAppend(dateFilteredRecordset);
+    await dataExtractAndAppend(dateFilteredRecordset);
 
     // Filtern, dass anobel (und später weitere Peronen) nicht ausgewertet werden
-  //  var blacklistFilteredRecordset = blackList('anobel', dateFilteredRecordset);
+    var blacklistFilteredRecordset = blackList('anobel', dateFilteredRecordset);
 
     // Recordset nach charyNumber sortieren
 //    blacklistFilteredRecordset.sort((a, b) => b.charyScore - a.charyScore);
 
     // Vorlage mit Recordset füllen
-//    var filledTemplate = await fillTemplate(dateRange, blacklistFilteredRecordset);
+  //  var filledTemplate = await fillTemplate(dateRange, blacklistFilteredRecordset);
 
  //   console.log('Der BlacklistedRecordSet sieht so aus: ', JSON.stringify(blacklistFilteredRecordset));
  //   console.log('Das FilledTemplate sieht so aus: ', filledTemplate);
@@ -202,6 +206,8 @@ async function main() {
   //  fs.writeFileSync('FilledReportTemplate.md', filledTemplate);
 
   //fs.writeFileSync('dateFilteredRecordset.json',dateFilteredRecordset);
+  fs.writeFileSync('dateFilteredRecordset.json', JSON.stringify(dateFilteredRecordset));
+
 
   } catch (error) {
     console.error(error);
