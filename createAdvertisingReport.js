@@ -79,20 +79,39 @@ async function fillTemplate(dateRange, recordset) {
   const template = fs.readFileSync('ReportTemplate.md', 'utf8');
 
   // Recordset nach charyNumber sortieren
-  recordset.sort((a, b) => b.charyNumber - a.charyNumber);
+  //recordset.sort((a, b) => b.charyNumber - a.charyNumber);
 
   // Platzhalter ersetzen
   let filledTemplate = template;
-  for (let i = 0; i < Math.min(recordset.length, 3); i++) {
-    const author = recordset[i].charyNumber ? recordset[i].account : `[AUTHOR${i + 1}]`;
+  console.log('Filledtemplate = ' + filledTemplate);
+  console.log('Recordset = ' + recordset);
+  const recordsetObj = JSON.parse(recordset);
+  for (let i = 0; i < Math.min(recordsetObj.length, 5); i++) {
+    console.log('Filltemplate RecordsetObj[i]: ' + JSON.stringify(recordsetObj[i]));
+    console.log('Author = ' + JSON.stringify(recordsetObj[i].author));
+    const author = recordsetObj[i].author //? recordset[i].account : `[AUTHOR${i + 1}]`;
+    console.log('author = ', author);
     filledTemplate = filledTemplate.replace(`[AUTHOR${i + 1}]`, author);
-    const weburl = recordset[i].charyNumber ? recordset[i].weburl : `[URL${i + 1}]`;
+    const weburl = recordsetObj[i].weburl;
+    console.log('weburl = ', weburl);
     filledTemplate = filledTemplate.replace(`[URL${i + 1}]`, weburl);
-    const body = recordset[i].charyNumber ? recordset[i].body : `[REASON${i + 1}]`;
-    filledTemplate = filledTemplate.replace(`[REASON${i + 1}]`, body);
+    const body = JSON.stringify(recordsetObj[i].body);
+    // truncate the body to the first 10 words
+    stringWithoutCR = body.replace(/\r/g, ''); // remove Carriege Return
+    const words = stringWithoutCR.split(' ');
+    const truncatedWords = words.slice(0, 10);
+    const truncatedBody = truncatedWords.join(' ');
+    if (!truncatedBody.endsWith('"')) {
+     truncatedBodyWithEnd = truncatedBody+' ..."';
+    }
+    else {
+      truncatedBodyWithEnd = truncatedBody;
+    }
+    console.log('truncatedBodyWithEnd = ', truncatedBodyWithEnd);
+    filledTemplate = filledTemplate.replace(`[REASON${i + 1}]`, truncatedBodyWithEnd);
 
-    //const url = "/hive-150210/@alifkhan1995/todays-cleanplanet-activity--day-50---date-22082023-#@alifkhan1995/re-achimmertens-rzu2rc";
-    const url = recordset[i].charyNumber ? recordset[i].url : `[URL${i + 1}]`;
+    // //const url = "/hive-150210/@alifkhan1995/todays-cleanplanet-activity--day-50---date-22082023-#@alifkhan1995/re-achimmertens-rzu2rc";
+    const url = recordsetObj[i].url;
     const [firstImageUrl, authorReputation] = await getMetaData(url);
     filledTemplate = filledTemplate.replace(`[IMAGE${i + 1}]`, firstImageUrl);
     console.log("authorReputation = ", authorReputation);
@@ -100,8 +119,8 @@ async function fillTemplate(dateRange, recordset) {
   }
 
   // Datum im filledTemplate reinschreiben
-  dateText = dateFrame(dateRange);
-  filledTemplate = filledTemplate.replace(`[DATE_FRAME]`, dateText)
+  // dateText = dateFrame(dateRange);
+  // filledTemplate = filledTemplate.replace(`[DATE_FRAME]`, dateText)
 
   // Aktualisierte Vorlage zurückgeben
   return filledTemplate;
@@ -147,7 +166,7 @@ async function dataExtractAndAppend(dateFilteredRecordset) {
     console.log("dataExtractAndAppend - Author der Meldung:", item.author);
     //item.stakedChary = await getStakedChary(item.author)
     const [firstImageUrl, authorReputation] = await getMetaData(item.url);
-    if (!firstImageUrl) return "";
+    //if (!firstImageUrl) return "";
     console.log("dataExtractAndAppend - First Image Url:", firstImageUrl);
     item.originAuthorReputation = authorReputation;
     item.firstImageUrl = firstImageUrl
@@ -160,6 +179,7 @@ async function dataExtractAndAppend(dateFilteredRecordset) {
 // Filtern, dass anobel (und später weitere Peronen) nicht ausgewertet werden
 function blackList(blackListedAccount, dateFilteredRecordset) {
   const blacklistFilteredRecordset = dateFilteredRecordset.filter((item) => {
+    console.log("Blacklist - item:", item);
     return item.account !== blackListedAccount;
   });
   return blacklistFilteredRecordset;
@@ -193,20 +213,20 @@ async function main() {
     var blacklistFilteredRecordset = blackList('anobel', dateFilteredRecordset);
 
     // Recordset nach charyNumber sortieren
-//    blacklistFilteredRecordset.sort((a, b) => b.charyScore - a.charyScore);
+    //    blacklistFilteredRecordset.sort((a, b) => b.charyScore - a.charyScore);
 
     // Vorlage mit Recordset füllen
-  //  var filledTemplate = await fillTemplate(dateRange, blacklistFilteredRecordset);
+    var filledTemplate = await fillTemplate(dateRange, JSON.stringify(blacklistFilteredRecordset));
 
- //   console.log('Der BlacklistedRecordSet sieht so aus: ', JSON.stringify(blacklistFilteredRecordset));
- //   console.log('Das FilledTemplate sieht so aus: ', filledTemplate);
+    //   console.log('Der BlacklistedRecordSet sieht so aus: ', JSON.stringify(blacklistFilteredRecordset));
+    //   console.log('Das FilledTemplate sieht so aus: ', filledTemplate);
 
-  //  fs.writeFileSync('changedRecordSet.json', JSON.stringify(blacklistFilteredRecordset));
+    //  fs.writeFileSync('changedRecordSet.json', JSON.stringify(blacklistFilteredRecordset));
     // Aktualisierte Vorlage in eine neue Datei schreiben
-  //  fs.writeFileSync('FilledReportTemplate.md', filledTemplate);
+    fs.writeFileSync('FilledReportTemplate.md', filledTemplate);
 
-  //fs.writeFileSync('dateFilteredRecordset.json',dateFilteredRecordset);
-  fs.writeFileSync('dateFilteredRecordset.json', JSON.stringify(dateFilteredRecordset));
+    //fs.writeFileSync('dateFilteredRecordset.json',dateFilteredRecordset);
+    fs.writeFileSync('dateFilteredRecordset.json', JSON.stringify(dateFilteredRecordset));
 
 
   } catch (error) {
