@@ -11,8 +11,11 @@ I am proud to announce, that I can send some money to people, which helped other
 
 # Here are the winners of the last week:
 
-|Place|Amount Hive|Winner|First Ten Words|Url|Image|
+|Date|Amount Hive|Winner|First Ten Words|Url|Image|
 |-|-|-|-|-|-|
+[TABLE]
+
+
 |1.|10 Hive|@[AUTHOR1]|[REASON1]|[URL1]|[IMAGE1]|
 |2.|7 Hive|@[AUTHOR2]|[REASON2]|[URL2]|[IMAGE2]|
 |3.|3 Hive|@[AUTHOR3]|[REASON3]|[URL3]|[IMAGE3]|

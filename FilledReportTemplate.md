@@ -11,11 +11,17 @@ I am proud to announce, that I can send some money to people, which helped other
 
 # Here are the winners of the last week:
 
-|Place|Amount Hive|Winner|First Ten Words|Url|Image|
+|Date|Amount Hive|Winner|First Ten Words|Url|Image|
 |-|-|-|-|-|-|
-|1.|10 Hive|@shitpostingpro|"What can you do for money?\n\nfollow @achimmertens"|https://peakd.com/hive-167922/@shitpostingpro/my-shittiest-shitpost-so-far|null|
-|2.|7 Hive|@advertisingbot|"Hello everyone,\n\nI have read the following challenge:\nhttps://inleo.io/@advertisingbot2/advertising-contest-earn-one-hive-by-writing-two-words-in-your-post\nSo I want to ..."|https://peakd.com/hive-167922/@advertisingbot/i-want-to-earn-one-hive|null|
-|3.|3 Hive|@advertisingbot2|"Hello Hivers,\n\nWeb3, especially Hive, is a great tool to earn ..."|https://peakd.com/hive-154303/@advertisingbot2/advertising-contest-earn-one-hive-by-writing-two-words-in-your-post|![grafik.png](https://files.peakd.com/file/peakd-hive/advertisingbot2/243fzm7JBrwodQNuQHiBRfwJ27JYc8pp9VSGXa1ruNetSr9EzpWNtPTQ6yKJkdAkQtJRB.png)|
+|2023-11-05T21:37|1|@shitpostingpro|"What can you do for money?\n\nfollow @achimmertens"|/hive-167922/@shitpostingpro/my-shittiest-shitpost-so-far|null|
+|2023-11-05T19:54|1|@advertisingbot|"Hello everyone,\n\nI have read the following challenge:\nhttps://inleo.io/@advertisingbot2/advertising-contest-earn-one-hive-by-writing-two-words-in-your-post\nSo I want to ..."|/hive-167922/@advertisingbot/i-want-to-earn-one-hive|null|
+|2023-11-02T10:05|1|@advertisingbot|"Hi, this is a test, to see, if my advertising ..."|/hive-167922/@advertisingbot/advertising-in-a-thread|null|
+
+
+
+|1.|10 Hive|@[AUTHOR1]|[REASON1]|[URL1]|[IMAGE1]|
+|2.|7 Hive|@[AUTHOR2]|[REASON2]|[URL2]|[IMAGE2]|
+|3.|3 Hive|@[AUTHOR3]|[REASON3]|[URL3]|[IMAGE3]|
 
 
 
