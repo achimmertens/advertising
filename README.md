@@ -1,6 +1,10 @@
 # advertising
 Searches for predefined advertising-text in the blockchain Hive and creates reports about the findings
 
+# Run the script
+node createAdvertisingReport.js
+
+
 // Todo
 - Zeilenanzahl in der Reporttabelle anpassen an die tatsächliche Anzahl der Treffer bis zu einem definierten Maximum
 - Anzahl der Follower als Spalte integrieren
