@@ -7,8 +7,8 @@ This is the
 
 # Here are the winners of the last week:
 
-|Date|Amount Hive|Winner|First Ten Words|Url|Image|
-|-|-|-|-|-|-|
+|Date|Amount Hive|Winner|Reputation|First Ten Words|Url|Image|
+|-|-|-|-|-|-|-|
 [TABLE]
 
 

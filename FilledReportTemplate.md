@@ -7,9 +7,9 @@ This is the
 
 # Here are the winners of the last week:
 
-|Date|Amount Hive|Winner|First Ten Words|Url|Image|
-|-|-|-|-|-|-|
-|2023-11-11T14:07|1|@advertisingbot|"Hi everyone,\n\nDid you know that we have a community, where ..."|/hive-167922/@advertisingbot/earn-money-with-microtasks|null|
+|Date|Amount Hive|Winner|Reputation|First Ten Words|Url|Image|
+|-|-|-|-|-|-|-|
+|2023-11-11T14:07|1|@advertisingbot|39.24|"Hi everyone,\n\nDid you know that we have a community, where ..."|/hive-167922/@advertisingbot/earn-money-with-microtasks|null|
 
 
 

@@ -116,7 +116,7 @@ async function fillTemplate(dateRange, recordset, maxAdvertisers, HiveAmountPerU
     j=i+1;
     lastUpdateTrunc=((JSON.stringify(recordsetObj[i].last_update)).slice(0, -9)).slice(1);
     //tableString=tableString+'|'+j+'|'+HiveAmountPerUser+'|@'+author+'|'+truncatedBodyWithEnd+'|'+url+'|'+firstImageUrl+'|\n';
-    tableString=tableString+'|'+lastUpdateTrunc+'|'+HiveAmountPerUser+'|@'+author+'|'+truncatedBodyWithEnd+'|'+url+'|'+firstImageUrl+'|\n';
+    tableString=tableString+'|'+lastUpdateTrunc+'|'+HiveAmountPerUser+'|@'+author+'|'+(authorReputation/1000000000).toFixed(2)+'|'+truncatedBodyWithEnd+'|'+url+'|'+firstImageUrl+'|\n';
     //|1.|10 Hive|@[AUTHOR1]|[REASON1]|[URL1]|[IMAGE1]|
 
 
@@ -196,7 +196,7 @@ async function main() {
   let recordset; // Variable initialisieren für die If-Klausel
 
   try {
-    if (datasource == 'sql') {
+    if (datasource == 'file') {
       // SQL-Skript ausführen - Hier den Suchtext eingeben:
       recordset = await executeSQLScript("subscribe the community Hive Marketing");
       fs.writeFileSync('exampleRecordSet.json', JSON.stringify(recordset));

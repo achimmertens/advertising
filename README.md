@@ -6,7 +6,10 @@ node createAdvertisingReport.js
 
 
 // Todo
-- Zeilenanzahl in der Reporttabelle anpassen an die tatsächliche Anzahl der Treffer bis zu einem definierten Maximum
-- Anzahl der Follower als Spalte integrieren
-- Das Script, welches den Report erstellt, mit folgenden Übergabeparametern aufrufbar machen: Budget, Maximale Werber
+
+- Anzahl der Follower des Authors und Authorreputation als Spalte integrieren
+- Das Script, welches den Report erstellt, mit folgenden Übergabeparametern aufrufbar machen: Budget, Maximale Werber, Werbe-Text
 - Der Report soll auch angeben wie viel Geld vom Budget übrig geblieben ist
+
+Done Novemeber 2023:
+- Zeilenanzahl in der Reporttabelle anpassen an die tatsächliche Anzahl der Treffer bis zu einem definierten Maximum
