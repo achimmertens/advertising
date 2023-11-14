@@ -5,6 +5,7 @@ const { dateFrame } = require('./getDateFrame.js');
 const getMetaData = require('./getMetaData');
 const { table } = require('console');
 const { stringify } = require('querystring');
+const getFollower = require('./getFollower.js');
 //const getStakedChary = require('./getStakedChary');
 //const math = require('math');
 
@@ -88,6 +89,7 @@ async function fillTemplate(dateRange, recordset, maxAdvertisers, HiveAmountPerU
     console.log('Author = ' + JSON.stringify(recordsetObj[i].author));
     const author = recordsetObj[i].author //? recordset[i].account : `[AUTHOR${i + 1}]`;
     console.log('author = ', author);
+    const NumberOfFollowers = await getFollower(author);
     //filledTemplate = filledTemplate.replace(`[AUTHOR${i + 1}]`, author);
     const weburl = recordsetObj[i].weburl;
     console.log('weburl = ', weburl);
@@ -109,11 +111,14 @@ async function fillTemplate(dateRange, recordset, maxAdvertisers, HiveAmountPerU
 
     // //const url = "/hive-150210/@alifkhan1995/todays-cleanplanet-activity--day-50---date-22082023-#@alifkhan1995/re-achimmertens-rzu2rc";
     const url = recordsetObj[i].url;
-    const [firstImageUrl, authorReputation] = await getMetaData(url);
+    const [firstImageUrl, authorReputation] = await getMetaData.getMetaData(url);
     //filledTemplate = filledTemplate.replace(`[IMAGE${i + 1}]`, firstImageUrl);
     console.log("authorReputation = ", authorReputation);
     recordset[i].originAuthorReputation = authorReputation;
-    j=i+1;
+    //j=i+1;
+
+    
+    console.log("NumberOfFollowers = ", NumberOfFollowers);
     lastUpdateTrunc=((JSON.stringify(recordsetObj[i].last_update)).slice(0, -9)).slice(1);
     //tableString=tableString+'|'+j+'|'+HiveAmountPerUser+'|@'+author+'|'+truncatedBodyWithEnd+'|'+url+'|'+firstImageUrl+'|\n';
     tableString=tableString+'|'+lastUpdateTrunc+'|'+HiveAmountPerUser+'|@'+author+'|'+(authorReputation/1000000000).toFixed(2)+'|'+truncatedBodyWithEnd+'|'+url+'|'+firstImageUrl+'|\n';
@@ -169,7 +174,7 @@ async function dataExtractAndAppend(dateFilteredRecordset) {
     item.weburl = modifyUrl(item.url);
     console.log("dataExtractAndAppend - Author der Meldung:", item.author);
     //item.stakedChary = await getStakedChary(item.author)
-    const [firstImageUrl, authorReputation] = await getMetaData(item.url);
+    const [firstImageUrl, authorReputation] = await getMetaData.getMetaData(item.url);
     //if (!firstImageUrl) return "";
     console.log("dataExtractAndAppend - First Image Url:", firstImageUrl);
     item.originAuthorReputation = authorReputation;

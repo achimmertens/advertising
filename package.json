@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/achimmertens/advertising#readme",
   "dependencies": {
+    "@hiveio/dhive": "^1.2.8",
     "axios": "^1.6.0",
     "mssql": "^10.0.1"
   }
