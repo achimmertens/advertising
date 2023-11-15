@@ -189,7 +189,7 @@ async function dataExtractAndAppend(dateFilteredRecordset) {
 function blackList(blackListedAccount, dateFilteredRecordset) {
   const blacklistFilteredRecordset = dateFilteredRecordset.filter((item) => {
     console.log("Blacklist - item:", item);
-    return item.account !== blackListedAccount;
+    return item.account !== blackListedAccount && !item.url.includes('#@');
   });
   return blacklistFilteredRecordset;
 }
