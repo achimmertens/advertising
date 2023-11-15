@@ -7,10 +7,11 @@ This is the
 
 # Here are the winners of the last week:
 
-|Date|Amount Hive|Winner|Reputation|First Ten Words|Url|Image|
-|-|-|-|-|-|-|-|
+|Date|Amount Hive|Winner|APG Reputation*|Number of Followers|First Ten Words|Url|Image|
+|-|-|-|-|-|-|-|-|
 [TABLE]
 
+* AGPReputation = Authors Post Giga Reputation = Reputation of the author that is shown in the authors post, divided by 10^9.
 
 
 
