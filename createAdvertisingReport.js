@@ -199,9 +199,13 @@ async function main() {
   const dateRange = 28 // Number of days, that we want to observe in the dataset
   const datasource = 'sql'  // 'sql' or 'file'
   let recordset; // Variable initialisieren für die If-Klausel
+  const budget = 20 // Max number of Hive, that the sponsor is willing to give
+  const reward = 2 // Amount of Hive for each unique advertiser
+  const maxAdvertisers = budget/reward
+  const advertisingText = 'follow @fjworld and visit https://epaytraffic.com/'
 
   try {
-    if (datasource == 'file') {
+    if (datasource == 'sql') {
       // SQL-Skript ausführen - Hier den Suchtext eingeben:
       recordset = await executeSQLScript("subscribe the community Hive Marketing");
       fs.writeFileSync('exampleRecordSet.json', JSON.stringify(recordset));

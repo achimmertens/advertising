@@ -1,7 +1,9 @@
-Hello hivers, advertisers, influencers, contesters and all the rest,
+Winners of Marketing Campaing #yymmdd_nn
 
-This is the
-# Advertising Contest Report from [DATE_FRAME].
+Hello Hivers, Advertisers, Influencers, Contesters and all the rest,
+
+this is the
+# Advertising Contest Report from [DATE_FRAME], campaing #yymmdd_nn.
 ![Hive Advertising4.jpg](https://files.peakd.com/file/peakd-hive/advertisingbot2/23tvXqGQwrhpay9wynk62ZB7xcamK45iVCVy4rUjKtiKZrY9UrsXvgDRyMYq8JXYfshrT.jpg)
 *[origin](https://photofunia.com/)*
 
@@ -11,7 +13,7 @@ This is the
 |-|-|-|-|-|-|-|-|
 [TABLE]
 
-* AGPReputation = Authors Post Giga Reputation = Reputation of the author that is shown in the authors post, divided by 10^9.
+* APG Reputation = Authors Post Giga Reputation = Reputation of the author that is shown in the authors post, divided by 10^9.
 
 
 
@@ -33,4 +35,4 @@ Greetings, Advertisingbot2 (alias Achim)
 
 
 These are the winners of the last advertising contest
-advertising contest microtask task challenge minijob report marketing
+advertising contest microtask task challenge minijob report marketing campaign
