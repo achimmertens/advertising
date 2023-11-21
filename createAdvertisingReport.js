@@ -6,6 +6,7 @@ const getMetaData = require('./getMetaData');
 const { table } = require('console');
 const { stringify } = require('querystring');
 const getFollower = require('./getFollower.js');
+const getDateFrame = require('./getDateFrame.js');
 //const getStakedChary = require('./getStakedChary');
 //const math = require('math');
 
@@ -196,7 +197,8 @@ function blackList(blackListedAccount, dateFilteredRecordset) {
 
 // Hauptfunktion
 async function main() {
-  const dateRange = 28 // Number of days, that we want to observe in the dataset
+  //const dateRange = 7 // Number of days, that we want to observe in the dataset
+  let {dateFrame, currentDateString, oneWeekAgoString, timeFrame} = getDateFrame();
   const datasource = 'sql'  // 'sql' or 'file'
   let recordset; // Variable initialisieren für die If-Klausel
   const budget = 20 // Max number of Hive, that the sponsor is willing to give
@@ -217,7 +219,7 @@ async function main() {
     }
 
     // Datensatz auf dateRange Tage begrenzen
-    const dateFilteredRecordset = datefilter(dateRange, recordset);
+    const dateFilteredRecordset = datefilter(timeFrame, recordset);
 
     // URL, Account und CharyNumber extrahieren und anhängen:
     await dataExtractAndAppend(dateFilteredRecordset);
@@ -229,7 +231,7 @@ async function main() {
     //    blacklistFilteredRecordset.sort((a, b) => b.charyScore - a.charyScore);
 
     // Vorlage mit Recordset füllen
-    var filledTemplate = await fillTemplate(dateRange, JSON.stringify(blacklistFilteredRecordset), 10,1);
+    var filledTemplate = await fillTemplate(timeFrame, JSON.stringify(blacklistFilteredRecordset), 10,1);
 
     //   console.log('Der BlacklistedRecordSet sieht so aus: ', JSON.stringify(blacklistFilteredRecordset));
     //   console.log('Das FilledTemplate sieht so aus: ', filledTemplate);

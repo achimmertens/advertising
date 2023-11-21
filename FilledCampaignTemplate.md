@@ -1,8 +1,8 @@
-Hive Marketing Campaign [CURRENT_WEEK]_01
+Hive Marketing Campaign 47_01
 
 Hello everyone who wants to earn some small money,
 
-here I announce the next advertising contest for week [CURRENT_WEEK] from sponsor [SPONSOR], period: [DATE_FRAME].
+here I announce the next advertising contest for week 47 from sponsor @achimmertens, period: 2023-11-14 to 2023-11-21.
 
 ![Earn Money(2).png](https://files.peakd.com/file/peakd-hive/achimmertens/AKAr2pK3Nw7DhpREEcx2yQ1dSe3BQ4KKDFLKAWjNL9Ni952afaaKuqX68gTapsB.png)
 
@@ -11,7 +11,7 @@ here I announce the next advertising contest for week [CURRENT_WEEK] from sponso
 ![Task_and_Rules.png](https://files.peakd.com/file/peakd-hive/achimmertens/AKe5wHrNamDx6RNtvzvqhB4qwg2qhZTGoEtwSPhfsuwSEJhTjSajgbDFC77j8pa.png)
 
 ## Advertising Text:
-**"[ADVERTISING_TEXT]"**
+**"follow @fjworld and visit https://epaytraffic.com/"**
 
 ![optional.png](https://files.peakd.com/file/peakd-hive/achimmertens/AKtSxwA38nJdyUdmvhncNmy6tW8CtYvXAw982Fh8BvMuxYgstc1eESWrwkNtsYn.png)
 
@@ -20,7 +20,7 @@ Lorem Ipsum
 
 # The Reward
 
-The first [MAX_ADVERTISERS] Hive users, that do this, will get [REWARD] Hive each.
+The first 10 Hive users, that do this, will get 2 Hive each.
 
 
 # Does it work?
