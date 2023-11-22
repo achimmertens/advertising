@@ -84,6 +84,7 @@ async function fillTemplate(dateRange, recordset, maxAdvertisers, HiveAmountPerU
   console.log('Filledtemplate = ' + filledTemplate);
   console.log('Recordset = ' + recordset);
   const recordsetObj = JSON.parse(recordset);
+  let numberOfAdvertisers = 0;
   // loop until number of hits or maxAdvertisers is reached
   for (let i = 0; i < Math.min(recordsetObj.length, maxAdvertisers); i++) {
     console.log('Filltemplate RecordsetObj[i]: ' + JSON.stringify(recordsetObj[i]));
@@ -124,7 +125,7 @@ async function fillTemplate(dateRange, recordset, maxAdvertisers, HiveAmountPerU
     //tableString=tableString+'|'+j+'|'+HiveAmountPerUser+'|@'+author+'|'+truncatedBodyWithEnd+'|'+url+'|'+firstImageUrl+'|\n';
     tableString=tableString+'|'+lastUpdateTrunc+'|'+HiveAmountPerUser+'|@'+author+'|'+(authorReputation/1000000000).toFixed(2)+'|'+NumberOfFollowers+'|'+truncatedBodyWithEnd+'|'+url+'|'+firstImageUrl+'|\n';
     //|1.|10 Hive|@[AUTHOR1]|[REASON1]|[URL1]|[IMAGE1]|
-
+    numberOfAdvertisers = i;
 
   }
 
@@ -133,6 +134,8 @@ async function fillTemplate(dateRange, recordset, maxAdvertisers, HiveAmountPerU
   // filledTemplate = filledTemplate.replace(`[DATE_FRAME]`, dateText)
 
   filledTemplate = filledTemplate.replace(`[TABLE]`, tableString);
+  filledTemplate = filledTemplate.replace(`[NUMBER_OF_ADVERTISERS]`, numberOfAdvertisers+1);
+  
   return filledTemplate;
 }
 
@@ -199,7 +202,7 @@ function blackList(blackListedAccount, dateFilteredRecordset) {
 async function main() {
   //const dateRange = 7 // Number of days, that we want to observe in the dataset
   let {dateFrame, currentDateString, oneWeekAgoString, timeFrame} = getDateFrame();
-  const datasource = 'sql'  // 'sql' or 'file'
+  const datasource = 'file'  // 'sql' or 'file'
   let recordset; // Variable initialisieren für die If-Klausel
   const budget = 20 // Max number of Hive, that the sponsor is willing to give
   const reward = 2 // Amount of Hive for each unique advertiser

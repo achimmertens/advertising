@@ -1,11 +1,16 @@
 const fs = require('fs');
-const getDateFrame = require('./getDateFrame.js');
-const budget = 20 // Hive
-const reward = 2 // Hive per participant
-const maxAdvertisers = budget/reward
-const advertisingText = 'follow @fjworld and visit https://epaytraffic.com/'
-const sponsor = '@achimmertens';
-let {dateFrame, currentDateString, oneWeekAgoString, timeFrame} = getDateFrame();
+const config = require('./campaignConfig_4701.json');
+const budget = config.budget; // Hive
+const reward = config.reward; // Hive per participant
+const maxAdvertisers = budget/reward;
+const advertisingText = config.advertisingText;
+const sponsor = config.sponsor;
+let today = new Date();
+let nextWeek = new Date(today.getTime() + 7 * 24 * 60 * 60 * 1000); // Heutiges Datum plus 7 Tage in Millisekunden
+let formattedToday = today.toISOString().split('T')[0]; // Formatierung des heutigen Datums
+let formattedNextWeek = nextWeek.toISOString().split('T')[0]; // Formatierung des Datums in einer Woche
+let formattedNextPeriod = formattedToday + ' to ' + formattedNextWeek; // Zusammenführen der formatierten Daten
+console.log('Nächste Periode: ',formattedNextPeriod); 
 
 
 function getCurrentWeek() {
@@ -38,7 +43,7 @@ async function main () {
     let currentWeek = getCurrentWeek();
     console.log("Die aktuelle Kalenderwoche ist: " + currentWeek);
     try {
-        var filledTemplate = await fillTemplate(dateFrame, currentWeek, sponsor, advertisingText, maxAdvertisers, reward);
+        var filledTemplate = await fillTemplate(formattedNextPeriod, currentWeek, sponsor, advertisingText, maxAdvertisers, reward);
         fs.writeFileSync('FilledCampaignTemplate.md', filledTemplate);
 }   catch (error) {
         console.error(error);

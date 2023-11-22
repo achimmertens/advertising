@@ -9,17 +9,16 @@ Searches for predefined advertising-text in the blockchain Hive and creates repo
 
 // Backlog
 
+- Einen Json Textfile erstellen, der alle Parameter beinhaltet. Dieser wird verwendet sowohl für fie jeweilige Kampagne als auch den Report.
+- Der Report soll auch angeben wie viel Geld vom Budget übrig geblieben ist
+- Campaing Datum erstellen und im Report einsetzen
 
-
+Done November 2023:
 - Campaign Template automatisch ausfüllen mit
   - Hive/advertiser
   - max advertiser
   - advertising text
   - Dateframe
-- Der Report soll auch angeben wie viel Geld vom Budget übrig geblieben ist
-- Campaing Datum erstellen und im Report einsetzen
-
-Done November 2023:
 - CampaingTemplate erstellt
 - Report Template erstellt
 - Zeilenanzahl in der Reporttabelle anpassen an die tatsächliche Anzahl der Treffer bis zu einem definierten Maximum

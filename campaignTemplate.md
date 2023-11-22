@@ -15,7 +15,7 @@ here I announce the next advertising contest for week [CURRENT_WEEK] from sponso
 
 ![optional.png](https://files.peakd.com/file/peakd-hive/achimmertens/AKtSxwA38nJdyUdmvhncNmy6tW8CtYvXAw982Fh8BvMuxYgstc1eESWrwkNtsYn.png)
 
-Lorem Ipsum
+> Please change this ad description Text
 
 
 # The Reward
@@ -32,6 +32,18 @@ https://peakd.com/hive-154303/@advertisingbot2/winners-of-the-advertising-contes
 
 ![About.png](https://files.peakd.com/file/peakd-hive/achimmertens/AK299d4UG9ZMVqmPCk4bNmimT7nsX7e97oF5X92S4LFjZbapekr19HWa8BGonQF.png)
 
+# Status of this project
+
+This week I worked on the automatic creation of a campaing, based on a template. I only need to change the following parameters: 
+```
+const budget = 20 // Hive
+const reward = 2 // Hive per participant
+const maxAdvertisers = budget/reward
+const advertisingText = 'follow @fjworld and visit https://epaytraffic.com/'
+const sponsor = '@achimmertens';
+```
+
+And then the campaign-Text will be created automatically.
 
 ![Questions.png](https://files.peakd.com/file/peakd-hive/achimmertens/AKKRqJt1qnuNodPEACGiuC9iauEfvSWwo3w9ACbwELDzPg5VpvwJCsfsA8ptwYH.png)
 

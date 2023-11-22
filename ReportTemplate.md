@@ -22,6 +22,8 @@ The money has already been sent:
 [IMAGE_SEND_MONEY]
 *Screenshot of the @advertingsbot2 wallet from today*
 
+The [NUMBER_OF_ADVERTISERS] participents got [REWARD] Hive each, this means [REST] Hive of the Budget from [BUDGET] was not used goes back to [SPONSOR].
+
 ---
 # Status of this "decentral advertising" project
 
