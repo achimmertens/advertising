@@ -1,10 +1,17 @@
 const sql = require('mssql');
 const { password1 } = require('./config');
 const fs = require('fs');
-const { dateFrame } = require('./getDateFrame.js');
+const campaignConfig = require('./campaignConfig_4701.json');
+const budget = campaignConfig.budget; // Hive
+const reward = campaignConfig.reward; // Hive per participant
+const maxAdvertisers = budget/reward;
+const advertisingText = campaignConfig.advertisingText;
+const sponsor = campaignConfig.sponsor;
+const campaignID = campaignConfig.campaignID;
+const campaignUrl = campaignConfig.campaignUrl;
 const getMetaData = require('./getMetaData');
-const { table } = require('console');
-const { stringify } = require('querystring');
+//const { table } = require('console');
+//const { stringify } = require('querystring');
 const getFollower = require('./getFollower.js');
 const getDateFrame = require('./getDateFrame.js');
 //const getStakedChary = require('./getStakedChary');
@@ -71,7 +78,7 @@ function modifyUrl(url) {
 }
 
 // Funktion zum Ersetzen der Platzhalter in der Vorlagendatei
-async function fillTemplate(dateRange, recordset, maxAdvertisers, HiveAmountPerUser) {
+async function fillTemplate(campaignID, campaignUrl, dateRange, recordset, maxAdvertisers, reward, budget, sponsor) {
   // Vorlagendatei lesen
   const template = fs.readFileSync('ReportTemplate.md', 'utf8');
 
@@ -123,7 +130,7 @@ async function fillTemplate(dateRange, recordset, maxAdvertisers, HiveAmountPerU
     console.log("NumberOfFollowers = ", NumberOfFollowers);
     lastUpdateTrunc=((JSON.stringify(recordsetObj[i].last_update)).slice(0, -9)).slice(1);
     //tableString=tableString+'|'+j+'|'+HiveAmountPerUser+'|@'+author+'|'+truncatedBodyWithEnd+'|'+url+'|'+firstImageUrl+'|\n';
-    tableString=tableString+'|'+lastUpdateTrunc+'|'+HiveAmountPerUser+'|@'+author+'|'+(authorReputation/1000000000).toFixed(2)+'|'+NumberOfFollowers+'|'+truncatedBodyWithEnd+'|'+url+'|'+firstImageUrl+'|\n';
+    tableString=tableString+'|'+lastUpdateTrunc+'|'+reward+'|@'+author+'|'+(authorReputation/1000000000).toFixed(2)+'|'+NumberOfFollowers+'|'+truncatedBodyWithEnd+'|'+url+'|'+firstImageUrl+'|\n';
     //|1.|10 Hive|@[AUTHOR1]|[REASON1]|[URL1]|[IMAGE1]|
     numberOfAdvertisers = i;
 
@@ -133,8 +140,19 @@ async function fillTemplate(dateRange, recordset, maxAdvertisers, HiveAmountPerU
   // dateText = dateFrame(dateRange);
   // filledTemplate = filledTemplate.replace(`[DATE_FRAME]`, dateText)
 
+  let rest = budget - (numberOfAdvertisers+1)*reward;
+
   filledTemplate = filledTemplate.replace(`[TABLE]`, tableString);
   filledTemplate = filledTemplate.replace(`[NUMBER_OF_ADVERTISERS]`, numberOfAdvertisers+1);
+  filledTemplate = filledTemplate.replace(`[CAMPAIGN_ID]`,campaignID);
+  filledTemplate = filledTemplate.replace(`[CAMPAIGN_ID]`,campaignID);
+  filledTemplate = filledTemplate.replace(`[CAMPAIGN_URL]`,campaignUrl);
+  filledTemplate = filledTemplate.replace(`[DATE_FRAME]`,dateRange);
+  filledTemplate = filledTemplate.replace(`[REWARD]`,reward);
+  filledTemplate = filledTemplate.replace(`[REST]`,rest);
+  filledTemplate = filledTemplate.replace(`[BUDGET]`,budget);
+  filledTemplate = filledTemplate.replace(`[SPONSOR]`,sponsor);
+  filledTemplate = filledTemplate.replace(`[ADVERTISING_TEXT]`,advertisingText);
   
   return filledTemplate;
 }
@@ -204,10 +222,10 @@ async function main() {
   let {dateFrame, currentDateString, oneWeekAgoString, timeFrame} = getDateFrame();
   const datasource = 'file'  // 'sql' or 'file'
   let recordset; // Variable initialisieren für die If-Klausel
-  const budget = 20 // Max number of Hive, that the sponsor is willing to give
-  const reward = 2 // Amount of Hive for each unique advertiser
-  const maxAdvertisers = budget/reward
-  const advertisingText = 'follow @fjworld and visit https://epaytraffic.com/'
+  //const budget = 20 // Max number of Hive, that the sponsor is willing to give
+  //const reward = 2 // Amount of Hive for each unique advertiser
+  //const maxAdvertisers = budget/reward
+  //const advertisingText = 'follow @fjworld and visit https://epaytraffic.com/'
 
   try {
     if (datasource == 'sql') {
@@ -234,14 +252,14 @@ async function main() {
     //    blacklistFilteredRecordset.sort((a, b) => b.charyScore - a.charyScore);
 
     // Vorlage mit Recordset füllen
-    var filledTemplate = await fillTemplate(timeFrame, JSON.stringify(blacklistFilteredRecordset), 10,1);
+    var filledTemplate = await fillTemplate(campaignID, campaignUrl, dateFrame, JSON.stringify(blacklistFilteredRecordset), maxAdvertisers,reward, budget, sponsor);
 
     //   console.log('Der BlacklistedRecordSet sieht so aus: ', JSON.stringify(blacklistFilteredRecordset));
     //   console.log('Das FilledTemplate sieht so aus: ', filledTemplate);
 
     //  fs.writeFileSync('changedRecordSet.json', JSON.stringify(blacklistFilteredRecordset));
     // Aktualisierte Vorlage in eine neue Datei schreiben
-    fs.writeFileSync('FilledReportTemplate.md', filledTemplate);
+    fs.writeFileSync('FilledReportTemplate_' + campaignID + '.md', filledTemplate);
 
     //fs.writeFileSync('dateFilteredRecordset.json',dateFilteredRecordset);
     fs.writeFileSync('dateFilteredRecordset.json', JSON.stringify(dateFilteredRecordset));

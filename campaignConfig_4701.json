@@ -1,7 +1,8 @@
 {
-    "campaignID":"4701",
+    "campaignID":"234701",
     "budget": 20,
     "reward": 2,
     "advertisingText": "follow @fjworld and visit https://epaytraffic.com/",
-    "sponsor": "@achimmertens"
+    "sponsor": "@achimmertens",
+    "campaignUrl": "http://peakd.com/@achimmertens"
   }
