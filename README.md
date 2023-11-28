@@ -9,7 +9,7 @@ Searches for predefined advertising-text in the blockchain Hive and creates repo
 
 // Backlog
 
-- Unempfidlich machen gegen Groß und Kleinschreibung
+
 - DateFrame in die JSON Config packen
 - Name von FilledReportTemplate ändern
 - Der ÜbergabeParameter für den Suchtext fehlt
@@ -17,6 +17,7 @@ Searches for predefined advertising-text in the blockchain Hive and creates repo
 - Campaing Datum erstellen und im Report einsetzen
 
 Done November 2023:
+- Unempfidlich machen gegen Groß und Kleinschreibung
 - Einen Json Textfile erstellen, der alle Parameter beinhaltet. Dieser wird verwendet sowohl für fie jeweilige Kampagne als auch den Report.
 - Campaign Template automatisch ausfüllen mit
   - Hive/advertiser

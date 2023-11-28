@@ -1,7 +1,7 @@
 const sql = require('mssql');
 const { password1 } = require('./config');
 const fs = require('fs');
-const campaignConfig = require('./campaignConfig_4701.json');
+const campaignConfig = require('./' + process.argv[2]);
 const budget = campaignConfig.budget; // Hive
 const reward = campaignConfig.reward; // Hive per participant
 const maxAdvertisers = budget/reward;
@@ -160,7 +160,7 @@ async function main() {
   const datasource = 'sql'  // 'sql' or 'file'
   let recordset; // Variable initialisieren für die If-Klausel
   try {
-    if (datasource == 'sql') {
+    if (datasource == 'file') {
       // SQL-Skript ausführen - Hier den Suchtext eingeben:
       recordset = await executeSQLScript("subscribe the community Hive Marketing");
       fs.writeFileSync('exampleRecordSet.json', JSON.stringify(recordset));
