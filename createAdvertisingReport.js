@@ -157,12 +157,12 @@ function blackList(blackListedAccount, dateFilteredRecordset) {
 // Hauptfunktion
 async function main() {
   let {dateFrame, currentDateString, oneWeekAgoString, timeFrame} = getDateFrame();
-  const datasource = 'file'  // 'sql' or 'file'
+  const datasource = 'sql'  // 'sql' or 'file'
   let recordset; // Variable initialisieren für die If-Klausel
   try {
     if (datasource == 'sql') {
       // SQL-Skript ausführen - Hier den Suchtext eingeben:
-      recordset = await executeSQLScript("subscribe the community Hive Marketing");
+      recordset = await executeSQLScript("Earn some small money by doing advertising and follow @advertisingbot2");
       fs.writeFileSync('exampleRecordSet.json', JSON.stringify(recordset));
     }
     else {

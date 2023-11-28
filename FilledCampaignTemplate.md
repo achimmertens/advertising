@@ -2,7 +2,7 @@ Hive Marketing Campaign 47_01
 
 Hello everyone who wants to earn some small money,
 
-here I announce the next advertising contest for week 47 from sponsor @achimmertens, period: 2023-11-22 to 2023-11-29.
+here I announce the next advertising contest for week 47 from sponsor @achimmertens, period: 2023-11-24 to 2023-12-01.
 
 ![Earn Money(2).png](https://files.peakd.com/file/peakd-hive/achimmertens/AKAr2pK3Nw7DhpREEcx2yQ1dSe3BQ4KKDFLKAWjNL9Ni952afaaKuqX68gTapsB.png)
 

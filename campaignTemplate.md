@@ -51,5 +51,5 @@ And then the campaign-Text will be created automatically.
 ---
 
 
-Here you get the chance to earn easily some small money for doing advertising.
+Here you get the chance to easily earn some small money for advertising.
 marketing campaign contest challenge hive advertising
