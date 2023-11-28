@@ -162,7 +162,7 @@ async function main() {
   try {
     if (datasource == 'sql') {
       // SQL-Skript ausführen - Hier den Suchtext eingeben:
-      recordset = await executeSQLScript("Earn some small money by doing advertising and follow @advertisingbot2");
+      recordset = await executeSQLScript("subscribe the community Hive Marketing");
       fs.writeFileSync('exampleRecordSet.json', JSON.stringify(recordset));
     }
     else {
