@@ -9,6 +9,7 @@ const advertisingText = campaignConfig.advertisingText;
 const sponsor = campaignConfig.sponsor;
 const campaignID = campaignConfig.campaignID;
 const campaignUrl = campaignConfig.campaignUrl;
+const timeFrame = campaignConfig.timeFrame;
 const getMetaData = require('./getMetaData');
 const getFollower = require('./getFollower.js');
 const getDateFrame = require('./getDateFrame.js');
@@ -118,10 +119,10 @@ async function fillTemplate(campaignID, campaignUrl, dateRange, recordset, maxAd
 }
 
 // Filtern der Datensätze basierend auf last_update:
-function datefilter(dateRange, recordset) {
+function datefilter(timeFrame, recordset) {
   const currentDate = new Date();
   const sevenDaysAgo = new Date();
-  sevenDaysAgo.setDate(currentDate.getDate() - dateRange);
+  sevenDaysAgo.setDate(currentDate.getDate() - timeFrame);
   const dateFilteredRecordset = recordset.filter((item) => {
     const lastUpdate = new Date(item.last_update);
     return lastUpdate >= sevenDaysAgo && lastUpdate <= currentDate;
@@ -156,7 +157,7 @@ function blackList(blackListedAccount, dateFilteredRecordset) {
 
 // Hauptfunktion
 async function main() {
-  let {dateFrame, currentDateString, oneWeekAgoString, timeFrame} = getDateFrame();
+  let {dateFrame, currentDateString, oneWeekAgoString} = getDateFrame(timeFrame);
   const datasource = 'sql'  // 'sql' or 'file'
   let recordset; // Variable initialisieren für die If-Klausel
   try {

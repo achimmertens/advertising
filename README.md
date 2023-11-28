@@ -4,7 +4,7 @@ Searches for predefined advertising-text in the blockchain Hive and creates repo
 # Run the script
 1. Check Dateframe in getDateFrame.js
 2. Check if you want to load from sql or from file in main method from createAdvertisingReport.js
-3. node createAdvertisingReport.js
+3. node createAdvertisingReport.js [campaignConfig_xxxx.json]
 
 
 // Backlog
