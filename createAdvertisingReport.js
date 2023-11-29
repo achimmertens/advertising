@@ -123,7 +123,7 @@ async function fillTemplate(campaignID, campaignUrl, dateRange, recordset, maxAd
   return filledTemplate;
 }
 
-// Filtern der Datensätze basierend auf last_update:
+// Filtern der Datensätze basierend auf last_update und unique Authors:
 function datefilter(timeFrame, recordset) {
   console.log("TimeFrame: im dateFilter() = " + timeFrame)
   const currentDate = new Date();
@@ -133,7 +133,15 @@ function datefilter(timeFrame, recordset) {
     const lastUpdate = new Date(item.last_update);
     return lastUpdate >= sevenDaysAgo && lastUpdate <= currentDate;
   });
-  return dateFilteredRecordset;
+  let uniqueAuthors = [];
+  let filteredRecordset = dateFilteredRecordset.filter((item) => {
+    if (!uniqueAuthors.includes(item.author)) {
+      uniqueAuthors.push(item.author);
+      return true;
+    }
+    return false;
+  });
+  return filteredRecordset;
 }
 
 

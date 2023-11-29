@@ -14,12 +14,9 @@ Advertising text: "Earn some small money by doing advertising and follow @advert
 |-|-|-|-|-|-|-|-|
 |2023-11-29T05:23|2|@sayury|102477.27|909|"<center> ![](https://images.ecency.com/DQmPMMCGoj9ADyeswkpPjmwnEgqtK6RK1zSpi1RMptgNDr3/inshot_20231129_005122845.jpg)\n\n</center><br>\n<br>\n**(Esta es una publicación bilingüe, puedes ver la versión ..."|/hive-179291/@sayury/avoiding-death-esquivando-la-muerte|![](https://images.ecency.com/DQmPMMCGoj9ADyeswkpPjmwnEgqtK6RK1zSpi1RMptgNDr3/inshot_20231129_005122845.jpg)|
 |2023-11-27T13:51|2|@lunafrances|385.30|233|"<center>https://images.ecency.com/DQmXdCuqVyrhfv17HUMU86Thw344au9FeCbPbAW7SYuUYU6/img_20231115_wa0059.jpg\n\n</center><br>\n<br>\n**(Esta es una publicación bilingüe, puedes ver la versión en ..."|/hive-179291/@lunafrances/el-lucero-de-matias-cuento|null|
-|2023-11-27T10:41|2|@sayury|102477.27|909|"\n<center>https://images.ecency.com/DQmTVsNQLrnh4E26ZL8ZwjwDU8PPA4uy5KU1zNdqLXXoJ6n/20231125_090630.jpg\n\n </center><br>\n<br>\n**(Esta es una publicación bilingüe, puedes ver la versión ..."|/hive-179017/@sayury/here-s-my-shade-to|null|
 |2023-11-27T03:17|2|@luisfe|26000.80|524|"<center>https://images.ecency.com/DQmYfrAJeE9raau6mxoSx9QuQU9x79z9SsiyhNx7jG8ddEe/20231123_082752.jpg\n\n</center><br><br>\n\n<br>\n**(Esta es una publicación bilingüe, puedes ver la versión en ..."|/hive-179017/@luisfe/my-entry-to-shadow-hunters-179cb82e566ac|null|
 |2023-11-26T12:14|2|@elioe|15470.95|97|"---\n\n<center>![](https://images.ecency.com/DQmZJzTmoWUTBa29isgAmGujWZz6hjk8uLev6qxNxsvTTWL/inshot_20231126_062330918.jpg)\n\n </center><br>\n<br>\n** <center> (Esta es una publicación bilingüe, puedes ver ..."|/hive-120026/@elioe/dkmhvfox|![](https://images.ecency.com/DQmZJzTmoWUTBa29isgAmGujWZz6hjk8uLev6qxNxsvTTWL/inshot_20231126_062330918.jpg)|
-|2023-11-26T12:09|2|@sayury|102477.27|909|"<center>https://images.ecency.com/DQmTbUYEzZkpGNFhyGuKp9uZGYrcPeRodtpTcwJaTocxrJH/inshot_20231125_153152447.jpg\n</center><br>\n\n\n<br>\n**(Esta es una publicación bilingüe, puedes ver la versión en ..."|/hive-120026/@sayury/crfekywt|![](https://ipfs-3speak.b-cdn.net/ipfs/bafybeig7ezgwlub7auqa5d474auezzetoh6bgkam6qap566xggdee3bdfm/)|
 |2023-11-25T23:30|2|@orlandobello|25452.40|49|"<center>https://images.ecency.com/DQmbLebycQUnYXfpcu2rwtEGiZ5TbM6FX5Lc56XgQ2hojJH/inshot_20231125_053135030.jpg\n\n</center><br>\n<center>\n\n[![](https://ipfs-3speak.b-cdn.net/ipfs/bafybeibwsu2wgzmeyqfxdn5zzsqfw4kkqmda7gx2hop2sdhtnajeasozxm/)](https://3speak.tv/watch?v=orlandobello/tnhgcgzp)\n\n▶️ [Watch on 3Speak](https://3speak.tv/watch?v=orlandobello/tnhgcgzp)\n\n</center>\n\n---\n\n(Esta es una publicación bilingüe. La versión ..."|/hive-120026/@orlandobello/tnhgcgzp|![](https://ipfs-3speak.b-cdn.net/ipfs/bafybeibwsu2wgzmeyqfxdn5zzsqfw4kkqmda7gx2hop2sdhtnajeasozxm/)|
-|2023-11-24T12:17|2|@luisfe|26000.80|524|"<center>https://images.ecency.com/DQmcVazqdoTQfm1kMukJvk38voSfhqKF95PX1dviP8iwsNa/20231123_073612.jpg\n\n</center>\n\n<br>\n<center><b>  (Esta es una publicación bilingüe. Al final del ..."|/hive-161155/@luisfe/in-venezuela-you-cook-with|null|
 
 
 * APG Reputation = Authors Post Giga Reputation = Reputation of the author that is shown in the authors post, divided by 10^9.
@@ -31,7 +28,7 @@ The money has already been sent:
 [IMAGE_SEND_MONEY]
 *Screenshot of the @advertingsbot2 wallet from today*
 
-The 8 participents got 2 Hive each, this means 4 Hive of the Budget from 20 Hive were not used and go back to @achimmertens.
+The 5 participents got 2 Hive each, this means 10 Hive of the Budget from 20 Hive were not used and go back to @achimmertens.
 
 ---
 # Status of this "decentral advertising" project

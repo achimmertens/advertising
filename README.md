@@ -12,13 +12,16 @@ Searches for predefined advertising-text in the blockchain Hive and creates repo
 
 
 - Bilder werden nicht richtig dargestellt.
-- Doppelte Links ausblenden.
-- Name von FilledReportTemplate ändern
-- Der ÜbergabeParameter für den Suchtext fehlt
+
+- Optionaler Text in json-Config einfügen und auswerten.
 - Der Report soll auch angeben wie viel Geld vom Budget übrig geblieben ist
 - Campaing Datum erstellen und im Report einsetzen
+- 
 
 Done November 2023:
+- Doppelte Links ausblenden.
+- Der ÜbergabeParameter für den Suchtext fehlt
+- Name von FilledReportTemplate ändern
 - DateFrame in die JSON Config packen
 - Unempfidlich machen gegen Groß und Kleinschreibung
 - Einen Json Textfile erstellen, der alle Parameter beinhaltet. Dieser wird verwendet sowohl für fie jeweilige Kampagne als auch den Report.
