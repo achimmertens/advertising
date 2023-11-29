@@ -1,6 +1,10 @@
 const sql = require('mssql');
 const { password1 } = require('./config');
 const fs = require('fs');
+if (process.argv.length < 3) {
+  console.log("Please add a config file.");
+  process.exit(1);
+}
 const campaignConfig = require('./' + process.argv[2]);
 const budget = campaignConfig.budget; // Hive
 const reward = campaignConfig.reward; // Hive per participant
@@ -28,13 +32,14 @@ const config = {
 
 // Funktion zum Ausführen des SQL-Skripts
 async function executeSQLScript(searchParameter) {
+  console.log('searchParameter = ', searchParameter);
   try {
     // Verbindung zum SQL Server herstellen
     await sql.connect(config);
     const queryTemplate = fs.readFileSync('HiveSQLQuery.sql', 'utf8');
     const query = queryTemplate.replace(/!CHARY/g, searchParameter);
     const result = await sql.query(query);
-    console.log(result.recordset);
+    console.log("Result of the Query = ", result.recordset);
     await sql.close();
     return result.recordset
   } catch (error) {
@@ -120,6 +125,7 @@ async function fillTemplate(campaignID, campaignUrl, dateRange, recordset, maxAd
 
 // Filtern der Datensätze basierend auf last_update:
 function datefilter(timeFrame, recordset) {
+  console.log("TimeFrame: im dateFilter() = " + timeFrame)
   const currentDate = new Date();
   const sevenDaysAgo = new Date();
   sevenDaysAgo.setDate(currentDate.getDate() - timeFrame);
@@ -158,12 +164,13 @@ function blackList(blackListedAccount, dateFilteredRecordset) {
 // Hauptfunktion
 async function main() {
   let {dateFrame, currentDateString, oneWeekAgoString} = getDateFrame(timeFrame);
+  console.log("dateFrame:", dateFrame, "timeFrame:", timeFrame);
   const datasource = 'sql'  // 'sql' or 'file'
   let recordset; // Variable initialisieren für die If-Klausel
   try {
-    if (datasource == 'file') {
+    if (datasource == 'sql') {
       // SQL-Skript ausführen - Hier den Suchtext eingeben:
-      recordset = await executeSQLScript("subscribe the community Hive Marketing");
+      recordset = await executeSQLScript(advertisingText);
       fs.writeFileSync('exampleRecordSet.json', JSON.stringify(recordset));
     }
     else {

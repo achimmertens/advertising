@@ -10,13 +10,16 @@ Searches for predefined advertising-text in the blockchain Hive and creates repo
 // Backlog
 
 
-- DateFrame in die JSON Config packen
+
+- Bilder werden nicht richtig dargestellt.
+- Doppelte Links ausblenden.
 - Name von FilledReportTemplate ändern
 - Der ÜbergabeParameter für den Suchtext fehlt
 - Der Report soll auch angeben wie viel Geld vom Budget übrig geblieben ist
 - Campaing Datum erstellen und im Report einsetzen
 
 Done November 2023:
+- DateFrame in die JSON Config packen
 - Unempfidlich machen gegen Groß und Kleinschreibung
 - Einen Json Textfile erstellen, der alle Parameter beinhaltet. Dieser wird verwendet sowohl für fie jeweilige Kampagne als auch den Report.
 - Campaign Template automatisch ausfüllen mit
