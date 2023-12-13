@@ -14,6 +14,7 @@ const sponsor = campaignConfig.sponsor;
 const campaignID = campaignConfig.campaignID;
 const campaignUrl = campaignConfig.campaignUrl;
 const timeFrame = campaignConfig.timeFrame;
+const startDate = campaignConfig.startDate;
 const getMetaData = require('./getMetaData');
 const getFollower = require('./getFollower.js');
 const getDateFrame = require('./getDateFrame.js');
@@ -88,24 +89,24 @@ async function fillTemplate(campaignID, campaignUrl, dateRange, recordset, maxAd
     console.log('weburl = ', weburl);
     const body = JSON.stringify(recordsetObj[i].body);
     // truncate the body to the first 10 words
-    stringWithoutCR = body.replace(/\r/g, ''); // remove Carriege Return
-    const words = stringWithoutCR.split(' ');
-    const truncatedWords = words.slice(0, 10);
-    const truncatedBody = truncatedWords.join(' ');
-    if (!truncatedBody.endsWith('"')) {
-     truncatedBodyWithEnd = truncatedBody+' ..."';
-    }
-    else {
-      truncatedBodyWithEnd = truncatedBody;
-    }
-    console.log('truncatedBodyWithEnd = ', truncatedBodyWithEnd);
+    // stringWithoutCR = body.replace(/\r/g, ''); // remove Carriege Return
+    // const words = stringWithoutCR.split(' ');
+    // const truncatedWords = words.slice(0, 10);
+    // const truncatedBody = truncatedWords.join(' ');
+    // if (!truncatedBody.endsWith('"')) {
+    //  truncatedBodyWithEnd = truncatedBody+' ..."';
+    // }
+    // else {
+    //   truncatedBodyWithEnd = truncatedBody;
+    // }
+    // console.log('truncatedBodyWithEnd = ', truncatedBodyWithEnd);
     const url = recordsetObj[i].url;
     const [firstImageUrl, authorReputation] = await getMetaData.getMetaData(url);
     console.log("authorReputation = ", authorReputation);
     recordset[i].originAuthorReputation = authorReputation;
     console.log("NumberOfFollowers = ", NumberOfFollowers);
     lastUpdateTrunc=((JSON.stringify(recordsetObj[i].last_update)).slice(0, -9)).slice(1);
-    tableString=tableString+'|'+lastUpdateTrunc+'|'+reward+'|@'+author+'|'+(authorReputation/1000000000).toFixed(2)+'|'+NumberOfFollowers+'|'+truncatedBodyWithEnd+'|'+url+'|'+firstImageUrl+'|\n';
+    tableString=tableString+'|'+lastUpdateTrunc+'|'+reward+'|@'+author+'|'+(authorReputation/1000000000).toFixed(2)+'|'+NumberOfFollowers+'|'+url+'|'+firstImageUrl+'|\n';
     numberOfAdvertisers = i;
   }
   let rest = budget - (numberOfAdvertisers+1)*reward;
@@ -171,7 +172,7 @@ function blackList(blackListedAccount, dateFilteredRecordset) {
 
 // Hauptfunktion
 async function main() {
-  let {dateFrame, currentDateString, oneWeekAgoString} = getDateFrame(timeFrame);
+  let {dateFrame, currentDateString, oneWeekAgoString} = getDateFrame(startDate, timeFrame);
   console.log("dateFrame:", dateFrame, "timeFrame:", timeFrame);
   const datasource = 'sql'  // 'sql' or 'file'
   let recordset; // Variable initialisieren für die If-Klausel

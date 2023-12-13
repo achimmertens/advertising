@@ -8,19 +8,19 @@ here I announce the next advertising contest for week [CURRENT_WEEK] from sponso
 
 ---
 
-![Task_and_Rules.png](https://files.peakd.com/file/peakd-hive/achimmertens/AKe5wHrNamDx6RNtvzvqhB4qwg2qhZTGoEtwSPhfsuwSEJhTjSajgbDFC77j8pa.png)
+![grafik.png](https://files.peakd.com/file/peakd-hive/advertisingbot2/23zbKpafXUuXqcgN1UqE4ELLLjBk6HWR7VCHXMBWeuuhHvjVr9V26Vu632H51AX3QEB1Q.png)
 
 ## Advertising Text:
 **"[ADVERTISING_TEXT]"**
 
-![optional.png](https://files.peakd.com/file/peakd-hive/achimmertens/AKtSxwA38nJdyUdmvhncNmy6tW8CtYvXAw982Fh8BvMuxYgstc1eESWrwkNtsYn.png)
+![grafik.png](https://files.peakd.com/file/peakd-hive/advertisingbot2/EpnDF7XjUzRvHbukYSaPzgLofEeP2bKekjBmuA9oo8mHW8BAv1i1sGfdg5fHShUuuSn.png)
 
 > Please change this ad description Text
 
 
 # The Reward
 
-The first [MAX_ADVERTISERS] Hive users, that do this, will get [REWARD] Hive each.
+The first [MAX_ADVERTISERS] Hive users, that do this, will get [REWARD] Hive each short after the end of the campaign.
 
 
 # Does it work?
@@ -30,7 +30,7 @@ https://peakd.com/hive-154303/@advertisingbot2/winners-of-marketing-campaing-231
 https://peakd.com/hive-154303/@advertisingbot2/winners-of-the-advertising-contest-from-last-week
 
 
-![About.png](https://files.peakd.com/file/peakd-hive/achimmertens/AK299d4UG9ZMVqmPCk4bNmimT7nsX7e97oF5X92S4LFjZbapekr19HWa8BGonQF.png)
+![grafik.png](https://files.peakd.com/file/peakd-hive/advertisingbot2/23vrtfBe9soddee9UwH688PMyJYa2GjTPDpiV9s9mAwMHwp7AWurWJanpDDMtpQJx9z89.png)
 
 # Status of this project
 
