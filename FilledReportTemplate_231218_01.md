@@ -1,18 +1,18 @@
-Winners Of The Hive Marketing Campaign 231204_01
+Winners Of The Hive Marketing Campaign 231218_01
 
 Hello Hivers, Advertisers, Influencers, Contesters and all the rest,
 
 this is the
-# Hive Marketing Campaign Report from 2023-12-04 to 2023-12-11, Nr. 231204_01.
+# Hive Marketing Campaign Report from 2023-12-18 to 2023-12-25, Nr. 231218_01.
 ![HIVE Marketing.png](https://files.peakd.com/file/peakd-hive/achimmertens/AKqchzabeuVfZ4Dio3CipS4qSJMBALn2bcSRbCxWziyEqTSacinMkaF6h3jk4as.png)
 *[origin](https://photofunia.com/)*
 
 # Here are the participants of the last week:
-Campaign URL: https://peakd.com/hive-154303/@advertisingbot2/hive-marketing-campaign-nr-231204_01
-Advertising text: "Follow the community HiveGhana and support their projects: https://peakd.com/c/hive-176874/created"
+Campaign URL: https://peakd.com/hive-154303/@advertisingbot2/hive-marketing-campaign-nr-231218_01
+Advertising text: "Subscribe to the beer community https://peakd.com/c/hive-187719/created"
 |Date|Amount Hive|Participant|Reputation|Number of Followers|Url|Image|
 |-|-|-|-|-|-|-|
-|2023-12-09T06:02|2|@barbyjr|19541.53|61|/hive-109876/@barbyjr/mi-experiencia-con-el-contorno|![](https://images.ecency.com/DQmNqFiUUZQ6B3XjPjBjtAFg1dTjcQ11TRKhWnrbD9zhuey/1702099978886.jpg)|
+|2023-12-09T05:11|2|@detlev|917320.93|5720|/hive-187719/@detlev/beersaturday-336|![](https://i.imgur.com/d7bSzo0.jpg)|
 
 
 

@@ -1,8 +1,8 @@
-Hive Marketing Campaign [CURRENT_WEEK]_01
+Hive Marketing Campaign 50_01
 
 Hello everyone who wants to earn some small money,
 
-here I announce the next advertising contest for week [CURRENT_WEEK] from sponsor [SPONSOR], period: [DATE_FRAME].
+here I announce the next advertising contest for week 50 from sponsor @achimmertens, period: 2023-12-18 to 2023-12-25.
 
 ![Earn Money(2).png](https://files.peakd.com/file/peakd-hive/achimmertens/AKAr2pK3Nw7DhpREEcx2yQ1dSe3BQ4KKDFLKAWjNL9Ni952afaaKuqX68gTapsB.png)
 
@@ -11,16 +11,16 @@ here I announce the next advertising contest for week [CURRENT_WEEK] from sponso
 ![grafik.png](https://files.peakd.com/file/peakd-hive/advertisingbot2/23zbKpafXUuXqcgN1UqE4ELLLjBk6HWR7VCHXMBWeuuhHvjVr9V26Vu632H51AX3QEB1Q.png)
 
 ## Advertising Text:
-**"[ADVERTISING_TEXT]"**
+**"Subscribe to the beer community https://peakd.com/c/hive-187719/created"**
 
 ![grafik.png](https://files.peakd.com/file/peakd-hive/advertisingbot2/EpnDF7XjUzRvHbukYSaPzgLofEeP2bKekjBmuA9oo8mHW8BAv1i1sGfdg5fHShUuuSn.png)
 
-[OPTIONAL_TEXT]
+This is a open minded community with people who loves BEER, which is third most drunken liquid on earth. Meet people that share this experience. The Community is as well the home the the Hive #BeerSaturday and the #BEER token. Join contests and win some of them.
 
 
 # The Reward
 
-The first [MAX_ADVERTISERS] Hive users, that do this, will get [REWARD] Hive each short after the end of the campaign.
+The first 10 Hive users, that do this, will get 2 Hive each short after the end of the campaign.
 
 
 # Does it work?

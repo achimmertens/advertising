@@ -13,8 +13,9 @@ const advertisingText = campaignConfig.advertisingText;
 const sponsor = campaignConfig.sponsor;
 const campaignID = campaignConfig.campaignID;
 const campaignUrl = campaignConfig.campaignUrl;
-const timeFrame = campaignConfig.timeFrame;
+const numberOfDays = campaignConfig.numberOfDays;
 const startDate = campaignConfig.startDate;
+// Todo: title = campaignConfig.campaignURL - https:/...
 const getMetaData = require('./getMetaData');
 const getFollower = require('./getFollower.js');
 const getDateFrame = require('./getDateFrame.js');
@@ -125,11 +126,11 @@ async function fillTemplate(campaignID, campaignUrl, dateRange, recordset, maxAd
 }
 
 // Filtern der Datensätze basierend auf last_update und unique Authors:
-function datefilter(timeFrame, recordset) {
-  console.log("TimeFrame: im dateFilter() = " + timeFrame)
+function datefilter(numberOfDays, recordset) {
+  console.log("numberOfDays: im dateFilter() = " + numberOfDays)
   const currentDate = new Date();
   const sevenDaysAgo = new Date();
-  sevenDaysAgo.setDate(currentDate.getDate() - timeFrame);
+  sevenDaysAgo.setDate(currentDate.getDate() - numberOfDays);
   const dateFilteredRecordset = recordset.filter((item) => {
     const lastUpdate = new Date(item.last_update);
     return lastUpdate >= sevenDaysAgo && lastUpdate <= currentDate;
@@ -172,8 +173,8 @@ function blackList(blackListedAccount, dateFilteredRecordset) {
 
 // Hauptfunktion
 async function main() {
-  let {dateFrame, currentDateString, oneWeekAgoString} = getDateFrame(startDate, timeFrame);
-  console.log("dateFrame:", dateFrame, "timeFrame:", timeFrame);
+  let {dateFrame} = getDateFrame(startDate, numberOfDays);
+  console.log("dateFrame:", dateFrame, "numberOfDays:", numberOfDays);
   const datasource = 'sql'  // 'sql' or 'file'
   let recordset; // Variable initialisieren für die If-Klausel
   try {
@@ -188,7 +189,7 @@ async function main() {
       recordset = JSON.parse(data);
     }
     // Datensatz auf dateRange Tage begrenzen
-    const dateFilteredRecordset = datefilter(timeFrame, recordset);
+    const dateFilteredRecordset = datefilter(numberOfDays, recordset);
     await dataExtractAndAppend(dateFilteredRecordset);
     // Filtern, dass anobel (und später weitere Peronen) nicht ausgewertet werden
     var blacklistFilteredRecordset = blackList('advertisingbot2', dateFilteredRecordset);
