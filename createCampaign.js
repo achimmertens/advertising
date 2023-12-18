@@ -68,7 +68,7 @@ async function main () {
     console.log("Die aktuelle Kalenderwoche ist: " + currentWeek);
     try {
         var filledTemplate = await fillTemplate(campaignId, dateFrame, currentWeek, sponsor, recipient, advertisingText, optionalText, maxAdvertisers, reward, lastCampaigns, tags);
-        fs.writeFileSync('FilledCampaignTemplate'+ campaignId + '.md', filledTemplate);
+        fs.writeFileSync('Campaign'+ campaignId + '.md', filledTemplate);
 }   catch (error) {
         console.error(error);
   }
