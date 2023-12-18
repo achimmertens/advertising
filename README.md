@@ -10,12 +10,7 @@ Searches for predefined advertising-text in the blockchain Hive and creates repo
 // Backlog:
 
 // Campaign:
-- Integration of Startdate 
-- Put Calenderweek and Recipient into the title
-- put recipient into json file
-- Proper preparation of campaing-json file including Start-Date, Campaign ID and campaign_url
-- Make campaign-json file as parameter available for createCampaign.js
-- take the correct advertising text into the filled campaign template
+
 - Change the URL of the campaign automatecally in the json file
 
 
@@ -27,6 +22,18 @@ Searches for predefined advertising-text in the blockchain Hive and creates repo
 - Optionaler Text in json-Config einfügen und auswerten.
 - Der Report soll auch angeben wie viel Geld vom Budget übrig geblieben ist
 - 
+
+
+Done in December 2023:
+// Campaign:
+- Integration of Startdate 
+- Put Calenderweek and Recipient into the title
+- put recipient, ... into json file
+- Proper preparation of campaing-json file including Start-Date, Campaign ID and campaign_url
+- Make campaign-json file as parameter available for createCampaign.js
+- take the correct advertising text into the filled campaign template
+- Put tags also into the json file
+
 
 Done November 2023:
 - Doppelte Links ausblenden.

@@ -1,4 +1,4 @@
-Hive Marketing Campaign [CURRENT_WEEK]_01
+Hive Marketing Campaign [CAMPAIGN_ID] (Week [CURRENT_WEEK], For "[RECIPIENT]")
 
 Hello everyone who wants to earn some small money,
 
@@ -26,24 +26,15 @@ The first [MAX_ADVERTISERS] Hive users, that do this, will get [REWARD] Hive eac
 # Does it work?
 Yes. We did it before. Here is the proof:
 
-https://peakd.com/hive-154303/@advertisingbot2/winners-of-marketing-campaing-23111001
-https://peakd.com/hive-154303/@advertisingbot2/winners-of-the-advertising-contest-from-last-week
-
+[LAST_CAMPAIGNS]
 
 ![grafik.png](https://files.peakd.com/file/peakd-hive/advertisingbot2/23vrtfBe9soddee9UwH688PMyJYa2GjTPDpiV9s9mAwMHwp7AWurWJanpDDMtpQJx9z89.png)
 
 # Status of this project
 
-This week I worked on the automatic creation of a campaing, based on a template. I only need to change the following parameters: 
-```
-const budget = 20 // Hive
-const reward = 2 // Hive per participant
-const maxAdvertisers = budget/reward
-const advertisingText = 'follow @fjworld and visit https://epaytraffic.com/'
-const sponsor = '@achimmertens';
-```
+[LAST_WEEK]
 
-And then the campaign-Text will be created automatically.
+---
 
 ![Questions.png](https://files.peakd.com/file/peakd-hive/achimmertens/AKKRqJt1qnuNodPEACGiuC9iauEfvSWwo3w9ACbwELDzPg5VpvwJCsfsA8ptwYH.png)
 
@@ -52,4 +43,4 @@ And then the campaign-Text will be created automatically.
 
 
 Here you get the chance to easily earn some small money for advertising.
-marketing campaign contest challenge hive advertising
+marketing campaign contest challenge hive advertising [TAGS]
