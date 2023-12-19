@@ -61,17 +61,37 @@ async function fillTemplate(campaignId, dateFrame, currentWeek, sponsor, recipie
     return filledTemplate;
 }
 
-async function main () {
-
-  const {dateFrame, endDateString, startDateString} = getDateFrame(startDate, numberOfDays);
-    let currentWeek = getCurrentWeek();
-    console.log("Die aktuelle Kalenderwoche ist: " + currentWeek);
-    try {
-        var filledTemplate = await fillTemplate(campaignId, dateFrame, currentWeek, sponsor, recipient, advertisingText, optionalText, maxAdvertisers, reward, lastCampaigns, tags);
-        fs.writeFileSync('Campaign'+ campaignId + '.md', filledTemplate);
-}   catch (error) {
-        console.error(error);
-  }
+function changeCampaignUrl(filePath, config, campaignUrl, currentWeek) {
+  config.campaignUrl = campaignUrl;
+  config.currentWeek = currentWeek;
+  let updatedJson = JSON.stringify(config, null, 2);
+  fs.writeFile(filePath, updatedJson, 'utf8', (err) => {
+    if (err) {
+      console.error("Error writing the file: " + err);
+      return;
+    }
+    console.log("File has been updated successfully.");
+  });
 }
+
+async function main() {
+  const { dateFrame, endDateString, startDateString } = getDateFrame(startDate, numberOfDays);
+  let currentWeek = getCurrentWeek();
+  console.log("Die aktuelle Kalenderwoche ist: " + currentWeek);
+  try {
+    var filledTemplate = await fillTemplate(campaignId, dateFrame, currentWeek, sponsor, recipient, advertisingText, optionalText, maxAdvertisers, reward, lastCampaigns, tags);
+    fs.writeFileSync('Campaign' + campaignId + '.md', filledTemplate);
+  } catch (error) {
+    console.error(error);
+  }
+  let campaignIdChanged = campaignId.replace("_", "");
+  let recipientChanged = recipient.replace(" ", "-").replace("_", "").toLowerCase();
+  let campaignUrl = `https://peakd.com/hive-154303/@advertisingbot2/hive-marketing-campaign-${campaignIdChanged}-week-${currentWeek}-for-${recipientChanged}`;
+  console.log(campaignUrl);
+  changeCampaignUrl('./' + process.argv[2], config, campaignUrl, currentWeek)
+}
+
+
+
 
 main ();
