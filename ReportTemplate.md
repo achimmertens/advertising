@@ -7,9 +7,16 @@ this is the
 ![HIVE Marketing.png](https://files.peakd.com/file/peakd-hive/achimmertens/AKqchzabeuVfZ4Dio3CipS4qSJMBALn2bcSRbCxWziyEqTSacinMkaF6h3jk4as.png)
 *[origin](https://photofunia.com/)*
 
+#### Campaign URL: 
+[CAMPAIGN_URL]
+
+#### Advertising text: 
+"[ADVERTISING_TEXT]"
+
+#### Optional Text: 
+"[OPTIONAL_TEXT]"
+
 # Here are the participants of the last week:
-Campaign URL: [CAMPAIGN_URL]
-Advertising text: "[ADVERTISING_TEXT]"
 |Date|Amount Hive|Participant|Reputation|Number of Followers|Url|Image|
 |-|-|-|-|-|-|-|
 [TABLE]
@@ -28,11 +35,7 @@ The [NUMBER_OF_ADVERTISERS] participents got [REWARD] Hive each, this means [RES
 ---
 # Status of this "decentral advertising" project
 
-
-Last week I worked on the templates for the campaing and the report. I created the images with https://www.canva.com, GIMP and photofunia.com. Photofunia made all the images, where the Hive Logo is advertised. The pretty woman was created with the Bing AI image creator from Microsoft.
-
-I still have some code to write to make the project more automated.
-And of course, there are too few advertisers. I hope to find more people, which work for us.
+[LAST_WEEK]
 
 
 

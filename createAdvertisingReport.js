@@ -15,6 +15,8 @@ const campaignID = campaignConfig.campaignID;
 const campaignUrl = campaignConfig.campaignUrl;
 const numberOfDays = campaignConfig.numberOfDays;
 const startDate = campaignConfig.startDate;
+const optionalText = campaignConfig.optionalText;
+const lastWeek = campaignConfig.lastWeek;
 // Todo: title = campaignConfig.campaignURL - https:/...
 const getMetaData = require('./getMetaData');
 const getFollower = require('./getFollower.js');
@@ -122,6 +124,8 @@ async function fillTemplate(campaignID, campaignUrl, dateRange, recordset, maxAd
   filledTemplate = filledTemplate.replace(`[BUDGET]`,budget);
   filledTemplate = filledTemplate.replace(`[SPONSOR]`,sponsor);
   filledTemplate = filledTemplate.replace(`[ADVERTISING_TEXT]`,advertisingText);
+  filledTemplate = filledTemplate.replace(`[OPTIONAL_TEXT]`,optionalText);
+  filledTemplate = filledTemplate.replace(`[LAST_WEEK]`,lastWeek);
   return filledTemplate;
 }
 

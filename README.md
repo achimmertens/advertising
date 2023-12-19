@@ -133,11 +133,11 @@ Now you can upload this MD-File to Hive.
 // Campaign:
 
 // Report:
-- Campaign URL is wrong at the moment.
-- The URL in the table has to be made usefull.
-- The Dateframe has to be taken from the json file, not from the date, when the report is created.
-- Optionaler Text in json-Config einfügen und auswerten.
-- Der Report soll auch angeben wie viel Geld vom Budget übrig geblieben ist
+
+
+
+
+
 - 
 
 
@@ -152,6 +152,13 @@ Done in December 2023:
 - take the correct advertising text into the filled campaign template
 - Put tags also into the json file
 - Change the URL of the campaign automatecally in the json file
+
+// Report:
+- Repairs: Campaign URL is wrong at the moment.
+- Repairs: The URL in the table has to be made usefull.
+- The Dateframe has to be taken from the json file, not from the date, when the report is created.
+- Optionaler Text in json-Config einfügen und auswerten.
+- Der Report soll auch angeben wie viel Geld vom Budget übrig geblieben ist
 
 
 Done November 2023:

@@ -7,9 +7,16 @@ this is the
 ![HIVE Marketing.png](https://files.peakd.com/file/peakd-hive/achimmertens/AKqchzabeuVfZ4Dio3CipS4qSJMBALn2bcSRbCxWziyEqTSacinMkaF6h3jk4as.png)
 *[origin](https://photofunia.com/)*
 
+#### Campaign URL: 
+https://peakd.com/hive-154303/@advertisingbot2/hive-marketing-campaign-23121801-week-51-for-beer-community
+
+#### Advertising text: 
+"Subscribe to the beer community https://peakd.com/c/hive-187719/created"
+
+#### Optional Text: 
+"The beer community is a open minded community with people who loves BEER, which is third most drunken liquid on earth. Meet people that share this experience. The community is as well the home the the Hive #BeerSaturday and the #BEER token. Join contests and win some of them. And send special greetings to @detlev, the founder of this community."
+
 # Here are the participants of the last week:
-Campaign URL: https://peakd.com/hive-154303/@advertisingbot2/hive-marketing-campaign-23121801-week-51-for-beer-community
-Advertising text: "Subscribe to the beer community https://peakd.com/c/hive-187719/created"
 |Date|Amount Hive|Participant|Reputation|Number of Followers|Url|Image|
 |-|-|-|-|-|-|-|
 |2023-12-16T10:04|2|@detlev|921442.90|5725|https://peakd.com/hive-187719/@detlev/beersaturday-337|![](https://i.imgur.com/d7bSzo0.jpg)|
@@ -29,11 +36,7 @@ The 1 participents got 2 Hive each, this means 18 Hive of the Budget from 20 Hiv
 ---
 # Status of this "decentral advertising" project
 
-
-Last week I worked on the templates for the campaing and the report. I created the images with https://www.canva.com, GIMP and photofunia.com. Photofunia made all the images, where the Hive Logo is advertised. The pretty woman was created with the Bing AI image creator from Microsoft.
-
-I still have some code to write to make the project more automated.
-And of course, there are too few advertisers. I hope to find more people, which work for us.
+I used the last week to automate my campaign and report creation scripts. I made huge progress, because I start to code like a real developer ;-). I have created a json file, where all the parameters are located and used for the campaign- and report creation. I also started with my readme.md file.
 
 
 
