@@ -3,16 +3,16 @@ Winners Of The Hive Marketing Campaign 231218_01
 Hello Hivers, Advertisers, Influencers, Contesters and all the rest,
 
 this is the
-# Hive Marketing Campaign Report from 2023-12-18 to 2023-12-25, Nr. 231218_01.
+# Hive Marketing Campaign Report from 2023-12-18 to 2023-12-26, Nr. 231218_01.
 ![HIVE Marketing.png](https://files.peakd.com/file/peakd-hive/achimmertens/AKqchzabeuVfZ4Dio3CipS4qSJMBALn2bcSRbCxWziyEqTSacinMkaF6h3jk4as.png)
 *[origin](https://photofunia.com/)*
 
 # Here are the participants of the last week:
-Campaign URL: https://peakd.com/hive-154303/@advertisingbot2/hive-marketing-campaign-nr-231218_01
+Campaign URL: https://peakd.com/hive-154303/@advertisingbot2/hive-marketing-campaign-23121801-week-51-for-beer-community
 Advertising text: "Subscribe to the beer community https://peakd.com/c/hive-187719/created"
 |Date|Amount Hive|Participant|Reputation|Number of Followers|Url|Image|
 |-|-|-|-|-|-|-|
-|2023-12-09T05:11|2|@detlev|917320.93|5720|/hive-187719/@detlev/beersaturday-336|![](https://i.imgur.com/d7bSzo0.jpg)|
+|2023-12-16T10:04|2|@detlev|921436.43|5725|/hive-187719/@detlev/beersaturday-337|![](https://i.imgur.com/d7bSzo0.jpg)|
 
 
 
