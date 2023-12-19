@@ -107,7 +107,7 @@ async function fillTemplate(campaignID, campaignUrl, dateRange, recordset, maxAd
     recordset[i].originAuthorReputation = authorReputation;
     console.log("NumberOfFollowers = ", NumberOfFollowers);
     lastUpdateTrunc=((JSON.stringify(recordsetObj[i].last_update)).slice(0, -9)).slice(1);
-    tableString=tableString+'|'+lastUpdateTrunc+'|'+reward+'|@'+author+'|'+(authorReputation/1000000000).toFixed(2)+'|'+NumberOfFollowers+'|'+url+'|'+firstImageUrl+'|\n';
+    tableString=tableString+'|'+lastUpdateTrunc+'|'+reward+'|@'+author+'|'+(authorReputation/1000000000).toFixed(2)+'|'+NumberOfFollowers+'|'+weburl+'|'+firstImageUrl+'|\n';
     numberOfAdvertisers = i;
   }
   let rest = budget - (numberOfAdvertisers+1)*reward;

@@ -12,7 +12,7 @@ Campaign URL: https://peakd.com/hive-154303/@advertisingbot2/hive-marketing-camp
 Advertising text: "Subscribe to the beer community https://peakd.com/c/hive-187719/created"
 |Date|Amount Hive|Participant|Reputation|Number of Followers|Url|Image|
 |-|-|-|-|-|-|-|
-|2023-12-16T10:04|2|@detlev|921436.43|5725|/hive-187719/@detlev/beersaturday-337|![](https://i.imgur.com/d7bSzo0.jpg)|
+|2023-12-16T10:04|2|@detlev|921442.90|5725|https://peakd.com/hive-187719/@detlev/beersaturday-337|![](https://i.imgur.com/d7bSzo0.jpg)|
 
 
 

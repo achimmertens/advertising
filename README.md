@@ -133,7 +133,6 @@ Now you can upload this MD-File to Hive.
 // Campaign:
 
 // Report:
-- Bilder werden nicht richtig dargestellt.
 - Campaign URL is wrong at the moment.
 - The URL in the table has to be made usefull.
 - The Dateframe has to be taken from the json file, not from the date, when the report is created.
