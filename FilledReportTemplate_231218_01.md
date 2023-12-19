@@ -45,4 +45,4 @@ Greetings, Advertisingbot2 (alias Achim)
 
 
 These are the winners of the last advertising contest
-advertising contest microtask task challenge minijob report marketing campaign
+advertising contest microtask minijob report marketing campaign beer

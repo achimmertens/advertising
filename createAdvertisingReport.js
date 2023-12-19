@@ -17,6 +17,7 @@ const numberOfDays = campaignConfig.numberOfDays;
 const startDate = campaignConfig.startDate;
 const optionalText = campaignConfig.optionalText;
 const lastWeek = campaignConfig.lastWeek;
+const tags = campaignConfig.tags;
 // Todo: title = campaignConfig.campaignURL - https:/...
 const getMetaData = require('./getMetaData');
 const getFollower = require('./getFollower.js');
@@ -126,6 +127,7 @@ async function fillTemplate(campaignID, campaignUrl, dateRange, recordset, maxAd
   filledTemplate = filledTemplate.replace(`[ADVERTISING_TEXT]`,advertisingText);
   filledTemplate = filledTemplate.replace(`[OPTIONAL_TEXT]`,optionalText);
   filledTemplate = filledTemplate.replace(`[LAST_WEEK]`,lastWeek);
+  filledTemplate = filledTemplate.replace(`[TAGS]`,tags);
   return filledTemplate;
 }
 
@@ -201,6 +203,7 @@ async function main() {
     var filledTemplate = await fillTemplate(campaignID, campaignUrl, dateFrame, JSON.stringify(blacklistFilteredRecordset), maxAdvertisers,reward, budget, sponsor);
     fs.writeFileSync('FilledReportTemplate_' + campaignID + '.md', filledTemplate);
     fs.writeFileSync('dateFilteredRecordset.json', JSON.stringify(dateFilteredRecordset));
+    console.log('FilledReportTemplate_' + campaignID + '.md was written successfully');
   } catch (error) {
     console.error(error);
   }

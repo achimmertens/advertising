@@ -52,7 +52,7 @@ For each campaing we need to set up the config file. Here is an example with exp
 -  "lastCampaigns"
    -  Must be filled. It contains some example of the last successfull campaigns.
 -  "tags"
-   -  optional
+   -  optional. Max three words in lowercase divided by spaces.
 -  "currentWeek"
    -  This will be filled automatically
 
