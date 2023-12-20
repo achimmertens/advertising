@@ -19,8 +19,6 @@ https://peakd.com/hive-154303/@advertisingbot2/hive-marketing-campaign-23121801-
 # Here are the participants of the last week:
 |Date|Amount Hive|Participant|Reputation|Number of Followers|Url|Image|
 |-|-|-|-|-|-|-|
-|2023-12-20T05:51|2|@advertisingbot|58.00|2|https://peakd.com/hive-167922/@advertisingbot/there-are-still-2-hive-to-earn-by-just-writing-one-sentence|null|
-|2023-12-16T10:04|2|@detlev|921453.71|5725|https://peakd.com/hive-187719/@detlev/beersaturday-337|![](https://i.imgur.com/d7bSzo0.jpg)|
 
 
 
@@ -32,7 +30,7 @@ Proof, that the money has already been sent:
 [IMAGE_SEND_MONEY]
 *Screenshot of the [@advertingsbot2](https://peakd.com/@advertisingbot2/wallet) wallet from today*
 
-The 2 participents got 2 Hive each, this means 16 Hive of the Budget from 20 Hive were not used and go back to @achimmertens.
+The 1 participents got 2 Hive each, this means 18 Hive of the Budget from 20 Hive were not used and go back to @achimmertens.
 
 ---
 # Status of this "decentral advertising" project

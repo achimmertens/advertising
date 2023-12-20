@@ -139,14 +139,25 @@ function datefilter(numberOfDays, recordset) {
     const lastUpdate = new Date(item.last_update);
     return lastUpdate >= sevenDaysAgo && lastUpdate <= currentDate;
   });
-  let uniqueAuthors = [];
+  //let uniqueAuthors = [];
+  // let filteredRecordset = dateFilteredRecordset.filter((item) => {
+  //   if (!uniqueAuthors.includes(item.author)) {
+  //     uniqueAuthors.push(item.author);
+  //     return true;
+  //   }
+  //   return false;
+  // });
+
+  let existingAuthors = new Set(campaignConfig.authors.map(a => a.author)); // Ein Set mit den vorhandenen Autoren erstellen
+
   let filteredRecordset = dateFilteredRecordset.filter((item) => {
-    if (!uniqueAuthors.includes(item.author)) {
-      uniqueAuthors.push(item.author);
+    if (!existingAuthors.has(item.author)) { // Überprüfen, ob der Autor bereits im Set existiert
+      existingAuthors.add(item.author); // Autor zum Set hinzufügen
       return true;
     }
     return false;
   });
+
   return filteredRecordset;
 }
 
