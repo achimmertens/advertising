@@ -74,7 +74,7 @@ function modifyUrl(url) {
 }
 
 // Funktion zum Ersetzen der Platzhalter in der Vorlagendatei
-async function fillTemplate(campaignID, campaignUrl, dateRange, recordset, maxAdvertisers, reward, budget, sponsor) {
+async function fillTemplate(campaignConfig, campaignID, campaignUrl, dateRange, recordset, maxAdvertisers, reward, budget, sponsor) {
   const template = fs.readFileSync('ReportTemplate.md', 'utf8');
   let tableString = '';
   let filledTemplate = template;
@@ -92,18 +92,6 @@ async function fillTemplate(campaignID, campaignUrl, dateRange, recordset, maxAd
     const weburl = recordsetObj[i].weburl;
     console.log('weburl = ', weburl);
     const body = JSON.stringify(recordsetObj[i].body);
-    // truncate the body to the first 10 words
-    // stringWithoutCR = body.replace(/\r/g, ''); // remove Carriege Return
-    // const words = stringWithoutCR.split(' ');
-    // const truncatedWords = words.slice(0, 10);
-    // const truncatedBody = truncatedWords.join(' ');
-    // if (!truncatedBody.endsWith('"')) {
-    //  truncatedBodyWithEnd = truncatedBody+' ..."';
-    // }
-    // else {
-    //   truncatedBodyWithEnd = truncatedBody;
-    // }
-    // console.log('truncatedBodyWithEnd = ', truncatedBodyWithEnd);
     const url = recordsetObj[i].url;
     const [firstImageUrl, authorReputation] = await getMetaData.getMetaData(url);
     console.log("authorReputation = ", authorReputation);
@@ -112,6 +100,8 @@ async function fillTemplate(campaignID, campaignUrl, dateRange, recordset, maxAd
     lastUpdateTrunc=((JSON.stringify(recordsetObj[i].last_update)).slice(0, -9)).slice(1);
     tableString=tableString+'|'+lastUpdateTrunc+'|'+reward+'|@'+author+'|'+(authorReputation/1000000000).toFixed(2)+'|'+NumberOfFollowers+'|'+weburl+'|'+firstImageUrl+'|\n';
     numberOfAdvertisers = i;
+    //campaignConfig.author[i] = author
+    campaignConfig.authors.push({ "author": author });
   }
   let rest = budget - (numberOfAdvertisers+1)*reward;
   filledTemplate = filledTemplate.replace(`[TABLE]`, tableString);
@@ -128,6 +118,14 @@ async function fillTemplate(campaignID, campaignUrl, dateRange, recordset, maxAd
   filledTemplate = filledTemplate.replace(`[OPTIONAL_TEXT]`,optionalText);
   filledTemplate = filledTemplate.replace(`[LAST_WEEK]`,lastWeek);
   filledTemplate = filledTemplate.replace(`[TAGS]`,tags);
+  let updatedJson = JSON.stringify(campaignConfig, null, 2);
+  fs.writeFile('./' + process.argv[2], updatedJson, 'utf8', (err) => {
+    if (err) {
+      console.error("Error writing the file: " + err);
+      return;
+    }
+    console.log("The configfile has been updated successfully.");
+  });
   return filledTemplate;
 }
 
@@ -200,7 +198,7 @@ async function main() {
     // Filtern, dass anobel (und später weitere Peronen) nicht ausgewertet werden
     var blacklistFilteredRecordset = blackList('advertisingbot2', dateFilteredRecordset);
     // Vorlage mit Recordset füllen
-    var filledTemplate = await fillTemplate(campaignID, campaignUrl, dateFrame, JSON.stringify(blacklistFilteredRecordset), maxAdvertisers,reward, budget, sponsor);
+    var filledTemplate = await fillTemplate(campaignConfig, campaignID, campaignUrl, dateFrame, JSON.stringify(blacklistFilteredRecordset), maxAdvertisers,reward, budget, sponsor);
     fs.writeFileSync('FilledReportTemplate_' + campaignID + '.md', filledTemplate);
     fs.writeFileSync('dateFilteredRecordset.json', JSON.stringify(dateFilteredRecordset));
     console.log('FilledReportTemplate_' + campaignID + '.md was written successfully');

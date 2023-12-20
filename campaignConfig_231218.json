@@ -12,5 +12,13 @@
   "lastWeek": "I used the last week to automate my campaign and report creation scripts. I made huge progress, because I start to code like a real developer ;-). I have created a json file, where all the parameters are located and used for the campaign- and report creation. I also started with my readme.md file.",
   "lastCampaigns": "* https://peakd.com/advertising/@advertisingbot2/winners-of-the-hive-marketing-campaign-23120401 \n\r* https://peakd.com/hive-154303/@advertisingbot2/winners-of-marketing-campaing-23111001\n\r* https://peakd.com/hive-154303/@advertisingbot2/winners-of-the-advertising-contest-from-last-week",
   "tags": "beer",
-  "currentWeek": 51
+  "currentWeek": 51,
+  "authors": [
+    {
+      "author": "advertisingbot"
+    },
+    {
+      "author": "detlev"
+    }
+  ]
 }

@@ -55,6 +55,8 @@ For each campaing we need to set up the config file. Here is an example with exp
    -  optional. Max three words in lowercase divided by spaces.
 -  "currentWeek"
    -  This will be filled automatically
+-  "authors"
+   -  Must be filled with at least "[]". The rest will be filled automatecally during the report creation.
 
 
 # Create A New Campaign

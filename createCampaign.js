@@ -70,7 +70,7 @@ function changeCampaignUrl(filePath, config, campaignUrl, currentWeek) {
       console.error("Error writing the file: " + err);
       return;
     }
-    console.log("File has been updated successfully.");
+    console.log("The configfile has been updated successfully.");
   });
 }
 
