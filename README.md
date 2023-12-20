@@ -1,7 +1,7 @@
 # advertising
 This tool searches for predefined advertising-text in the blockchain Hive and creates reports about the findings.
 
-It has two main scripts, createCampaign.js and createAdvertisingReport.js, and uses a config.json file to generate both, an advertising campaign and a report of the success.
+It has three main scripts, createCampaign.js, createAdvertisingReport.js and payTheAuthors.js, and uses a config.json file to generate both, an advertising campaign and a report of the success and pays the advertisers.
 
 # The Config Json File
 For each campaing we need to set up the config file. Here is an example with explanation:
@@ -21,7 +21,8 @@ For each campaing we need to set up the config file. Here is an example with exp
   "lastWeek": "In my last weeks I was distracted from the uncertenties with my job. But at least luckily for me, the situation is getting clearer and I can calm down a bit. So I started again working in my spare time on the automatisation of the Hive marketing campaing creation code. I made some small progress in chore details.",
   "lastCampaigns": "* https://peakd.com/advertising/@advertisingbot2/winners-of-the-hive-marketing-campaign-23120401 \n\r* https://peakd.com/hive-154303/@advertisingbot2/winners-of-marketing-campaing-23111001\n\r* https://peakd.com/hive-154303/@advertisingbot2/winners-of-the-advertising-contest-from-last-week",
   "tags": "beer",
-  "currentWeek": 51
+  "currentWeek": 51,
+  "authors": []
 }
 ```
 
@@ -56,7 +57,7 @@ For each campaing we need to set up the config file. Here is an example with exp
 -  "currentWeek"
    -  This will be filled automatically
 -  "authors"
-   -  Must be filled with at least "[]". The rest will be filled automatecally during the report creation.
+   -  Must be filled with at least "[]". The rest will be filled automatically during the report creation.
 
 
 # Create A New Campaign
@@ -111,7 +112,23 @@ Advertising text: "Subscribe to the beer community https://peakd.com/c/hive-1877
 ```
 
 Send to each of them the promised money ("reward" in the JSON file) and make a screenshot of it.
-Upload this screenshot to peakd.com and copy the URL.
+
+For this, the campaignConfig.JSON file has got the authors from the report during running the createAdvertisingReport.js script. It contains now (example):
+``` 
+ "authors": [
+    {
+      "author": "advertisingbot"
+    },
+    {
+      "author": "detlev"
+    }
+  ]
+```
+
+Now you can pay them out with 
+> node payTheAuthors.js <name_of_campaignConfig.json>
+
+Go to https://peakd.com/@advertisingbot2/wallet, take a screenshot, upload this screenshot to peakd.com and copy the URL.
 Exchange this URL with the part [IMAGE_SEND_MONEY]:
 
 ```
@@ -132,9 +149,8 @@ Now you can upload this MD-File to Hive.
 
 // Backlog:
 
-// Campaign:
-
-// Report:
+// PayTheAuthors
+* Übername von Hive Reward und Campagne-ID für den Memo-Text aus der COnfig Datei.
 
 
 
