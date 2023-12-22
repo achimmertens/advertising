@@ -138,11 +138,27 @@ Proof, that the money has already been sent:
 *Screenshot of the [@advertingsbot2](https://peakd.com/@advertisingbot2/wallet) wallet from today*
 ```
 
+
+
+
+
+
+
 Now you can upload this MD-File to Hive.
 
 
 
+# Summary
 
+- prepare the config file
+- node createCampaign.js <name_of_campaignConfig.json>
+- wait until the campaign has finished
+- node createAdvertisingReport.js <name_of_campaignConfig.json>
+- node payTheAuthors.js <name_of_campaignConfig.json>
+- node getTransaction.js <name_of_campaignConfig.json>
+- node fillAdvertisingReportWithPaidAuthors.js <name_of_campaignConfig.json>
+
+Now you can upload this MD-File to Hive.
 
 
 

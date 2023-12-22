@@ -25,10 +25,52 @@ https://peakd.com/hive-154303/@advertisingbot2/hive-marketing-campaign-23121801-
 
 
 
-Proof, that the money has already been sent:
+Proof, that the money has already been sent (See also https://peakd.com/@advertisingbot2/wallet):
 
-[IMAGE_SEND_MONEY]
-*Screenshot of the [@advertingsbot2](https://peakd.com/@advertisingbot2/wallet) wallet from today*
+'''
+[
+  [
+    1762,
+    {
+      "trx_id": "47fe21cdb93d5027a4c57ef50000f56c4682ee25",
+      "block": 81192395,
+      "trx_in_block": 15,
+      "op_in_trx": 0,
+      "virtual_op": false,
+      "timestamp": "2023-12-20T14:36:00",
+      "op": [
+        "transfer",
+        {
+          "from": "advertisingbot2",
+          "to": "detlev",
+          "amount": "0.001 HIVE",
+          "memo": "Meine ersten automatisierten Geldversende-Versuche"
+        }
+      ]
+    }
+  ],
+  [
+    1763,
+    {
+      "trx_id": "5d9dde5656c50b04f52cf6f414d6049abdf27000",
+      "block": 81192395,
+      "trx_in_block": 17,
+      "op_in_trx": 0,
+      "virtual_op": false,
+      "timestamp": "2023-12-20T14:36:00",
+      "op": [
+        "transfer",
+        {
+          "from": "advertisingbot2",
+          "to": "advertisingbot",
+          "amount": "0.001 HIVE",
+          "memo": "Meine ersten automatisierten Geldversende-Versuche"
+        }
+      ]
+    }
+  ]
+]
+'''
 
 The 1 participents got 2 Hive each, this means 18 Hive of the Budget from 20 Hive were not used and go back to @achimmertens.
 

@@ -25,10 +25,11 @@ this is the
 
 
 
-Proof, that the money has already been sent:
+Proof, that the money has already been sent (See also https://peakd.com/@advertisingbot2/wallet):
 
+'''
 [IMAGE_SEND_MONEY]
-*Screenshot of the [@advertingsbot2](https://peakd.com/@advertisingbot2/wallet) wallet from today*
+'''
 
 The [NUMBER_OF_ADVERTISERS] participents got [REWARD] Hive each, this means [REST] Hive of the Budget from [BUDGET] Hive were not used and go back to [SPONSOR].
 

@@ -26,14 +26,12 @@ client.call('condenser_api', 'get_account_history', [username, -1, 1000])
         // Filtern Sie die Transaktionen der letzten 7 Tage
         let transactionsLastSevenDays = result.filter(transaction => {
             let transactionDate = new Date(transaction[1].timestamp + 'Z');
-            return transactionDate >= sevenDaysAgo && transaction[1].op[0] === 'transfer';
+            return transactionDate >= sevenDaysAgo && 
+            transaction[1].op[0] === 'transfer' && 
+            transaction[1].op[1].memo.toLowerCase().includes('versuche');  // Bitte Versuche durch Transaction-ID ersetzen
         });
 
-        // Drucken Sie die Transaktionen der letzten 7 Tage
-        //console.log('Transaktionen der letzten 7 Tage: ', transactionsLastSevenDays);
         transactionsLastSevenDays.forEach(transaction => {
-            // console.log('Transaction: ', transaction);
-            // console.log('Inhalt des "op" -Arrays: ', transaction[1].op);
             console.log('Transaction: ', JSON.stringify(transaction, null, 2));
         });
         fs.writeFileSync('authorsPaid_' + campaignID + '.json', JSON.stringify(transactionsLastSevenDays, null, 2));
