@@ -1,0 +1,62 @@
+[
+  [
+    1758,
+    {
+      "trx_id": "ecc6ea6beb395a6a1a932a36baa1c07e33848c41",
+      "block": 81183120,
+      "trx_in_block": 31,
+      "op_in_trx": 0,
+      "virtual_op": false,
+      "timestamp": "2023-12-20T06:51:54",
+      "op": [
+        "transfer",
+        {
+          "from": "advertisingbot2",
+          "to": "advertisingbot",
+          "amount": "1.000 HIVE",
+          "memo": "Mein erster Geldversende-Test"
+        }
+      ]
+    }
+  ],
+  [
+    1762,
+    {
+      "trx_id": "47fe21cdb93d5027a4c57ef50000f56c4682ee25",
+      "block": 81192395,
+      "trx_in_block": 15,
+      "op_in_trx": 0,
+      "virtual_op": false,
+      "timestamp": "2023-12-20T14:36:00",
+      "op": [
+        "transfer",
+        {
+          "from": "advertisingbot2",
+          "to": "detlev",
+          "amount": "0.001 HIVE",
+          "memo": "Meine ersten automatisierten Geldversende-Versuche"
+        }
+      ]
+    }
+  ],
+  [
+    1763,
+    {
+      "trx_id": "5d9dde5656c50b04f52cf6f414d6049abdf27000",
+      "block": 81192395,
+      "trx_in_block": 17,
+      "op_in_trx": 0,
+      "virtual_op": false,
+      "timestamp": "2023-12-20T14:36:00",
+      "op": [
+        "transfer",
+        {
+          "from": "advertisingbot2",
+          "to": "advertisingbot",
+          "amount": "0.001 HIVE",
+          "memo": "Meine ersten automatisierten Geldversende-Versuche"
+        }
+      ]
+    }
+  ]
+]

@@ -149,9 +149,7 @@ Now you can upload this MD-File to Hive.
 
 // Backlog:
 
-// PayTheAuthors
-* Übername von Hive Reward und Campagne-ID für den Memo-Text aus der COnfig Datei.
-
+JSON erstellen von der Auszahlung durch Advertisingbot2
 
 
 
@@ -178,6 +176,8 @@ Done in December 2023:
 - Optionaler Text in json-Config einfügen und auswerten.
 - Der Report soll auch angeben wie viel Geld vom Budget übrig geblieben ist
 
+// PayTheAuthors
+* Übername von Hive Reward und Campagne-ID für den Memo-Text aus der Config Datei.
 
 Done November 2023:
 - Doppelte Links ausblenden.

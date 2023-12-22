@@ -1,3 +1,11 @@
+const fs = require('fs');
+if (process.argv.length < 3) {
+  console.log("Please add a config file.");
+  process.exit(1);
+}
+const campaignConfig = require('./' + process.argv[2]);
+const campaignID = campaignConfig.campaignID;
+
 // Importieren Sie die dhive-Bibliothek
 const dhive = require('@hiveio/dhive');
 
@@ -28,6 +36,7 @@ client.call('condenser_api', 'get_account_history', [username, -1, 1000])
             // console.log('Inhalt des "op" -Arrays: ', transaction[1].op);
             console.log('Transaction: ', JSON.stringify(transaction, null, 2));
         });
+        fs.writeFileSync('authorsPaid_' + campaignID + '.json', JSON.stringify(transactionsLastSevenDays, null, 2));
     })
     .catch(err => {
         console.error('Es gab einen Fehler beim Abrufen der Account-Historie: ', err);
