@@ -27,13 +27,13 @@ let reward = campaignConfig.reward+" HIVE";
 for (let i = 0; i < campaignConfig.authors.length; i++) {
     let recipient = campaignConfig.authors[i].author;
     console.log("Empfänger = ", recipient, " Reward = ", reward, " Memo = ", memo); 
-    // hive.broadcast.transfer(privateKey, sender, recipient, reward, memo, function(err, result) {
-    //      if (err) {
-    //        console.error('Fehler beim Senden von HIVE:', err);
-    //      } else {
-    //        console.log('HIVE erfolgreich gesendet:', result);
-    //      }
-    //    });
+    hive.broadcast.transfer(privateKey, sender, recipient, reward, memo, function(err, result) {
+         if (err) {
+           console.error('Fehler beim Senden von HIVE:', err);
+         } else {
+           console.log('HIVE erfolgreich gesendet:', result);
+         }
+       });
   }
 
 

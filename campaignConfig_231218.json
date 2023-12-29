@@ -2,9 +2,9 @@
   "startDate": "2023-12-18",
   "campaignID": "231218_01",
   "budget": 20,
-  "reward": 2,
+  "reward": "2.000",
   "recipient": "Beer Community",
-  "advertisingText": "Subscribe to the beer community https://peakd.com/c/hive-187719/created",
+  "advertisingText": "Subscribe to the beer community  https://peakd.com/c/hive-187719/created",
   "optionalText": "The beer community is a open minded community with people who loves BEER, which is third most drunken liquid on earth. Meet people that share this experience. The community is as well the home the the Hive #BeerSaturday and the #BEER token. Join contests and win some of them. And send special greetings to @detlev, the founder of this community.",
   "sponsor": "@achimmertens",
   "numberOfDays": 8,
@@ -15,10 +15,19 @@
   "currentWeek": 51,
   "authors": [
     {
-      "author": "advertisingbot"
+      "author": "detlev"
     },
     {
-      "author": "detlev"
+      "author": "oasiskp2"
+    },
+    {
+      "author": "achimmertens"
+    },
+    {
+      "author": "sayury"
+    },
+    {
+      "author": "advertisingbot"
     }
   ]
 }

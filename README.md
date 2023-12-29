@@ -165,7 +165,12 @@ Now you can upload this MD-File to Hive.
 
 // Backlog:
 
-JSON erstellen von der Auszahlung durch Advertisingbot2
+- Bug: Tabelle zeigt zu wenig Personen an (ich vermute das Datum stimmt nicht)
+- Feature: Personen, denen Gelg bezahlt wurde, erhalten einen Flag in der Config JSON Datei
+- Feature: Im Titel vom Advertisingreprot Beispiel: (Week 51, For "Beer Community") einfügen
+- Bug: proof that the money has been send zeigt zu wenig Einträge an.
+- Bug: Ecency-Einträge kürzen das https raus und werden dann nicht mehr gefunden. Beispiel: "Subscribe to the beer community created/hive-187719"
+- Chore: Einige Groß und Kleinschreibungen sind noch mim AdvertisingReport drin.
 
 
 
@@ -194,6 +199,7 @@ Done in December 2023:
 
 // PayTheAuthors
 * Übername von Hive Reward und Campagne-ID für den Memo-Text aus der Config Datei.
+* JSON erstellen von der Auszahlung durch Advertisingbot2
 
 Done November 2023:
 - Doppelte Links ausblenden.
