@@ -130,14 +130,17 @@ async function fillTemplate(campaignConfig, campaignID, campaignUrl, dateRange, 
 }
 
 // Filtern der Datensätze basierend auf last_update und unique Authors:
-function datefilter(numberOfDays, recordset) {
-  console.log("numberOfDays: im dateFilter() = " + numberOfDays)
-  const currentDate = new Date();
-  const sevenDaysAgo = new Date();
-  sevenDaysAgo.setDate(currentDate.getDate() - numberOfDays);
+function datefilter(startDateString, endDateString, recordset) {
+  console.log("Im datefilter startDate = " + startDateString + ", endDate = " + endDateString)
+  const startDate = new Date(startDateString);
+  const endDate = new Date(endDateString);
+  // const sevenDaysAgo = new Date();
+ // const endDate = startDate+numberOfDays;
+  // console.log("End date: " + endDate);                             
+  //sevenDaysAgo.setDate(currentDate.getDate() - numberOfDays);
   const dateFilteredRecordset = recordset.filter((item) => {
     const lastUpdate = new Date(item.last_update);
-    return lastUpdate >= sevenDaysAgo && lastUpdate <= currentDate;
+    return lastUpdate >= startDate && lastUpdate <= endDate;
   });
   //let uniqueAuthors = [];
   // let filteredRecordset = dateFilteredRecordset.filter((item) => {
@@ -188,7 +191,7 @@ function blackList(blackListedAccount, dateFilteredRecordset) {
 
 // Hauptfunktion
 async function main() {
-  let {dateFrame} = getDateFrame(startDate, numberOfDays);
+  let {dateFrame, endDateString} = getDateFrame(startDate, numberOfDays);
   console.log("dateFrame:", dateFrame, "numberOfDays:", numberOfDays);
   const datasource = 'sql'  // 'sql' or 'file'
   let recordset; // Variable initialisieren für die If-Klausel
@@ -204,7 +207,7 @@ async function main() {
       recordset = JSON.parse(data);
     }
     // Datensatz auf dateRange Tage begrenzen
-    const dateFilteredRecordset = datefilter(numberOfDays, recordset);
+    const dateFilteredRecordset = datefilter(startDate, endDateString.slice(0, 10), recordset);
     await dataExtractAndAppend(dateFilteredRecordset);
     // Filtern, dass anobel (und später weitere Peronen) nicht ausgewertet werden
     var blacklistFilteredRecordset = blackList('advertisingbot2', dateFilteredRecordset);

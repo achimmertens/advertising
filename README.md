@@ -166,7 +166,7 @@ Now you can upload this MD-File to Hive.
 // Backlog:
 
 - Bug: Tabelle zeigt zu wenig Personen an (ich vermute das Datum stimmt nicht)
-- Feature: Personen, denen Gelg bezahlt wurde, erhalten einen Flag in der Config JSON Datei
+- Feature: Personen, denen Geld bezahlt wurde, erhalten einen Flag in der Config JSON Datei und erscheinen dort nur einmal.
 - Feature: Im Titel vom Advertisingreprot Beispiel: (Week 51, For "Beer Community") einfügen
 - Bug: proof that the money has been send zeigt zu wenig Einträge an.
 - Bug: Ecency-Einträge kürzen das https raus und werden dann nicht mehr gefunden. Beispiel: "Subscribe to the beer community created/hive-187719"
