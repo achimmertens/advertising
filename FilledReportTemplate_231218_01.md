@@ -1,4 +1,4 @@
-Winners Of The Hive Marketing Campaign 231218_01
+Winners Of The Hive Marketing Campaign 231218_01, [WEEK] for [RECIPIENT]
 
 Hello Hivers, Advertisers, Influencers, Contesters and all the rest,
 
@@ -19,8 +19,8 @@ https://peakd.com/hive-154303/@advertisingbot2/hive-marketing-campaign-23121801-
 # Here are the participants of the last week:
 |Date|Amount Hive|Participant|Reputation|Number of Followers|Url|Image|
 |-|-|-|-|-|-|-|
-|2023-12-23T05:11|2.000|@detlev|934652.52|5728|https://peakd.com/hive-187719/@detlev/beersaturday-338|![](https://i.imgur.com/d7bSzo0.jpg)|
-|2023-12-22T11:01|2.000|@achimmertens|72935.74|1131|https://peakd.com/hive-155221/@achimmertens/20231222t110103376z|![01_BoughtALiveByTime.png](https://f005.backblazeb2.com/file/Hive-Upload/screenshots_2023-12-22/Alive/01_BoughtAliveByTime.png)|
+|2023-12-23T05:11|2.000|@detlev|939656.63|5729|https://peakd.com/hive-187719/@detlev/beersaturday-338|![](https://i.imgur.com/d7bSzo0.jpg)|
+|2023-12-22T11:01|2.000|@achimmertens|72982.54|1131|https://peakd.com/hive-155221/@achimmertens/20231222t110103376z|![01_BoughtALiveByTime.png](https://f005.backblazeb2.com/file/Hive-Upload/screenshots_2023-12-22/Alive/01_BoughtAliveByTime.png)|
 |2023-12-20T05:51|2.000|@advertisingbot|69.10|2|https://peakd.com/hive-167922/@advertisingbot/there-are-still-2-hive-to-earn-by-just-writing-one-sentence|null|
 
 

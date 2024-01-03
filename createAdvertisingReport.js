@@ -101,7 +101,9 @@ async function fillTemplate(campaignConfig, campaignID, campaignUrl, dateRange, 
     tableString=tableString+'|'+lastUpdateTrunc+'|'+reward+'|@'+author+'|'+(authorReputation/1000000000).toFixed(2)+'|'+NumberOfFollowers+'|'+weburl+'|'+firstImageUrl+'|\n';
     numberOfAdvertisers = i;
     //campaignConfig.author[i] = author
-    campaignConfig.authors.push({ "author": author });
+    if (!campaignConfig.authors.find(a => a.author === author)) {
+      campaignConfig.authors.push({ "author": author });
+    }
   }
   let rest = budget - (numberOfAdvertisers+1)*reward;
   filledTemplate = filledTemplate.replace(`[TABLE]`, tableString);

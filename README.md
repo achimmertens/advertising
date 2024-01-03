@@ -164,8 +164,6 @@ Now you can upload this MD-File to Hive.
 
 
 // Backlog:
-
-- Bug: Tabelle zeigt zu wenig Personen an (ich vermute das Datum stimmt nicht)
 - Feature: Personen, denen Geld bezahlt wurde, erhalten einen Flag in der Config JSON Datei und erscheinen dort nur einmal.
 - Feature: Im Titel vom Advertisingreprot Beispiel: (Week 51, For "Beer Community") einfügen
 - Bug: proof that the money has been send zeigt zu wenig Einträge an.
@@ -176,7 +174,8 @@ Now you can upload this MD-File to Hive.
 
 
 - 
-
+Done in January 2024:
+- Bug: Tabelle zeigt zu wenig Personen an (ich vermute das Datum stimmt nicht)
 
 Done in December 2023:
 - created README.md
