@@ -18,6 +18,8 @@ const startDate = campaignConfig.startDate;
 const optionalText = campaignConfig.optionalText;
 const lastWeek = campaignConfig.lastWeek;
 const tags = campaignConfig.tags;
+const currentWeek = campaignConfig.currentWeek;
+const recipient = campaignConfig.recipient;
 // Todo: title = campaignConfig.campaignURL - https:/...
 const getMetaData = require('./getMetaData');
 const getFollower = require('./getFollower.js');
@@ -74,7 +76,7 @@ function modifyUrl(url) {
 }
 
 // Funktion zum Ersetzen der Platzhalter in der Vorlagendatei
-async function fillTemplate(campaignConfig, campaignID, campaignUrl, dateRange, recordset, maxAdvertisers, reward, budget, sponsor) {
+async function fillTemplate(campaignConfig, campaignID, campaignUrl, currentWeek, dateRange, recordset, maxAdvertisers, reward, budget, sponsor, recipient) {
   const template = fs.readFileSync('ReportTemplate.md', 'utf8');
   let tableString = '';
   let filledTemplate = template;
@@ -111,6 +113,8 @@ async function fillTemplate(campaignConfig, campaignID, campaignUrl, dateRange, 
   filledTemplate = filledTemplate.replace(`[CAMPAIGN_ID]`,campaignID);
   filledTemplate = filledTemplate.replace(`[CAMPAIGN_ID]`,campaignID);
   filledTemplate = filledTemplate.replace(`[CAMPAIGN_URL]`,campaignUrl);
+  filledTemplate = filledTemplate.replace(`[CURRENTWEEK]`,currentWeek);
+  filledTemplate = filledTemplate.replace(`[RECIPIENT]`,recipient);
   filledTemplate = filledTemplate.replace(`[DATE_FRAME]`,dateRange);
   filledTemplate = filledTemplate.replace(`[REWARD]`,reward);
   filledTemplate = filledTemplate.replace(`[REST]`,rest);
@@ -214,7 +218,7 @@ async function main() {
     // Filtern, dass anobel (und später weitere Peronen) nicht ausgewertet werden
     var blacklistFilteredRecordset = blackList('advertisingbot2', dateFilteredRecordset);
     // Vorlage mit Recordset füllen
-    var filledTemplate = await fillTemplate(campaignConfig, campaignID, campaignUrl, dateFrame, JSON.stringify(blacklistFilteredRecordset), maxAdvertisers,reward, budget, sponsor);
+    var filledTemplate = await fillTemplate(campaignConfig, campaignID, campaignUrl, currentWeek, dateFrame, JSON.stringify(blacklistFilteredRecordset), maxAdvertisers,reward, budget, sponsor,recipient);
     fs.writeFileSync('FilledReportTemplate_' + campaignID + '.md', filledTemplate);
     fs.writeFileSync('dateFilteredRecordset.json', JSON.stringify(dateFilteredRecordset));
     console.log('FilledReportTemplate_' + campaignID + '.md was written successfully');

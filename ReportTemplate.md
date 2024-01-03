@@ -1,4 +1,4 @@
-Winners Of The Hive Marketing Campaign [CAMPAIGN_ID], [WEEK] for [RECIPIENT]
+Winners Of The Hive Marketing Campaign [CAMPAIGN_ID], Week [CURRENTWEEK] for "[RECIPIENT]"
 
 Hello Hivers, Advertisers, Influencers, Contesters and all the rest,
 
