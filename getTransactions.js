@@ -5,6 +5,7 @@ if (process.argv.length < 3) {
 }
 const campaignConfig = require('./' + process.argv[2]);
 const campaignID = campaignConfig.campaignID;
+const campaignUrl = campaignConfig.campaignUrl;
 
 // Importieren Sie die dhive-Bibliothek
 const dhive = require('@hiveio/dhive');
@@ -18,7 +19,7 @@ let username = 'advertisingbot2';
 // Definieren Sie das aktuelle Datum und das Datum vor 7 Tagen
 let currentDate = new Date();
 let sevenDaysAgo = new Date();
-sevenDaysAgo.setDate(currentDate.getDate() - 7);
+sevenDaysAgo.setDate(currentDate.getDate() - 30);
 
 // Rufen Sie die Account-Historie ab
 client.call('condenser_api', 'get_account_history', [username, -1, 1000])
@@ -28,7 +29,7 @@ client.call('condenser_api', 'get_account_history', [username, -1, 1000])
             let transactionDate = new Date(transaction[1].timestamp + 'Z');
             return transactionDate >= sevenDaysAgo && 
             transaction[1].op[0] === 'transfer' && 
-            transaction[1].op[1].memo.toLowerCase().includes('versuche');  // Bitte Versuche durch Transaction-ID ersetzen
+            transaction[1].op[1].memo.toLowerCase().includes(campaignUrl);  // Bitte Versuche durch Transaction-ID ersetzen
         });
 
         transactionsLastSevenDays.forEach(transaction => {
