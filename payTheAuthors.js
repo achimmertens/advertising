@@ -26,14 +26,27 @@ let reward = campaignConfig.reward+" HIVE";
 
 for (let i = 0; i < campaignConfig.authors.length; i++) {
     let recipient = campaignConfig.authors[i].author;
+    let wasPayed = campaignConfig.authors[i].payed;
     console.log("Empfänger = ", recipient, " Reward = ", reward, " Memo = ", memo); 
-    hive.broadcast.transfer(privateKey, sender, recipient, reward, memo, function(err, result) {
-         if (err) {
-           console.error('Fehler beim Senden von HIVE:', err);
-         } else {
-           console.log('HIVE erfolgreich gesendet:', result);
-         }
-       });
+    if (!wasPayed) {
+      campaignConfig.authors[i].payed = reward;
+      // hive.broadcast.transfer(privateKey, sender, recipient, reward, memo, function(err, result) {
+      //      if (err) {
+      //        console.error('Fehler beim Senden von HIVE:', err);
+      //      } else {
+      //        console.log('HIVE erfolgreich gesendet:', result);
+    
+      //      }
+      //    });
+      console.log("Der Empfänger = ", recipient, " wurde soeben bezahlt mit ", reward);
+      fs.writeFile(process.argv[2], JSON.stringify(campaignConfig, null, 2), (err) => {
+        if (err) throw err;
+        console.log('The file has been saved!');
+      });
+    }
+    else {
+      console.log('The Author', recipient, " was already paid.");
+    }
   }
 
 
