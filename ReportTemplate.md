@@ -1,23 +1,23 @@
-Winners Of The Hive Marketing Campaign [CAMPAIGN_ID], Week [CURRENTWEEK] for "[RECIPIENT]"
+Winners Of The Hive Marketing Campaign [CAMPAIGN_ID], Week [CURRENTWEEK] For "[RECIPIENT]"
 
 Hello Hivers, Advertisers, Influencers, Contesters and all the rest,
 
 this is the
-# Hive Marketing Campaign Report from [DATE_FRAME], Nr. [CAMPAIGN_ID].
+# Hive Marketing Campaign Report From [DATE_FRAME], Nr. [CAMPAIGN_ID].
 ![HIVE Marketing.png](https://files.peakd.com/file/peakd-hive/achimmertens/AKqchzabeuVfZ4Dio3CipS4qSJMBALn2bcSRbCxWziyEqTSacinMkaF6h3jk4as.png)
 *[origin](https://photofunia.com/)*
 
 #### Campaign URL: 
 [CAMPAIGN_URL]
 
-#### Advertising text: 
+#### Advertising Text: 
 "[ADVERTISING_TEXT]"
 
 #### Optional Text: 
 "[OPTIONAL_TEXT]"
 
-# Here are the participants of the last week:
-|Date|Amount Hive|Participant|Reputation|Number of Followers|Url|Image|
+# Here Are The Participants Of The Last Week:
+|Date|Amount Hive|Participant|Reputation|Number Of Followers|Url|Image|
 |-|-|-|-|-|-|-|
 [TABLE]
 
@@ -31,10 +31,10 @@ Proof, that the money has already been sent (See also https://peakd.com/@adverti
 [IMAGE_SEND_MONEY]
 ```
 
-The [NUMBER_OF_ADVERTISERS] participents got [REWARD] Hive each, this means [REST] Hive of the Budget from [BUDGET] Hive were not used and go back to [SPONSOR].
+The [NUMBER_OF_ADVERTISERS] participents got [REWARD] Hive each, this means [REST] Hive of the budget from [BUDGET] Hive were not used and go back to [SPONSOR].
 
 ---
-# Status of this "decentral advertising" project
+# Status Of This "decentral advertising" Project
 
 [LAST_WEEK]
 

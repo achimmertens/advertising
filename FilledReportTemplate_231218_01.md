@@ -11,7 +11,7 @@ this is the
 https://peakd.com/hive-154303/@advertisingbot2/hive-marketing-campaign-23121801-week-51-for-beer-community
 
 #### Advertising text: 
-"Subscribe to the beer community"
+"Subscribe to the beer community https://peakd.com/c/hive-187719/created"
 
 #### Optional Text: 
 "The beer community is a open minded community with people who loves BEER, which is third most drunken liquid on earth. Meet people that share this experience. The community is as well the home the the Hive #BeerSaturday and the #BEER token. Join contests and win some of them. And send special greetings to @detlev, the founder of this community."
@@ -19,9 +19,9 @@ https://peakd.com/hive-154303/@advertisingbot2/hive-marketing-campaign-23121801-
 # Here are the participants of the last week:
 |Date|Amount Hive|Participant|Reputation|Number of Followers|Url|Image|
 |-|-|-|-|-|-|-|
-|2023-12-23T05:11|2.000|@detlev|939658.68|5729|https://peakd.com/hive-187719/@detlev/beersaturday-338|![](https://i.imgur.com/d7bSzo0.jpg)|
-|2023-12-22T17:46|2.000|@oasiskp2|13123.02|56|https://peakd.com/hive-187719/@oasiskp2/campaign|null|
-|2023-12-22T11:01|2.000|@achimmertens|72982.54|1131|https://peakd.com/hive-155221/@achimmertens/20231222t110103376z|![01_BoughtALiveByTime.png](https://f005.backblazeb2.com/file/Hive-Upload/screenshots_2023-12-22/Alive/01_BoughtAliveByTime.png)|
+|2023-12-23T05:11|2.000|@detlev|943349.90|5732|https://peakd.com/hive-187719/@detlev/beersaturday-338|![](https://i.imgur.com/d7bSzo0.jpg)|
+|2023-12-22T17:46|2.000|@oasiskp2|13537.03|56|https://peakd.com/hive-187719/@oasiskp2/campaign|null|
+|2023-12-22T11:01|2.000|@achimmertens|73111.84|1131|https://peakd.com/hive-155221/@achimmertens/20231222t110103376z|![01_BoughtALiveByTime.png](https://f005.backblazeb2.com/file/Hive-Upload/screenshots_2023-12-22/Alive/01_BoughtAliveByTime.png)|
 |2023-12-20T05:51|2.000|@advertisingbot|69.10|2|https://peakd.com/hive-167922/@advertisingbot/there-are-still-2-hive-to-earn-by-just-writing-one-sentence|null|
 
 

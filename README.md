@@ -165,9 +165,11 @@ Now you can upload this MD-File to Hive.
 
 // Backlog:
 
-- Bug: proof that the money has been send zeigt zu wenig Einträge an.
-- Bug: Ecency-Einträge kürzen das https raus und werden dann nicht mehr gefunden. Beispiel: "Subscribe to the beer community created/hive-187719"
-- Chore: Einige Groß und Kleinschreibungen sind noch mim AdvertisingReport drin.
+
+
+- Chore: Einige Groß und Kleinschreibungen sind noch im AdvertisingReport drin.
+- Feat: Add a list of old members to the new campaign to ask to join again. Create a new variable in the config file for this list.
+- Feat: Create a scratch config file with all necessary variables filled in.
 
 
 
@@ -177,6 +179,8 @@ Done in January 2024:
 - Bug: Tabelle zeigt zu wenig Personen an (ich vermute das Datum stimmt nicht)
 - Feature: Personen, denen Geld bezahlt wurde, erhalten einen Flag in der Config JSON Datei und erscheinen dort nur einmal.
 - Feature: Im Titel vom Advertisingreprot Beispiel: (Week 51, For "Beer Community") einfügen
+- Bug: fixes proof that the money has been send zeigt zu wenig Einträge an.
+- Bug: Ecency-Einträge kürzen das https raus und werden dann nicht mehr gefunden. Beispiel: "Subscribe to the beer community created/hive-187719"
 
 Done in December 2023:
 - created README.md

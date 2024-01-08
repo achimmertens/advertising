@@ -38,13 +38,23 @@ const config = {
 };
 
 // Funktion zum Ausführen des SQL-Skripts
+
 async function executeSQLScript(searchParameter) {
   console.log('searchParameter = ', searchParameter);
   try {
     // Verbindung zum SQL Server herstellen
     await sql.connect(config);
+    // Extract URL from the searchParameter
+    const urlRegex = /(https?:\/\/[^ ]*)/;
+    const urlMatch = searchParameter.match(urlRegex);
+    let urlPath = '';
+    // Check if there's a match for the URL, independend from the urlPath
+    if (urlMatch && urlMatch[1]) {
+      const url = new URL(urlMatch[1]);
+      urlPath = url.pathname + url.search;
+    }
     const queryTemplate = fs.readFileSync('HiveSQLQuery.sql', 'utf8');
-    const query = queryTemplate.replace(/!CHARY/g, searchParameter);
+    const query = queryTemplate.replace(/!CHARY/g, urlPath);
     const result = await sql.query(query);
     console.log("Result of the Query = ", result.recordset);
     await sql.close();
@@ -53,7 +63,6 @@ async function executeSQLScript(searchParameter) {
     console.error(error);
   }
 }
-
 
 // Funktion zum Extrahieren des Accountnamens aus der URL
 function extractAccountFromUrl(url) {
@@ -140,33 +149,11 @@ function datefilter(startDateString, endDateString, recordset) {
   console.log("Im datefilter startDate = " + startDateString + ", endDate = " + endDateString)
   const startDate = new Date(startDateString);
   const endDate = new Date(endDateString);
-  // const sevenDaysAgo = new Date();
- // const endDate = startDate+numberOfDays;
-  // console.log("End date: " + endDate);                             
-  //sevenDaysAgo.setDate(currentDate.getDate() - numberOfDays);
   const dateFilteredRecordset = recordset.filter((item) => {
     const lastUpdate = new Date(item.last_update);
     return lastUpdate >= startDate && lastUpdate <= endDate;
   });
-  //let uniqueAuthors = [];
-  // let filteredRecordset = dateFilteredRecordset.filter((item) => {
-  //   if (!uniqueAuthors.includes(item.author)) {
-  //     uniqueAuthors.push(item.author);
-  //     return true;
-  //   }
-  //   return false;
-  // });
-
   let existingAuthors = new Set(campaignConfig.authors.map(a => a.author)); // Ein Set mit den vorhandenen Autoren erstellen
-
-  // let filteredRecordset = dateFilteredRecordset.filter((item) => {
-  //   if (!existingAuthors.has(item.author)) { // Überprüfen, ob der Autor bereits im Set existiert
-  //     existingAuthors.add(item.author); // Autor zum Set hinzufügen
-  //     return true;
-  //   }
-  //   return false;
-  // });
-
   return dateFilteredRecordset;
 }
 
