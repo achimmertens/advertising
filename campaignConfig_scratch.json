@@ -1,6 +1,6 @@
 {
-  "startDate": "",
-  "campaignID": "",
+  "startDate": "2023-12-18",
+  "campaignID": "231218_01",
   "budget": 20,
   "reward": "2.000",
   "recipient": "",
@@ -12,9 +12,8 @@
   "lastWeek": "",
   "lastCampaigns": "",
   "tags": "",
-  "currentWeek": 51,
   "authors": [],
-  "lastmembers": [
+  "lastMembers": [
     {
       "advertiser": "barbyjr"
     },
@@ -35,6 +34,18 @@
     },
     {
       "advertiser": "orlandobello"
+    },
+    {
+      "advertiser": "detlev"
+    },
+    {
+      "advertiser": "oasiskp2"
+    },
+    {
+      "advertiser": "advertisingbot"
+    },
+    {
+      "advertiser": "achimmertens"
     }
   ]
 }

@@ -5,6 +5,7 @@ if (process.argv.length < 3) {
   console.log("Please add a config file.");
   process.exit(1);
 }
+const campaignConfigScratch = require('./campaignConfig_scratch.json');
 const campaignConfig = require('./' + process.argv[2]);
 const budget = campaignConfig.budget; // Hive
 const reward = campaignConfig.reward; // Hive per participant
@@ -111,10 +112,14 @@ async function fillTemplate(campaignConfig, campaignID, campaignUrl, currentWeek
     lastUpdateTrunc=((JSON.stringify(recordsetObj[i].last_update)).slice(0, -9)).slice(1);
     tableString=tableString+'|'+lastUpdateTrunc+'|'+reward+'|@'+author+'|'+(authorReputation/1000000000).toFixed(2)+'|'+NumberOfFollowers+'|'+weburl+'|'+firstImageUrl+'|\n';
     numberOfAdvertisers = i;
-    //campaignConfig.author[i] = author
     if (!campaignConfig.authors.find(a => a.author === author)) {
       campaignConfig.authors.push({ "author": author });
     }
+    console.log("campaignConfigScratch.lastMembers = ", campaignConfigScratch.lastMembers)
+    // adds the advertisers to the campaignConfigScratch.json
+    if (!campaignConfigScratch.lastMembers.find(a => a.advertiser === author)) {
+      campaignConfigScratch.lastMembers.push({ "advertiser": author });
+   }   
   }
   let rest = budget - (numberOfAdvertisers+1)*reward;
   filledTemplate = filledTemplate.replace(`[TABLE]`, tableString);
@@ -134,12 +139,20 @@ async function fillTemplate(campaignConfig, campaignID, campaignUrl, currentWeek
   filledTemplate = filledTemplate.replace(`[LAST_WEEK]`,lastWeek);
   filledTemplate = filledTemplate.replace(`[TAGS]`,tags);
   let updatedJson = JSON.stringify(campaignConfig, null, 2);
+  let updatedCampaignConfigScratch = JSON.stringify(campaignConfigScratch, null, 2);
   fs.writeFile('./' + process.argv[2], updatedJson, 'utf8', (err) => {
     if (err) {
       console.error("Error writing the file: " + err);
       return;
     }
     console.log("The configfile has been updated successfully.");
+  });
+  fs.writeFile('./campaignConfig_scratch.json', updatedCampaignConfigScratch, 'utf8', (err) => {
+    if (err) {
+      console.error("Error writing the file: " + err);
+      return;
+    }
+    console.log("The config Scratch file has been updated successfully.");
   });
   return filledTemplate;
 }
