@@ -1,0 +1,40 @@
+{
+  "startDate": "",
+  "campaignID": "",
+  "budget": 20,
+  "reward": "2.000",
+  "recipient": "",
+  "advertisingText": "",
+  "optionalText": "",
+  "sponsor": "@achimmertens",
+  "numberOfDays": 8,
+  "campaignUrl": "",
+  "lastWeek": "",
+  "lastCampaigns": "",
+  "tags": "",
+  "currentWeek": 51,
+  "authors": [],
+  "lastmembers": [
+    {
+      "advertiser": "barbyjr"
+    },
+    {
+      "advertiser": "luisfe"
+    },
+    {
+      "advertiser": "azabache2021"
+    },
+    {
+      "advertiser": "sayury"
+    },
+    {
+      "advertiser": "lunafrances"
+    },
+    {
+      "advertiser": "elioe"
+    },
+    {
+      "advertiser": "orlandobello"
+    }
+  ]
+}
