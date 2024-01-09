@@ -8,21 +8,20 @@ For each campaing we need to set up the config file. Here is an example with exp
 
 ```
 {
-  "startDate": "2023-12-18",
-  "campaignID": "231218_01",
+  "startDate": "2024-01-10",
+  "campaignID": "240110_01",
   "budget": 20,
-  "reward": 2,
-  "recipient": "Beer Community",
-  "advertisingText": "Subscribe to the beer community https://peakd.com/c/hive-187719/created",
-  "optionalText": "The beer community is a open minded community with people who loves BEER, which is third most drunken liquid on earth. Meet people that share this experience. The community is as well the home the the Hive #BeerSaturday and the #BEER token. Join contests and win some of them. And send special greetings to @detlev, the founder of this community.",
+  "reward": "2.000",
+  "recipient": "@advertisingbot2",
+  "advertisingText": "Follow @advertisingbot2, an account that gives you mini-jobs and campaigns",
+  "optionalText": "@advertisingbot2 is an account, that was made for creating automated post. It creates reports for some token statistics, but also adverising campaigns. It checks the results and the work of the members and pays them their reward. It is an account from @achimmertens. ",
   "sponsor": "@achimmertens",
   "numberOfDays": 8,
-  "campaignUrl": "https://peakd.com/hive-154303/@advertisingbot2/hive-marketing-campaign-23121801-week-51-for-beer-community",
-  "lastWeek": "In my last weeks I was distracted from the uncertenties with my job. But at least luckily for me, the situation is getting clearer and I can calm down a bit. So I started again working in my spare time on the automatisation of the Hive marketing campaing creation code. I made some small progress in chore details.",
-  "lastCampaigns": "* https://peakd.com/advertising/@advertisingbot2/winners-of-the-hive-marketing-campaign-23120401 \n\r* https://peakd.com/hive-154303/@advertisingbot2/winners-of-marketing-campaing-23111001\n\r* https://peakd.com/hive-154303/@advertisingbot2/winners-of-the-advertising-contest-from-last-week",
-  "tags": "beer",
-  "currentWeek": 51,
-  "authors": []
+  "lastWeekCampaign": "Last week I managed to work good on the automation of my advertising process. At the moment I still have some manual work, but it gets less. I have build in some new features, like a list of the members of the last campaigns, which help me to stay in contact for new offers. So, stay tuned, I have not finished yet, the work goes on ;-)",
+  "lastWeekReport": "",
+  "lastCampaigns": "* https://peakd.com/advertising/@advertisingbot2/winners-of-the-hive-marketing-campaign-23120401 \n\r* https://peakd.com/hive-154303/@advertisingbot2/winners-of-marketing-campaing-23111001\n\r* https://peakd.com/hive-154303/@advertisingbot2/winners-of-the-advertising-contest-from-last-week\n\r* https://peakd.com/hive-154303/@advertisingbot2/winners-of-the-hive-marketing-campaign-23121801-week-51-for-beer-community",
+  "tags": "marketing campaign contest challenge hive advertising",
+  "authors": [],
 }
 ```
 
@@ -48,10 +47,12 @@ For each campaing we need to set up the config file. Here is an example with exp
    -  Must be filled. This is the period of the number of days the campaing is running. After that the money has to be paid out and the report has to be made .
 -  "campaignUrl"
    -  This will be filled automatically.
--  "lastWeek"
-   -  Must be filled. It contains some text about the status or the things I have done last week (to make this report more vivid and interesting).
+-  "lastWeekCampaign"
+   -  Must be filled. It contains some text about the status or the things I have done last week before I start the campaign (to make this report more vivid and interesting).
+-  "lastWeekReport"
+   -  Must be filled. It contains some text about the status or the things I have done last week before I start the report (to make this report more vivid and interesting).
 -  "lastCampaigns"
-   -  Must be filled. It contains some example of the last successfull campaigns.
+   -  Must be filled. It contains some example of the last successfull campaigns (URLs of the advertising reports).
 -  "tags"
    -  optional. Max three words in lowercase divided by spaces.
 -  "currentWeek"

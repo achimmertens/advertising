@@ -1,7 +1,9 @@
 const fs = require('fs');
-const config = require('./' + process.argv[2]);
 const getDateFrame = require('./getDateFrame.js');
-
+const campaignConfig_scratch = require('./campaignConfig_scratch.json');
+let lastMembers = campaignConfig_scratch.lastMembers.map(member => '@' + member.advertiser);
+lastMembers = lastMembers.join(', ');
+const config = require('./' + process.argv[2]);
 const budget = config.budget; // Hive
 console.log("Budget: " + budget);
 const reward = config.reward; // Hive per participant
@@ -13,7 +15,7 @@ const sponsor = config.sponsor;
 const numberOfDays = config.numberOfDays;
 const startDate = config.startDate;
 const campaignId = config.campaignID;
-const lastweek = config.lastWeek;
+const lastweek = config.lastWeekCampaign;
 const lastCampaigns = config.lastCampaigns;
 const tags = config.tags;
 // let today = new Date();
@@ -32,7 +34,7 @@ function getCurrentWeek() {
   }
 
 
-async function fillTemplate(campaignId, dateFrame, currentWeek, sponsor, recipient, advertisingText, optionalText, maxAdvertisers, reward, lastCampaigns, tags) {
+async function fillTemplate(lastMembers, campaignId, dateFrame, currentWeek, sponsor, recipient, advertisingText, optionalText, maxAdvertisers, reward, lastCampaigns, tags) {
     // Vorlagendatei lesen
     const template = fs.readFileSync('campaignTemplate.md', 'utf8');
     let filledTemplate = template;
@@ -58,6 +60,8 @@ async function fillTemplate(campaignId, dateFrame, currentWeek, sponsor, recipie
     console.log("last Campaigns = ", lastCampaigns);
     filledTemplate = filledTemplate.replace(`[TAGS]`, tags);
     console.log("Tags = ", tags);
+    filledTemplate = filledTemplate.replace(`[LASTMEMBERS]`, lastMembers);
+    console.log("Tags = ", tags);
     return filledTemplate;
 }
 
@@ -79,7 +83,7 @@ async function main() {
   let currentWeek = getCurrentWeek();
   console.log("Die aktuelle Kalenderwoche ist: " + currentWeek);
   try {
-    var filledTemplate = await fillTemplate(campaignId, dateFrame, currentWeek, sponsor, recipient, advertisingText, optionalText, maxAdvertisers, reward, lastCampaigns, tags);
+    var filledTemplate = await fillTemplate(lastMembers, campaignId, dateFrame, currentWeek, sponsor, recipient, advertisingText, optionalText, maxAdvertisers, reward, lastCampaigns, tags);
     fs.writeFileSync('Campaign' + campaignId + '.md', filledTemplate);
   } catch (error) {
     console.error(error);

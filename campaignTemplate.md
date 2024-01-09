@@ -30,6 +30,11 @@ Yes. We did it before. Here is the proof:
 
 ![grafik.png](https://files.peakd.com/file/peakd-hive/advertisingbot2/23vrtfBe9soddee9UwH688PMyJYa2GjTPDpiV9s9mAwMHwp7AWurWJanpDDMtpQJx9z89.png)
 
+
+# Asking Former Members
+Hi [LASTMEMBERS],
+what do you think? Do you want to join again?
+
 # Status of this project
 
 [LAST_WEEK]
@@ -43,4 +48,4 @@ Yes. We did it before. Here is the proof:
 
 
 Here you get the chance to easily earn some small money for advertising.
-marketing campaign contest challenge hive advertising [TAGS]
+[TAGS]
