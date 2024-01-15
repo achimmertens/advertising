@@ -1,0 +1,55 @@
+{
+  "startDate": "2024-01-10",
+  "campaignID": "240110_01",
+  "budget": 20,
+  "reward": "2.000",
+  "recipient": "@advertisingbot2",
+  "advertisingText": "Follow @advertisingbot2, an account that gives you mini-jobs and campaigns",
+  "optionalText": "@advertisingbot2 is an account, that was made for creating automated post. It creates reports for some token statistics, but also adverising campaigns. It checks the results and the work of the members and pays them their reward. It is an account from @achimmertens. ",
+  "sponsor": "@achimmertens",
+  "numberOfDays": 8,
+  "lastWeekCampaign": "Last week I managed to work good on the automation of my advertising process. At the moment I still have some manual work, but it gets less. I have build in some new features, like a list of the members of the last campaigns, which help me to stay in contact for new offers. So, stay tuned, I have not finished yet, the work goes on ;-)",
+  "lastWeekReport": "",
+  "lastCampaigns": "* https://peakd.com/advertising/@advertisingbot2/winners-of-the-hive-marketing-campaign-23120401 \n\r* https://peakd.com/hive-154303/@advertisingbot2/winners-of-marketing-campaing-23111001\n\r* https://peakd.com/hive-154303/@advertisingbot2/winners-of-the-advertising-contest-from-last-week\n\r* https://peakd.com/hive-154303/@advertisingbot2/winners-of-the-hive-marketing-campaign-23121801-week-51-for-beer-community",
+  "tags": "marketing campaign contest challenge hive advertising",
+  "authors": [],
+  "lastMembers": [
+    {
+      "advertiser": "barbyjr"
+    },
+    {
+      "advertiser": "luisfe"
+    },
+    {
+      "advertiser": "azabache2021"
+    },
+    {
+      "advertiser": "sayury"
+    },
+    {
+      "advertiser": "lunafrances"
+    },
+    {
+      "advertiser": "elioe"
+    },
+    {
+      "advertiser": "orlandobello"
+    },
+    {
+      "advertiser": "detlev"
+    },
+    {
+      "advertiser": "oasiskp2"
+    },
+    {
+      "advertiser": "advertisingbot"
+    },
+    {
+      "advertiser": "achimmertens"
+    }
+  ],
+  "campaignUrl": "https://peakd.com/hive-154303/@advertisingbot2/hive-marketing-campaign-24011001-week-2-for-@advertisingbot2",
+  "currentWeek": 2,
+  "permlink": "hive-marketing-campaign-24011001-week-2-for-@advertisingbot2",
+  "title": "Hive Marketing Campaign 24011001 Week 2 For @advertisingbot2"
+}

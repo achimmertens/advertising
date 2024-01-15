@@ -20,6 +20,7 @@
     "@hiveio/dhive": "^1.2.8",
     "@hiveio/hive-js": "^2.0.7",
     "axios": "^1.6.0",
+    "moment": "^2.30.1",
     "mssql": "^10.0.1"
   }
 }

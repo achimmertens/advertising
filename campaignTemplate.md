@@ -1,5 +1,3 @@
-Hive Marketing Campaign [CAMPAIGN_ID] (Week [CURRENT_WEEK], For "[RECIPIENT]")
-
 Hello everyone who wants to earn some small money,
 
 here I announce the next advertising contest for week [CURRENT_WEEK] from sponsor [SPONSOR], period: [DATE_FRAME].
@@ -30,10 +28,11 @@ Yes. We did it before. Here is the proof:
 
 ![grafik.png](https://files.peakd.com/file/peakd-hive/advertisingbot2/23vrtfBe9soddee9UwH688PMyJYa2GjTPDpiV9s9mAwMHwp7AWurWJanpDDMtpQJx9z89.png)
 
+![grafik.png](https://files.peakd.com/file/peakd-hive/achimmertens/23wghGTaUFS6SsidPJ6d5QqyM3cxpzSj2PMQ8r2XZSWHeBAi2jC4e7JdmyTWL8DbtYTpc.png)
 
-# Asking Former Members
+# Inviting Former Members
 Hi [LASTMEMBERS],
-what do you think? Do you want to join again?
+what do you think? Do you want to join the campaign again?
 
 # Status of this project
 
@@ -44,8 +43,3 @@ what do you think? Do you want to join again?
 ![Questions.png](https://files.peakd.com/file/peakd-hive/achimmertens/AKKRqJt1qnuNodPEACGiuC9iauEfvSWwo3w9ACbwELDzPg5VpvwJCsfsA8ptwYH.png)
 
 *[origin of some images](https://photofunia.com/)*
----
-
-
-Here you get the chance to easily earn some small money for advertising.
-[TAGS]

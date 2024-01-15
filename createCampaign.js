@@ -17,7 +17,7 @@ const startDate = config.startDate;
 const campaignId = config.campaignID;
 const lastweek = config.lastWeekCampaign;
 const lastCampaigns = config.lastCampaigns;
-const tags = config.tags;
+//const tags = config.tags;
 // let today = new Date();
 // let nextWeek = new Date(today.getTime() + 7 * 24 * 60 * 60 * 1000); // Heutiges Datum plus 7 Tage in Millisekunden
 // let formattedToday = today.toISOString().split('T')[0]; // Formatierung des heutigen Datums
@@ -34,15 +34,12 @@ function getCurrentWeek() {
   }
 
 
-async function fillTemplate(lastMembers, campaignId, dateFrame, currentWeek, sponsor, recipient, advertisingText, optionalText, maxAdvertisers, reward, lastCampaigns, tags) {
+async function fillTemplate(lastMembers, campaignId, dateFrame, currentWeek, sponsor, recipient, advertisingText, optionalText, maxAdvertisers, reward, lastCampaigns) {
     // Vorlagendatei lesen
     const template = fs.readFileSync('campaignTemplate.md', 'utf8');
     let filledTemplate = template;
-    filledTemplate = filledTemplate.replace(`[CAMPAIGN_ID]`, campaignId);
-    filledTemplate = filledTemplate.replace(`[CURRENT_WEEK]`, currentWeek); // for each field once
     filledTemplate = filledTemplate.replace(`[CURRENT_WEEK]`, currentWeek); // for each field once
     filledTemplate = filledTemplate.replace(`[DATE_FRAME]`, dateFrame);
-    filledTemplate = filledTemplate.replace(`[RECIPIENT]`, recipient);
     console.log("Recipient = ",recipient);
     filledTemplate = filledTemplate.replace(`[SPONSOR]`, sponsor);
     console.log("Sponsor = ",sponsor);
@@ -58,16 +55,26 @@ async function fillTemplate(lastMembers, campaignId, dateFrame, currentWeek, spo
     console.log("Status of the last week = ", lastweek);
     filledTemplate = filledTemplate.replace(`[LAST_CAMPAIGNS]`, lastCampaigns);
     console.log("last Campaigns = ", lastCampaigns);
-    filledTemplate = filledTemplate.replace(`[TAGS]`, tags);
-    console.log("Tags = ", tags);
+   // filledTemplate = filledTemplate.replace(`[TAGS]`, tags);
+   // console.log("Tags = ", tags);
     filledTemplate = filledTemplate.replace(`[LASTMEMBERS]`, lastMembers);
-    console.log("Tags = ", tags);
+ //   console.log("Tags = ", tags);
     return filledTemplate;
 }
 
-function changeCampaignUrl(filePath, config, campaignUrl, currentWeek) {
+function addConfigParameters(filePath, config, campaignUrl, currentWeek) {
   config.campaignUrl = campaignUrl;
   config.currentWeek = currentWeek;
+  const urlParts = campaignUrl.split("@advertisingbot2/");
+  config.permlink = urlParts[1].replace('@', '');
+  const permlink = config.permlink;
+  const title2 = permlink.replace(/-/g, ' ');
+  // uppercase title
+  const title2Words = title2.split(' ');
+  for (let i = 0; i < title2Words.length; i++) {
+      title2Words[i] = title2Words[i].charAt(0).toUpperCase() + title2Words[i].slice(1);
+  }
+  config.title = title2Words.join(' ');
   let updatedJson = JSON.stringify(config, null, 2);
   fs.writeFile(filePath, updatedJson, 'utf8', (err) => {
     if (err) {
@@ -83,7 +90,7 @@ async function main() {
   let currentWeek = getCurrentWeek();
   console.log("Die aktuelle Kalenderwoche ist: " + currentWeek);
   try {
-    var filledTemplate = await fillTemplate(lastMembers, campaignId, dateFrame, currentWeek, sponsor, recipient, advertisingText, optionalText, maxAdvertisers, reward, lastCampaigns, tags);
+    var filledTemplate = await fillTemplate(lastMembers, campaignId, dateFrame, currentWeek, sponsor, recipient, advertisingText, optionalText, maxAdvertisers, reward, lastCampaigns);
     fs.writeFileSync('Campaign' + campaignId + '.md', filledTemplate);
   } catch (error) {
     console.error(error);
@@ -92,7 +99,12 @@ async function main() {
   let recipientChanged = recipient.replace(" ", "-").replace("_", "").toLowerCase();
   let campaignUrl = `https://peakd.com/hive-154303/@advertisingbot2/hive-marketing-campaign-${campaignIdChanged}-week-${currentWeek}-for-${recipientChanged}`;
   console.log(campaignUrl);
-  changeCampaignUrl('./' + process.argv[2], config, campaignUrl, currentWeek)
+  addConfigParameters('./' + process.argv[2], config, campaignUrl, currentWeek)
+  
+
+
+
+
 }
 
 
