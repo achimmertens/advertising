@@ -19,7 +19,20 @@
     "hive",
     "advertising"
   ],
-  "authors": [],
+  "authors": [
+    {
+      "author": "luisfe"
+    },
+    {
+      "author": "sayury"
+    },
+    {
+      "author": "cashheaven"
+    },
+    {
+      "author": "oasiskp2"
+    }
+  ],
   "lastMembers": [
     {
       "advertiser": "barbyjr"

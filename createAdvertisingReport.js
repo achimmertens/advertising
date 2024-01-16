@@ -45,15 +45,20 @@ async function executeSQLScript(searchParameter) {
   try {
     // Verbindung zum SQL Server herstellen
     await sql.connect(config);
-    // Extract URL from the searchParameter
-    const urlRegex = /(https?:\/\/[^ ]*)/;
-    const urlMatch = searchParameter.match(urlRegex);
-    let urlPath = '';
-    // Check if there's a match for the URL, independend from the urlPath
-    if (urlMatch && urlMatch[1]) {
-      const url = new URL(urlMatch[1]);
-      urlPath = url.pathname + url.search;
+    // Extract URL from the searchParameter (because of the ecency users )
+    let urlPath = searchParameter;
+    const urlMatch = searchParameter;
+    if (searchParameter.includes('https')) {
+      const urlRegex = /(https?:\/\/[^ ]*)/;
+      urlMatch = searchParameter.match(urlRegex);
+       // Check if there's a match for the URL, independend from the urlPath
+      if (urlMatch && urlMatch[1]) {
+        const url = new URL(urlMatch[1]);
+        urlPath = url.pathname + url.search;
+        console.log('urlPath = ', urlPath);
+      }
     }
+    console.log('urlMatch = ', urlMatch);
     const queryTemplate = fs.readFileSync('HiveSQLQuery.sql', 'utf8');
     const query = queryTemplate.replace(/!CHARY/g, urlPath);
     const result = await sql.query(query);
@@ -79,6 +84,12 @@ function modifyUrl(url) {
   const regex = /\/hive-.*?\/(@.*?)\//;
   const match = url.match(regex);
   if (match) {
+    const modifiedUrl = `https://peakd.com${url.split('#')[0]}`;
+    return modifiedUrl;
+  }
+  const regex2 = /\/splinterlands\/(@.*?)\//;
+  const match2 = url.match(regex2);
+  if (match2) {
     const modifiedUrl = `https://peakd.com${url.split('#')[0]}`;
     return modifiedUrl;
   }

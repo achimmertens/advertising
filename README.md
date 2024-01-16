@@ -167,8 +167,8 @@ Now you can upload this MD-File to Hive.
 // Backlog:
 
 
-- Feat: Add a list of old members to the new campaign to ask to join again. Create a new variable in the config file for this list.
-- Feat: Create a scratch config file with all necessary variables filled in.
+- bug: ecency writers are not found in the report.
+
 
 
 
@@ -181,6 +181,8 @@ Done in January 2024:
 - Bug: fixes proof that the money has been send zeigt zu wenig Einträge an.
 - Bug: Ecency-Einträge kürzen das https raus und werden dann nicht mehr gefunden. Beispiel: "Subscribe to the beer community created/hive-187719"
 - Chore: Einige Groß und Kleinschreibungen sind noch im AdvertisingReport drin.
+- Feat: Add a list of old members to the new campaign to ask to join again. Create a new variable in the config file for this list.
+- - Feat: Create a scratch config file with all necessary variables filled in.
 
 Done in December 2023:
 - created README.md
