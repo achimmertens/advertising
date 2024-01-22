@@ -9,7 +9,7 @@
   "sponsor": "@achimmertens",
   "numberOfDays": 8,
   "lastWeekCampaign": "Last week I managed to work good on the automation of my advertising process. At the moment I still have some manual work, but it gets less. I have build in some new features, like a list of the members of the last campaigns, which help me to stay in contact for new offers. So, stay tuned, I have not finished yet, the work goes on ;-)",
-  "lastWeekReport": "",
+  "lastWeekReport": "Oh, I had an exciting week. I struggeled with Hivewatcher / spaminator. I have several account and create several reports and this is all very close to spam. But at the end I think we found a good compromise and I can go on working here on Hive. For more details see my latests [tokenstats posts](https://peakd.com/@advertisingbot2/posts?filter=stats).",
   "lastCampaigns": "* https://peakd.com/advertising/@advertisingbot2/winners-of-the-hive-marketing-campaign-23120401 \n\r* https://peakd.com/hive-154303/@advertisingbot2/winners-of-marketing-campaing-23111001\n\r* https://peakd.com/hive-154303/@advertisingbot2/winners-of-the-advertising-contest-from-last-week\n\r* https://peakd.com/hive-154303/@advertisingbot2/winners-of-the-hive-marketing-campaign-23121801-week-51-for-beer-community",
   "tags": [
     "marketing",
@@ -21,16 +21,20 @@
   ],
   "authors": [
     {
-      "author": "luisfe"
+      "author": "luisfe",
+      "payed": "2.000 HIVE"
     },
     {
-      "author": "sayury"
+      "author": "sayury",
+      "payed": "2.000 HIVE"
     },
     {
-      "author": "cashheaven"
+      "author": "cashheaven",
+      "payed": "2.000 HIVE"
     },
     {
-      "author": "oasiskp2"
+      "author": "oasiskp2",
+      "payed": "2.000 HIVE"
     }
   ],
   "lastMembers": [

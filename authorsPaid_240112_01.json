@@ -1,0 +1,82 @@
+[
+  [
+    2463,
+    {
+      "op": [
+        "transfer",
+        {
+          "to": "oasiskp2",
+          "from": "advertisingbot2",
+          "memo": "Thank you for doing advertising with campaign https://peakd.com/hive-154303/@advertisingbot2/hive-marketing-campaign-24011201-week-2-for-@advertisingbot2",
+          "amount": "2.000 HIVE"
+        }
+      ],
+      "block": 82046645,
+      "trx_id": "93155cac821fe0bc591eda542c766e452daacc3a",
+      "op_in_trx": 0,
+      "timestamp": "2024-01-19T07:19:45",
+      "virtual_op": false,
+      "trx_in_block": 9
+    }
+  ],
+  [
+    2464,
+    {
+      "op": [
+        "transfer",
+        {
+          "to": "cashheaven",
+          "from": "advertisingbot2",
+          "memo": "Thank you for doing advertising with campaign https://peakd.com/hive-154303/@advertisingbot2/hive-marketing-campaign-24011201-week-2-for-@advertisingbot2",
+          "amount": "2.000 HIVE"
+        }
+      ],
+      "block": 82046645,
+      "trx_id": "24ad23a373eb20fa8794ae7946453464ff7e3bea",
+      "op_in_trx": 0,
+      "timestamp": "2024-01-19T07:19:45",
+      "virtual_op": false,
+      "trx_in_block": 10
+    }
+  ],
+  [
+    2465,
+    {
+      "op": [
+        "transfer",
+        {
+          "to": "sayury",
+          "from": "advertisingbot2",
+          "memo": "Thank you for doing advertising with campaign https://peakd.com/hive-154303/@advertisingbot2/hive-marketing-campaign-24011201-week-2-for-@advertisingbot2",
+          "amount": "2.000 HIVE"
+        }
+      ],
+      "block": 82046645,
+      "trx_id": "f450c5165c27b28de7784274b038884cb3ccb49d",
+      "op_in_trx": 0,
+      "timestamp": "2024-01-19T07:19:45",
+      "virtual_op": false,
+      "trx_in_block": 11
+    }
+  ],
+  [
+    2466,
+    {
+      "op": [
+        "transfer",
+        {
+          "to": "luisfe",
+          "from": "advertisingbot2",
+          "memo": "Thank you for doing advertising with campaign https://peakd.com/hive-154303/@advertisingbot2/hive-marketing-campaign-24011201-week-2-for-@advertisingbot2",
+          "amount": "2.000 HIVE"
+        }
+      ],
+      "block": 82046645,
+      "trx_id": "f2534a0d4e4028d887736f95929d6201c6298029",
+      "op_in_trx": 0,
+      "timestamp": "2024-01-19T07:19:45",
+      "virtual_op": false,
+      "trx_in_block": 14
+    }
+  ]
+]
