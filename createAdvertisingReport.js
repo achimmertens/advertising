@@ -47,7 +47,7 @@ async function executeSQLScript(searchParameter) {
     await sql.connect(config);
     // Extract URL from the searchParameter (because of the ecency users )
     let urlPath = searchParameter;
-    const urlMatch = searchParameter;
+    let urlMatch = searchParameter;
     if (searchParameter.includes('https')) {
       const urlRegex = /(https?:\/\/[^ ]*)/;
       urlMatch = searchParameter.match(urlRegex);
@@ -215,6 +215,7 @@ async function main() {
   try {
     if (datasource == 'sql') {
       // SQL-Skript ausführen - Hier den Suchtext eingeben:
+      console.log("advertisingText in der Main Funktion =", advertisingText);
       recordset = await executeSQLScript(advertisingText);
       fs.writeFileSync('exampleRecordSet.json', JSON.stringify(recordset));
     }
