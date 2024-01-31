@@ -1,0 +1,102 @@
+[
+  [
+    1947,
+    {
+      "trx_id": "207656ea66756dddd77813d43d06dd250e2e404e",
+      "block": 81359906,
+      "trx_in_block": 1,
+      "op_in_trx": 0,
+      "virtual_op": false,
+      "timestamp": "2023-12-26T10:17:24",
+      "op": [
+        "transfer",
+        {
+          "from": "advertisingbot2",
+          "to": "detlev",
+          "amount": "2.000 HIVE",
+          "memo": "Thank you for doing advertising with campaign https://peakd.com/hive-154303/@advertisingbot2/hive-marketing-campaign-23121801-week-51-for-beer-community"
+        }
+      ]
+    }
+  ],
+  [
+    1948,
+    {
+      "trx_id": "b9b47b963ceb218375b55b1b376da7aebf229d1f",
+      "block": 81359906,
+      "trx_in_block": 2,
+      "op_in_trx": 0,
+      "virtual_op": false,
+      "timestamp": "2023-12-26T10:17:24",
+      "op": [
+        "transfer",
+        {
+          "from": "advertisingbot2",
+          "to": "achimmertens",
+          "amount": "2.000 HIVE",
+          "memo": "Thank you for doing advertising with campaign https://peakd.com/hive-154303/@advertisingbot2/hive-marketing-campaign-23121801-week-51-for-beer-community"
+        }
+      ]
+    }
+  ],
+  [
+    1949,
+    {
+      "trx_id": "ea1aa45418e9560a1ab2cb4fd8a4a4f7d16c2d1e",
+      "block": 81359906,
+      "trx_in_block": 3,
+      "op_in_trx": 0,
+      "virtual_op": false,
+      "timestamp": "2023-12-26T10:17:24",
+      "op": [
+        "transfer",
+        {
+          "from": "advertisingbot2",
+          "to": "oasiskp2",
+          "amount": "2.000 HIVE",
+          "memo": "Thank you for doing advertising with campaign https://peakd.com/hive-154303/@advertisingbot2/hive-marketing-campaign-23121801-week-51-for-beer-community"
+        }
+      ]
+    }
+  ],
+  [
+    1950,
+    {
+      "trx_id": "6d50cae4c696846af8522e4d52ad6d9a17934c93",
+      "block": 81359906,
+      "trx_in_block": 4,
+      "op_in_trx": 0,
+      "virtual_op": false,
+      "timestamp": "2023-12-26T10:17:24",
+      "op": [
+        "transfer",
+        {
+          "from": "advertisingbot2",
+          "to": "sayury",
+          "amount": "2.000 HIVE",
+          "memo": "Thank you for doing advertising with campaign https://peakd.com/hive-154303/@advertisingbot2/hive-marketing-campaign-23121801-week-51-for-beer-community"
+        }
+      ]
+    }
+  ],
+  [
+    1951,
+    {
+      "trx_id": "b9c1351b543336d4227d095ce234fa3045933dd8",
+      "block": 81359906,
+      "trx_in_block": 5,
+      "op_in_trx": 0,
+      "virtual_op": false,
+      "timestamp": "2023-12-26T10:17:24",
+      "op": [
+        "transfer",
+        {
+          "from": "advertisingbot2",
+          "to": "advertisingbot",
+          "amount": "2.000 HIVE",
+          "memo": "Thank you for doing advertising with campaign https://peakd.com/hive-154303/@advertisingbot2/hive-marketing-campaign-23121801-week-51-for-beer-community"
+        }
+      ]
+    }
+  ]
+]

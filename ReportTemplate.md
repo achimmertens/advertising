@@ -1,38 +1,48 @@
-Hive Nobel Prize Rewards For Week 33 - 20 Hive - 3 Winners
-Hello hivers, curators, donators, helping people, and all others,
+Winners Of The Hive Marketing Campaign [CAMPAIGN_ID], Week [CURRENTWEEK] For "[RECIPIENT]"
 
-This is the
-# Hive Nobel Prizes Award For The Last Week
-The timeframe is from [DATE_FRAME].
+Hello Hivers, Advertisers, Influencers, Contesters and all the rest,
 
-![image.png](https://files.peakd.com/file/peakd-hive/anobel/23wgU5QrADfW17UpV728xedX7gC8tRcBDB9vDg8N39QbJU5cXyK6zcvLGPH28LwuTZYkk.png)
+this is the
+# Hive Marketing Campaign Report From [DATE_FRAME], Nr. [CAMPAIGN_ID].
+![HIVE Marketing.png](https://files.peakd.com/file/peakd-hive/achimmertens/AKqchzabeuVfZ4Dio3CipS4qSJMBALn2bcSRbCxWziyEqTSacinMkaF6h3jk4as.png)
+*[origin](https://photofunia.com/)*
 
-I am proud to announce, that I can send some money to people, which helped other people in recent days.
+#### Campaign URL: 
+[CAMPAIGN_URL]
 
-# Here are the winners of the last week:
+#### Advertising Text: 
+"[ADVERTISING_TEXT]"
 
-|Place|Amount Hive|Winner|First Ten Words|Url|Image|
-|-|-|-|-|-|-|
-|1.|10 Hive|@[AUTHOR1]|[REASON1]|[URL1]|[IMAGE1]|
-|2.|7 Hive|@[AUTHOR2]|[REASON2]|[URL2]|[IMAGE2]|
-|3.|3 Hive|@[AUTHOR3]|[REASON3]|[URL3]|[IMAGE3]|
+#### Optional Text: 
+"[OPTIONAL_TEXT]"
+
+# Here Are The Participants Of The Last Week:
+|Date|Amount Hive|Participant|Reputation|Number Of Followers|Url|Image|
+|-|-|-|-|-|-|-|
+[TABLE]
 
 
 
-The money has already been sent:
 
+
+Proof, that the money has already been sent (See also https://peakd.com/@advertisingbot2/wallet):
+
+```
 [IMAGE_SEND_MONEY]
-*Screenshot of the @anobel wallet from today*
+```
 
---- 
-![image.png](https://files.peakd.com/file/peakd-hive/anobel/23t79QKG7fJh2yqmZXxqsnHUieWodfrg8Q7iypCaG3HVexRxVugD3gnKqvvWfuNUyLXiY.png)
-![image.png](https://files.peakd.com/file/peakd-hive/anobel/23vsmbzaM8PtfucVYFSj5gtesXtWAG7YkhtXvUDXQARn9A4DXULKTLimnMvdWnZDnXxgg.png)
-*Workflow of the Nobelprize system*
-![image.png](https://files.peakd.com/file/peakd-hive/anobel/23tGVGGcMFppCQZggFSHaDkZpojPUSRBJzCh4C6y4xs3gU6Fdf3VtZtdzQ6tAgnTV2G1n.png)
+The [NUMBER_OF_ADVERTISERS] participents got [REWARD] Hive each, this means [REST] Hive of the budget from [BUDGET] Hive were not used and go back to [SPONSOR].
 
-Greeting, Anobel (alias Achim)
+---
+# Status Of This "decentral advertising" Project
 
+[LAST_WEEK]
 
 
-This weekly report of helping people shows who have won some Hive
-charity nobelprice nobel chary help donation report
+
+Greetings, Advertisingbot2 (alias Achim)
+
+
+
+These are the winners of the last advertising contest
+advertising contest microtask minijob report marketing campaign [TAGS]

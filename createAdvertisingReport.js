@@ -1,10 +1,30 @@
 const sql = require('mssql');
 const { password1 } = require('./config');
 const fs = require('fs');
-const { dateFrame } = require('./getDateFrame.js');
+if (process.argv.length < 3) {
+  console.log("Please add a config file.");
+  process.exit(1);
+}
+const campaignConfigScratch = require('./campaignConfig_scratch.json');
+const campaignConfig = require('./' + process.argv[2]);
+const budget = campaignConfig.budget; // Hive
+const reward = campaignConfig.reward; // Hive per participant
+const maxAdvertisers = budget/reward;
+const advertisingText = campaignConfig.advertisingText;
+const sponsor = campaignConfig.sponsor;
+const campaignID = campaignConfig.campaignID;
+const campaignUrl = campaignConfig.campaignUrl;
+const numberOfDays = campaignConfig.numberOfDays;
+const startDate = campaignConfig.startDate;
+const optionalText = campaignConfig.optionalText;
+const lastWeek = campaignConfig.lastWeekReport;
+const tags = campaignConfig.tags;
+const currentWeek = campaignConfig.currentWeek;
+const recipient = campaignConfig.recipient;
+// Todo: title = campaignConfig.campaignURL - https:/...
 const getMetaData = require('./getMetaData');
-//const getStakedChary = require('./getStakedChary');
-//const math = require('math');
+const getFollower = require('./getFollower.js');
+const getDateFrame = require('./getDateFrame.js');
 
 // Konfigurationsobjekt für die Verbindung zum SQL Server
 const config = {
@@ -19,39 +39,36 @@ const config = {
 };
 
 // Funktion zum Ausführen des SQL-Skripts
+
 async function executeSQLScript(searchParameter) {
+  console.log('searchParameter = ', searchParameter);
   try {
     // Verbindung zum SQL Server herstellen
     await sql.connect(config);
-
-    // SQL-Abfrage aus der Datei lesen
+    // Extract URL from the searchParameter (because of the ecency users )
+    let urlPath = searchParameter;
+    let urlMatch = searchParameter;
+    if (searchParameter.includes('https')) {
+      const urlRegex = /(https?:\/\/[^ ]*)/;
+      urlMatch = searchParameter.match(urlRegex);
+       // Check if there's a match for the URL, independend from the urlPath
+      if (urlMatch && urlMatch[1]) {
+        const url = new URL(urlMatch[1]);
+        urlPath = url.pathname + url.search;
+        console.log('urlPath = ', urlPath);
+      }
+    }
+    console.log('urlMatch = ', urlMatch);
     const queryTemplate = fs.readFileSync('HiveSQLQuery.sql', 'utf8');
-
-    // Parameter in der Vorlage ersetzen
-    const query = queryTemplate.replace(/!CHARY/g, searchParameter);
-
-    // SQL-Abfrage ausführen
+    const query = queryTemplate.replace(/!CHARY/g, urlPath);
     const result = await sql.query(query);
-
-    // Ergebnis verarbeiten
-    console.log(result.recordset);
-
-    // Verbindung schließen
+    console.log("Result of the Query = ", result.recordset);
     await sql.close();
     return result.recordset
   } catch (error) {
     console.error(error);
   }
 }
-
-// // Funktion zum Extrahieren der Zahl aus der Zeichenkette
-// function extractNumberFromChary(value) {
-//   const match = value.match(/!CHARY:(\d+)/);
-//   if (match) {
-//     return parseInt(match[1]);
-//   }
-//   return null;
-// }
 
 // Funktion zum Extrahieren des Accountnamens aus der URL
 function extractAccountFromUrl(url) {
@@ -70,107 +87,111 @@ function modifyUrl(url) {
     const modifiedUrl = `https://peakd.com${url.split('#')[0]}`;
     return modifiedUrl;
   }
+  const regex2 = /\/splinterlands\/(@.*?)\//;
+  const match2 = url.match(regex2);
+  if (match2) {
+    const modifiedUrl = `https://peakd.com${url.split('#')[0]}`;
+    return modifiedUrl;
+  }
   return null;
 }
 
 // Funktion zum Ersetzen der Platzhalter in der Vorlagendatei
-async function fillTemplate(dateRange, recordset) {
-  // Vorlagendatei lesen
+async function fillTemplate(campaignConfig, campaignID, campaignUrl, currentWeek, dateRange, recordset, maxAdvertisers, reward, budget, sponsor, recipient) {
   const template = fs.readFileSync('ReportTemplate.md', 'utf8');
-
-  // Recordset nach charyNumber sortieren
-  //recordset.sort((a, b) => b.charyNumber - a.charyNumber);
-
-  // Platzhalter ersetzen
+  let tableString = '';
   let filledTemplate = template;
   console.log('Filledtemplate = ' + filledTemplate);
   console.log('Recordset = ' + recordset);
   const recordsetObj = JSON.parse(recordset);
-  for (let i = 0; i < Math.min(recordsetObj.length, 5); i++) {
+  let numberOfAdvertisers = 0;
+  // loop until number of hits or maxAdvertisers is reached
+  for (let i = 0; i < Math.min(recordsetObj.length, maxAdvertisers); i++) {
     console.log('Filltemplate RecordsetObj[i]: ' + JSON.stringify(recordsetObj[i]));
     console.log('Author = ' + JSON.stringify(recordsetObj[i].author));
-    const author = recordsetObj[i].author //? recordset[i].account : `[AUTHOR${i + 1}]`;
+    const author = recordsetObj[i].author 
     console.log('author = ', author);
-    filledTemplate = filledTemplate.replace(`[AUTHOR${i + 1}]`, author);
+    const NumberOfFollowers = await getFollower(author);
     const weburl = recordsetObj[i].weburl;
     console.log('weburl = ', weburl);
-    filledTemplate = filledTemplate.replace(`[URL${i + 1}]`, weburl);
     const body = JSON.stringify(recordsetObj[i].body);
-    // truncate the body to the first 10 words
-    stringWithoutCR = body.replace(/\r/g, ''); // remove Carriege Return
-    const words = stringWithoutCR.split(' ');
-    const truncatedWords = words.slice(0, 10);
-    const truncatedBody = truncatedWords.join(' ');
-    if (!truncatedBody.endsWith('"')) {
-     truncatedBodyWithEnd = truncatedBody+' ..."';
-    }
-    else {
-      truncatedBodyWithEnd = truncatedBody;
-    }
-    console.log('truncatedBodyWithEnd = ', truncatedBodyWithEnd);
-    filledTemplate = filledTemplate.replace(`[REASON${i + 1}]`, truncatedBodyWithEnd);
-
-    // //const url = "/hive-150210/@alifkhan1995/todays-cleanplanet-activity--day-50---date-22082023-#@alifkhan1995/re-achimmertens-rzu2rc";
     const url = recordsetObj[i].url;
-    const [firstImageUrl, authorReputation] = await getMetaData(url);
-    filledTemplate = filledTemplate.replace(`[IMAGE${i + 1}]`, firstImageUrl);
+    const [firstImageUrl, authorReputation] = await getMetaData.getMetaData(url);
     console.log("authorReputation = ", authorReputation);
     recordset[i].originAuthorReputation = authorReputation;
+    console.log("NumberOfFollowers = ", NumberOfFollowers);
+    lastUpdateTrunc=((JSON.stringify(recordsetObj[i].last_update)).slice(0, -9)).slice(1);
+    tableString=tableString+'|'+lastUpdateTrunc+'|'+reward+'|@'+author+'|'+(authorReputation/1000000000).toFixed(2)+'|'+NumberOfFollowers+'|'+weburl+'|'+firstImageUrl+'|\n';
+    numberOfAdvertisers = i;
+    if (!campaignConfig.authors.find(a => a.author === author)) {
+      campaignConfig.authors.push({ "author": author });
+    }
+    console.log("campaignConfigScratch.lastMembers = ", campaignConfigScratch.lastMembers)
+    // adds the advertisers to the campaignConfigScratch.json
+    if (!campaignConfigScratch.lastMembers.find(a => a.advertiser === author)) {
+      campaignConfigScratch.lastMembers.push({ "advertiser": author });
+   }   
   }
-
-  // Datum im filledTemplate reinschreiben
-  // dateText = dateFrame(dateRange);
-  // filledTemplate = filledTemplate.replace(`[DATE_FRAME]`, dateText)
-
-  // Aktualisierte Vorlage zurückgeben
+  let rest = budget - (numberOfAdvertisers+1)*reward;
+  filledTemplate = filledTemplate.replace(`[TABLE]`, tableString);
+  filledTemplate = filledTemplate.replace(`[NUMBER_OF_ADVERTISERS]`, numberOfAdvertisers+1);
+  filledTemplate = filledTemplate.replace(`[CAMPAIGN_ID]`,campaignID);
+  filledTemplate = filledTemplate.replace(`[CAMPAIGN_ID]`,campaignID);
+  filledTemplate = filledTemplate.replace(`[CAMPAIGN_URL]`,campaignUrl);
+  filledTemplate = filledTemplate.replace(`[CURRENTWEEK]`,currentWeek);
+  filledTemplate = filledTemplate.replace(`[RECIPIENT]`,recipient);
+  filledTemplate = filledTemplate.replace(`[DATE_FRAME]`,dateRange);
+  filledTemplate = filledTemplate.replace(`[REWARD]`,reward);
+  filledTemplate = filledTemplate.replace(`[REST]`,rest);
+  filledTemplate = filledTemplate.replace(`[BUDGET]`,budget);
+  filledTemplate = filledTemplate.replace(`[SPONSOR]`,sponsor);
+  filledTemplate = filledTemplate.replace(`[ADVERTISING_TEXT]`,advertisingText);
+  filledTemplate = filledTemplate.replace(`[OPTIONAL_TEXT]`,optionalText);
+  filledTemplate = filledTemplate.replace(`[LAST_WEEK]`,lastWeek);
+  filledTemplate = filledTemplate.replace(`[TAGS]`,tags);
+  let updatedJson = JSON.stringify(campaignConfig, null, 2);
+  let updatedCampaignConfigScratch = JSON.stringify(campaignConfigScratch, null, 2);
+  fs.writeFile('./' + process.argv[2], updatedJson, 'utf8', (err) => {
+    if (err) {
+      console.error("Error writing the file: " + err);
+      return;
+    }
+    console.log("The configfile has been updated successfully.");
+  });
+  fs.writeFile('./campaignConfig_scratch.json', updatedCampaignConfigScratch, 'utf8', (err) => {
+    if (err) {
+      console.error("Error writing the file: " + err);
+      return;
+    }
+    console.log("The config Scratch file has been updated successfully.");
+  });
   return filledTemplate;
 }
 
-// Filtern der Datensätze basierend auf last_update:
-function datefilter(dateRange, recordset) {
-  const currentDate = new Date();
-  const sevenDaysAgo = new Date();
-  sevenDaysAgo.setDate(currentDate.getDate() - dateRange);
-
+// Filtern der Datensätze basierend auf last_update und unique Authors:
+function datefilter(startDateString, endDateString, recordset) {
+  console.log("Im datefilter startDate = " + startDateString + ", endDate = " + endDateString)
+  const startDate = new Date(startDateString);
+  const endDate = new Date(endDateString);
   const dateFilteredRecordset = recordset.filter((item) => {
     const lastUpdate = new Date(item.last_update);
-    return lastUpdate >= sevenDaysAgo && lastUpdate <= currentDate;
+    return lastUpdate >= startDate && lastUpdate <= endDate;
   });
+  let existingAuthors = new Set(campaignConfig.authors.map(a => a.author)); // Ein Set mit den vorhandenen Autoren erstellen
   return dateFilteredRecordset;
 }
 
-async function calculateCharyScore(charyNumber, stakedChary, authorReputation) {
-  charyNumberMax = 10
-  if (charyNumber > charyNumberMax) { charyNumber = charyNumberMax }
-  authorReputationMax = 15; //10^15
-  authorReputationLog = Math.log10(authorReputation);
-  if (authorReputationLog > authorReputationMax) { authorReputationLog = authorReputationMax }
-  stakedCharyMax = 100000
-  if (stakedChary > stakedCharyMax) { stakedChary = stakedCharyMax }
-  charyNumberPart = charyNumber / charyNumberMax;
-  stakedCharyPart = stakedChary / stakedCharyMax;
-  authorReputationPart = authorReputationLog / authorReputationMax;
-  console.log("charyNumber = ", charyNumber, ", authorReputation = ", authorReputationLog, ", stakedChary = ", stakedChary);
-  console.log("charyNumberPart = ", charyNumberPart, ", authorReputationPart = ", authorReputationPart, ", stakeCharyPart = ", stakedCharyPart);
-  charyScore = 7 * charyNumberPart + 2 * authorReputationPart + 1 * stakedCharyPart;
-  console.log("charyScore = ", charyScore)
-  return charyScore.toFixed(3);
-}
 
-// URL, Account und CharyNumber extrahieren und anhängen:
+// URL, Account extrahieren und anhängen:
 async function dataExtractAndAppend(dateFilteredRecordset) {
   for (const item of dateFilteredRecordset) {
-    //item.charyNumber = extractNumberFromChary(item.body);
     item.account = extractAccountFromUrl(item.url);
     item.weburl = modifyUrl(item.url);
     console.log("dataExtractAndAppend - Author der Meldung:", item.author);
-    //item.stakedChary = await getStakedChary(item.author)
-    const [firstImageUrl, authorReputation] = await getMetaData(item.url);
-    //if (!firstImageUrl) return "";
+    const [firstImageUrl, authorReputation] = await getMetaData.getMetaData(item.url);
     console.log("dataExtractAndAppend - First Image Url:", firstImageUrl);
     item.originAuthorReputation = authorReputation;
     item.firstImageUrl = firstImageUrl
-    //item.charyScore = await calculateCharyScore(item.charyNumber, item.stakedChary, authorReputation);
     console.log("dataExtractAndAppend - item", item);
   }
 }
@@ -180,21 +201,22 @@ async function dataExtractAndAppend(dateFilteredRecordset) {
 function blackList(blackListedAccount, dateFilteredRecordset) {
   const blacklistFilteredRecordset = dateFilteredRecordset.filter((item) => {
     console.log("Blacklist - item:", item);
-    return item.account !== blackListedAccount;
+    return item.account !== blackListedAccount && !item.url.includes('#@');
   });
   return blacklistFilteredRecordset;
 }
 
 // Hauptfunktion
 async function main() {
-  const dateRange = 28 // Number of days, that we want to observe in the dataset
+  let {dateFrame, endDateString} = getDateFrame(startDate, numberOfDays);
+  console.log("dateFrame:", dateFrame, "numberOfDays:", numberOfDays);
   const datasource = 'sql'  // 'sql' or 'file'
   let recordset; // Variable initialisieren für die If-Klausel
-
   try {
-    if (datasource == 'file') {
-      // SQL-Skript ausführen
-      recordset = await executeSQLScript("follow @achimmertens");
+    if (datasource == 'sql') {
+      // SQL-Skript ausführen - Hier den Suchtext eingeben:
+      console.log("advertisingText in der Main Funktion =", advertisingText);
+      recordset = await executeSQLScript(advertisingText);
       fs.writeFileSync('exampleRecordSet.json', JSON.stringify(recordset));
     }
     else {
@@ -202,37 +224,19 @@ async function main() {
       const data = await fs.promises.readFile('exampleRecordSet.json', 'utf8');
       recordset = JSON.parse(data);
     }
-
     // Datensatz auf dateRange Tage begrenzen
-    const dateFilteredRecordset = datefilter(dateRange, recordset);
-
-    // URL, Account und CharyNumber extrahieren und anhängen:
+    const dateFilteredRecordset = datefilter(startDate, endDateString.slice(0, 10), recordset);
     await dataExtractAndAppend(dateFilteredRecordset);
-
     // Filtern, dass anobel (und später weitere Peronen) nicht ausgewertet werden
-    var blacklistFilteredRecordset = blackList('anobel', dateFilteredRecordset);
-
-    // Recordset nach charyNumber sortieren
-    //    blacklistFilteredRecordset.sort((a, b) => b.charyScore - a.charyScore);
-
+    var blacklistFilteredRecordset = blackList('advertisingbot2', dateFilteredRecordset);
     // Vorlage mit Recordset füllen
-    var filledTemplate = await fillTemplate(dateRange, JSON.stringify(blacklistFilteredRecordset));
-
-    //   console.log('Der BlacklistedRecordSet sieht so aus: ', JSON.stringify(blacklistFilteredRecordset));
-    //   console.log('Das FilledTemplate sieht so aus: ', filledTemplate);
-
-    //  fs.writeFileSync('changedRecordSet.json', JSON.stringify(blacklistFilteredRecordset));
-    // Aktualisierte Vorlage in eine neue Datei schreiben
-    fs.writeFileSync('FilledReportTemplate.md', filledTemplate);
-
-    //fs.writeFileSync('dateFilteredRecordset.json',dateFilteredRecordset);
+    var filledTemplate = await fillTemplate(campaignConfig, campaignID, campaignUrl, currentWeek, dateFrame, JSON.stringify(blacklistFilteredRecordset), maxAdvertisers,reward, budget, sponsor,recipient);
+    fs.writeFileSync('FilledReportTemplate_' + campaignID + '.md', filledTemplate);
     fs.writeFileSync('dateFilteredRecordset.json', JSON.stringify(dateFilteredRecordset));
-
-
+    console.log('FilledReportTemplate_' + campaignID + '.md was written successfully');
   } catch (error) {
     console.error(error);
   }
 }
 
-// Hauptfunktion aufrufen
 main();

@@ -1,38 +1,47 @@
-Hive Nobel Prize Rewards For Week 33 - 20 Hive - 3 Winners
-Hello hivers, curators, donators, helping people, and all others,
+Winners of Marketing Campaing #yymmdd_nn
 
-This is the
-# Hive Nobel Prizes Award For The Last Week
-The timeframe is from [DATE_FRAME].
+Hello Hivers, Advertisers, Influencers, Contesters and all the rest,
 
-![image.png](https://files.peakd.com/file/peakd-hive/anobel/23wgU5QrADfW17UpV728xedX7gC8tRcBDB9vDg8N39QbJU5cXyK6zcvLGPH28LwuTZYkk.png)
-
-I am proud to announce, that I can send some money to people, which helped other people in recent days.
+this is the
+# Hive Marketing Campaign Report from [DATE_FRAME], Nr. yymmdd_nn.
+![HIVE Marketing.png](https://files.peakd.com/file/peakd-hive/achimmertens/AKqchzabeuVfZ4Dio3CipS4qSJMBALn2bcSRbCxWziyEqTSacinMkaF6h3jk4as.png)
+*[origin](https://photofunia.com/)*
 
 # Here are the winners of the last week:
+[Campaign](Link of last weeks Campaign)
+|Date|Amount Hive|Winner|APG Reputation*|Number of Followers|First Ten Words|Url|Image|
+|-|-|-|-|-|-|-|-|
+|2023-11-16T00:10|1|@yohan2on|69338.20|741|"The tennis finals event was held over the previous weekend ..."|/hive-101690/@yohan2on/btc-the-tennis-finals|![IMG-20231111-WA0071.jpg](https://images.hive.blog/DQmXzArGaeUDNznGH432a7jSrf89VuS1ukk5V1CwcZa2V1G/IMG-20231111-WA0071.jpg)|
+|2023-11-14T13:18|1|@fjworld|4466.01|78|"<a href=\"https://epaytraffic.com/?rid=3\"><img src=\"https://epaytraffic.com/getimg.php?id=3\"></a>\n\nToday I joined the Hive Marketing community to ..."|/hive-154303/@fjworld/peptevent-offers-micro-earning-opportunities-and-more|null|
+|2023-11-14T06:55|1|@achimmertens|71690.26|1125|"Hi friends,\n\nI have started a contest for doing some advertising.\n\n\n![Hive ..."|/hive-154303/@achimmertens/reminder-to-my-advertising-contest|![Hive Advertising.jpg](https://files.peakd.com/file/peakd-hive/achimmertens/Eo8SLRm4dZTgbfLMeFbdeAZfokhRzUtjVua3BUmmmb5XGKEysFj7tfQqZgHzsN8jQSs.jpg)|
+|2023-11-11T14:07|1|@advertisingbot|39.25|2|"Hi everyone,\n\nDid you know that we have a community, where ..."|/hive-167922/@advertisingbot/earn-money-with-microtasks|null|
 
-|Place|Amount Hive|Winner|First Ten Words|Url|Image|
-|-|-|-|-|-|-|
-|1.|10 Hive|@shitpostingpro|"What can you do for money?\n\nfollow @achimmertens"|https://peakd.com/hive-167922/@shitpostingpro/my-shittiest-shitpost-so-far|null|
-|2.|7 Hive|@advertisingbot|"Hello everyone,\n\nI have read the following challenge:\nhttps://inleo.io/@advertisingbot2/advertising-contest-earn-one-hive-by-writing-two-words-in-your-post\nSo I want to ..."|https://peakd.com/hive-167922/@advertisingbot/i-want-to-earn-one-hive|null|
-|3.|3 Hive|@advertisingbot2|"Hello Hivers,\n\nWeb3, especially Hive, is a great tool to earn ..."|https://peakd.com/hive-154303/@advertisingbot2/advertising-contest-earn-one-hive-by-writing-two-words-in-your-post|![grafik.png](https://files.peakd.com/file/peakd-hive/advertisingbot2/243fzm7JBrwodQNuQHiBRfwJ27JYc8pp9VSGXa1ruNetSr9EzpWNtPTQ6yKJkdAkQtJRB.png)|
+
+* APG Reputation = Authors Post Giga Reputation = Reputation of the author that is shown in the authors post, divided by 10^9.
 
 
 
 The money has already been sent:
 
 [IMAGE_SEND_MONEY]
-*Screenshot of the @anobel wallet from today*
+*Screenshot of the @advertingsbot2 wallet from today*
 
---- 
-![image.png](https://files.peakd.com/file/peakd-hive/anobel/23t79QKG7fJh2yqmZXxqsnHUieWodfrg8Q7iypCaG3HVexRxVugD3gnKqvvWfuNUyLXiY.png)
-![image.png](https://files.peakd.com/file/peakd-hive/anobel/23vsmbzaM8PtfucVYFSj5gtesXtWAG7YkhtXvUDXQARn9A4DXULKTLimnMvdWnZDnXxgg.png)
-*Workflow of the Nobelprize system*
-![image.png](https://files.peakd.com/file/peakd-hive/anobel/23tGVGGcMFppCQZggFSHaDkZpojPUSRBJzCh4C6y4xs3gU6Fdf3VtZtdzQ6tAgnTV2G1n.png)
+The 4 participents got [REWARD] Hive each, this means [REST] Hive of the Budget from [BUDGET] was not used goes back to [SPONSOR].
 
-Greeting, Anobel (alias Achim)
+---
+# Status of this "decentral advertising" project
 
 
+Last week I worked on the templates for the campaing and the report. I created the images with https://www.canva.com, GIMP and photofunia.com. Photofunia made all the images, where the Hive Logo is advertised. The pretty woman was created with the Bing AI image creator from Microsoft.
 
-This weekly report of helping people shows who have won some Hive
-charity nobelprice nobel chary help donation report
+I still have some code to write to make the project more automated.
+And of course, there are too few advertisers. I hope to find more people, which work for us.
+
+
+
+Greetings, Advertisingbot2 (alias Achim)
+
+
+
+These are the winners of the last advertising contest
+advertising contest microtask task challenge minijob report marketing campaign
