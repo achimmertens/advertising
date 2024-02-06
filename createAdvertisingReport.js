@@ -46,6 +46,7 @@ async function executeSQLScript(searchParameter) {
     // Verbindung zum SQL Server herstellen
     await sql.connect(config);
     // Extract URL from the searchParameter (because of the ecency users )
+    searchParameter = searchParameter.substring(0, 160);  // Suche eingrentzen wegen sonst auftretendeer Fehler in der Query.
     let urlPath = searchParameter;
     let urlMatch = searchParameter;
     if (searchParameter.includes('https')) {

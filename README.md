@@ -38,7 +38,7 @@ For each campaing we need to set up the config file. Here is an example with exp
 -  "recipient"
    -  Must be filled. This is for whom the advertaising campaing is made. It appears in the title.
 -  "advertisingText"
-   -  Must be filled. This is the actual advertising text and the search text for the report. 
+   -  Must be filled. This is the actual advertising text and the search text for the report. The first 160 characters are the search string and have to be unique.
 -  "optionalText"
    -  Must be filled. It contains some additional text about the product or the recipient.
 -  "sponsor"
@@ -167,7 +167,9 @@ Now you can upload this MD-File to Hive.
 // Backlog:
 
 
-- bug: ecency writers are not found in the report.
+- bug: 
+- /soloescribe/@sayury/el-hueso-de-pollo-palabras was not found in the report.
+- (ecency writers are not found in the report.)?
 
 
 
@@ -182,7 +184,7 @@ Done in January 2024:
 - Bug: Ecency-Einträge kürzen das https raus und werden dann nicht mehr gefunden. Beispiel: "Subscribe to the beer community created/hive-187719"
 - Chore: Einige Groß und Kleinschreibungen sind noch im AdvertisingReport drin.
 - Feat: Add a list of old members to the new campaign to ask to join again. Create a new variable in the config file for this list.
-- - Feat: Create a scratch config file with all necessary variables filled in.
+- Feat: Create a scratch config file with all necessary variables filled in.
 
 Done in December 2023:
 - created README.md

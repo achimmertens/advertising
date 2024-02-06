@@ -1,0 +1,54 @@
+{
+  "startDate": "2024-02-06",
+  "campaignID": "240206_01",
+  "budget": 20,
+  "reward": "2.000",
+  "recipient": "@advertisingbot2",
+  "advertisingText": "This could be your advertising text. Follow @advertisingbot2 and buy your own advertising campaign.",
+  "optionalText": "The account @advertisingbot2 (owned by @achimmertens) is used to create advertising campaigns. It uses the unique hive ecosystem for a total new way of advertising. Not the big influencers, but a swarm of single advertisers act for your product. Just read the reports and ask @achimmertens to promote your product. At the moment, the service is without fee.",
+  "sponsor": "@achimmertens",
+  "numberOfDays": 8,
+  "tags": "marketing campaign contest challenge hive advertising",
+  "lastWeekCampaign": "Put some text of your last weeks (before you start the campaign) actions here",
+  "lastWeekReport": "Put some text of your last weeks (before you start the report) actions here",
+  "lastCampaigns": "* https://peakd.com/advertising/@advertisingbot2/winners-of-the-hive-marketing-campaign-23120401 \n\r* https://peakd.com/hive-154303/@advertisingbot2/winners-of-marketing-campaing-23111001\n\r* https://peakd.com/hive-154303/@advertisingbot2/winners-of-the-advertising-contest-from-last-week\n\r* https://peakd.com/hive-154303/@advertisingbot2/winners-of-the-hive-marketing-campaign-23121801-week-51-for-beer-community",
+  "authors": [],
+  "lastMembers": [
+    {
+      "advertiser": "barbyjr"
+    },
+    {
+      "advertiser": "luisfe"
+    },
+    {
+      "advertiser": "azabache2021"
+    },
+    {
+      "advertiser": "sayury"
+    },
+    {
+      "advertiser": "lunafrances"
+    },
+    {
+      "advertiser": "elioe"
+    },
+    {
+      "advertiser": "orlandobello"
+    },
+    {
+      "advertiser": "detlev"
+    },
+    {
+      "advertiser": "oasiskp2"
+    },
+    {
+      "advertiser": "advertisingbot"
+    },
+    {
+      "advertiser": "achimmertens"
+    },
+    {
+      "advertiser": "cashheaven"
+    }
+  ]
+}
