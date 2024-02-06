@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/achimmertens/advertising#readme",
   "dependencies": {
+    "@hivechain/dhive": "^0.13.4",
     "@hiveio/dhive": "^1.2.8",
     "@hiveio/hive-js": "^2.0.7",
     "axios": "^1.6.0",

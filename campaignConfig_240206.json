@@ -1,0 +1,58 @@
+{
+  "startDate": "2024-02-06",
+  "campaignID": "240206_01",
+  "budget": 20,
+  "reward": "2.000",
+  "recipient": "",
+  "advertisingText": "This could be your advertising text! Follow @advertisingbot2 to get instructions.",
+  "optionalText": "Create together with @advertisingbot2 your own advertising campaign.",
+  "sponsor": "@achimmertens",
+  "numberOfDays": 8,
+  "lastWeekCampaign": "Put some text of your last weeks (before you start the campaign) actions here",
+  "lastWeekReport": "Put some text of your last weeks (before you start the report) actions here",
+  "lastCampaigns": "* https://peakd.com/advertising/@advertisingbot2/winners-of-the-hive-marketing-campaign-23120401 \n\r* https://peakd.com/hive-154303/@advertisingbot2/winners-of-marketing-campaing-23111001\n\r* https://peakd.com/hive-154303/@advertisingbot2/winners-of-the-advertising-contest-from-last-week\n\r* https://peakd.com/hive-154303/@advertisingbot2/winners-of-the-hive-marketing-campaign-23121801-week-51-for-beer-community",
+  "tags": "marketing campaign contest challenge hive advertising",
+  "authors": [],
+  "lastMembers": [
+    {
+      "advertiser": "barbyjr"
+    },
+    {
+      "advertiser": "luisfe"
+    },
+    {
+      "advertiser": "azabache2021"
+    },
+    {
+      "advertiser": "sayury"
+    },
+    {
+      "advertiser": "lunafrances"
+    },
+    {
+      "advertiser": "elioe"
+    },
+    {
+      "advertiser": "orlandobello"
+    },
+    {
+      "advertiser": "detlev"
+    },
+    {
+      "advertiser": "oasiskp2"
+    },
+    {
+      "advertiser": "advertisingbot"
+    },
+    {
+      "advertiser": "achimmertens"
+    },
+    {
+      "advertiser": "cashheaven"
+    }
+  ],
+  "campaignUrl": "https://peakd.com/hive-154303/@advertisingbot2/hive-marketing-campaign-24020601-week-6-for-",
+  "currentWeek": 6,
+  "permlink": "hive-marketing-campaign-24020601-week-6-for-",
+  "title": "Hive Marketing Campaign 24020601 Week 6 For "
+}
