@@ -151,8 +151,9 @@ Now you can upload this MD-File to Hive.
 
 # Summary
 
-- prepare the config file (copy it from campaignConfig_scratch.json)
+- prepare the config file (copy it from campaignConfig_scratch.json and fill it until "tags")
 - node createCampaign.js <name_of_campaignConfig.json>
+- post CampaignYYMMDD_xx.md to hive with the @advertisingbot2 account via "node postCampaignToHive.js <name_of_campaignConfig.json>
 - wait until the campaign has finished
 - node createAdvertisingReport.js <name_of_campaignConfig.json>
 - node payTheAuthors.js <name_of_campaignConfig.json>
@@ -166,8 +167,9 @@ Now you can upload this MD-File to Hive.
 
 // Backlog:
 
-
+- bug: @rubyjosleidy27 was not found in the report.
 - bug: ecency writers are not found in the report.
+- bug: If in the report an "@" appears in the link to the campaign, it doesnt work. 
 
 
 
@@ -254,3 +256,4 @@ At the moment, this process is in a testing stage and half manual, half automate
 
 # Phrase for sending Hive:
 Thank you for working on the advertise campaign Nr. 231204_01
+

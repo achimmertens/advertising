@@ -31,7 +31,7 @@ Proof, that the money has already been sent (See also https://peakd.com/@adverti
 [IMAGE_SEND_MONEY]
 ```
 
-The [NUMBER_OF_ADVERTISERS] participents got [REWARD] Hive each, this means [REST] Hive of the budget from [BUDGET] Hive were not used and go back to [SPONSOR].
+The [NUMBER_OF_ADVERTISERS] participants got [REWARD] Hive each, which means [REST] Hive of the budget from [BUDGET] Hive were not used and will go back to [SPONSOR].
 
 ---
 # Status Of This "decentral advertising" Project

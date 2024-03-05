@@ -66,7 +66,7 @@ function addConfigParameters(filePath, config, campaignUrl, currentWeek) {
   config.campaignUrl = campaignUrl;
   config.currentWeek = currentWeek;
   const urlParts = campaignUrl.split("@advertisingbot2/");
-  config.permlink = urlParts[1].replace('@', '');
+  config.permlink = urlParts[1].replace('@', '').replace('.','-');
   const permlink = config.permlink;
   const title2 = permlink.replace(/-/g, ' ');
   // uppercase title

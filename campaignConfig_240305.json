@@ -1,0 +1,64 @@
+{
+  "startDate": "2024-03-05",
+  "campaignID": "240305",
+  "budget": 20,
+  "reward": "2.000",
+  "recipient": "@hive.samadi",
+  "advertisingText": "Please follow @hive.samadi because she helped pregnant mothers by giving them a meal",
+  "optionalText": "In her post https://peakd.com/hive-174578/@hive.samadi/providing-a-nutritious-diet-to-pregnant-mothers she describes, how she helped people in need.",
+  "sponsor": "@achimmertens",
+  "numberOfDays": 8,
+  "lastWeekCampaign": "The last week I worked on some tools ro automatecally read posts from Hive, download them and put them to an AI assistat. There they are checked for charity and hatespeech content. The prototype of this already works.",
+  "lastWeekReport": "Put some text of your last weeks (before you start the report) actions here",
+  "lastCampaigns": "* https://peakd.com/hive-154303/@advertisingbot2/winners-of-the-hive-marketing-campaign-24021601-week-7-for-awuahbenjamin-hive-154303 \n\r* https://peakd.com/advertising/@advertisingbot2/winners-of-the-hive-marketing-campaign-23120401 \n\r* https://peakd.com/hive-154303/@advertisingbot2/winners-of-marketing-campaing-23111001\n\r* https://peakd.com/hive-154303/@advertisingbot2/winners-of-the-advertising-contest-from-last-week",
+  "tags": "marketing campaign contest challenge hive advertising",
+  "authors": [],
+  "lastMembers": [
+    {
+      "advertiser": "barbyjr"
+    },
+    {
+      "advertiser": "luisfe"
+    },
+    {
+      "advertiser": "azabache2021"
+    },
+    {
+      "advertiser": "sayury"
+    },
+    {
+      "advertiser": "lunafrances"
+    },
+    {
+      "advertiser": "elioe"
+    },
+    {
+      "advertiser": "orlandobello"
+    },
+    {
+      "advertiser": "detlev"
+    },
+    {
+      "advertiser": "oasiskp2"
+    },
+    {
+      "advertiser": "advertisingbot"
+    },
+    {
+      "advertiser": "achimmertens"
+    },
+    {
+      "advertiser": "cashheaven"
+    },
+    {
+      "advertiser": "fjworld"
+    },
+    {
+      "advertiser": "rubyjosleidy27"
+    }
+  ],
+  "campaignUrl": "https://peakd.com/hive-154303/@advertisingbot2/hive-marketing-campaign-240305-week-10-for-@hive.samadi",
+  "currentWeek": 10,
+  "permlink": "hive-marketing-campaign-240305-week-10-for-hive-samadi",
+  "title": "Hive Marketing Campaign 240305 Week 10 For Hive Samadi"
+}
