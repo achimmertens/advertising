@@ -12,7 +12,14 @@
   "lastWeekReport": "Put some text of your last weeks (before you start the report) actions here",
   "lastCampaigns": "* https://peakd.com/hive-154303/@advertisingbot2/winners-of-the-hive-marketing-campaign-24021601-week-7-for-awuahbenjamin-hive-154303 \n\r* https://peakd.com/advertising/@advertisingbot2/winners-of-the-hive-marketing-campaign-23120401 \n\r* https://peakd.com/hive-154303/@advertisingbot2/winners-of-marketing-campaing-23111001\n\r* https://peakd.com/hive-154303/@advertisingbot2/winners-of-the-advertising-contest-from-last-week",
   "tags": "marketing campaign contest challenge hive advertising",
-  "authors": [],
+  "authors": [
+    {
+      "author": "carmencitavdc"
+    },
+    {
+      "author": "oasiskp2"
+    }
+  ],
   "lastMembers": [
     {
       "advertiser": "barbyjr"
