@@ -167,13 +167,16 @@ Now you can upload this MD-File to Hive.
 
 // Backlog:
 
-- bug: @rubyjosleidy27 was not found in the report.
-- bug: ecency writers are not found in the report.
-- bug: If in the report an "@" appears in the link to the campaign, it doesnt work. 
 
 
 
 
+
+
+Done in March 2024:
+- bug: @rubyjosleidy27 was not found in the report. -> Sie hat ein Komma dazwischengesetzt.
+- bug: If in the report an "@" appears in the link to the campaign, it doesnt work. -> Seems to be solved
+- bug: ecency writers are not found in the report. -> Maybe solved.
 
 - 
 Done in January 2024:
