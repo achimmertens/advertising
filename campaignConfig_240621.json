@@ -1,0 +1,117 @@
+{
+  "startDate": "2024-06-21",
+  "campaignID": "240621",
+  "budget": 20,
+  "reward": "2.000",
+  "recipient": "@adaezeinchrist",
+  "advertisingText": "Please follow @adaezeinchrist because she organized a gathering for widows and less privileged individuals, providing them with food and clothes in Nigeria",
+  "optionalText": "Gloria Amuche Edwin writes about her family, educational background, occupation, hobbies, and why she is drawn to the Hive community. She expresses her excitement to be a part of the platform and her goals to grow, share unique content, and engage with other members.",
+  "sponsor": "@achimmertens",
+  "numberOfDays": 6,
+  "lastWeekCampaign": "In the last weeks I have been working on a concept, how to find charity posts more efficiently. I made a little progress with my local AI bot.",
+  "lastWeekReport": "Last week I managed to write some javascripts, that get posts from hive, download their bodies, and check via AI, if the content is about charity or not. The next steps will be to train the AI and to send replies to the authors.",
+  "lastCampaigns": "* https://peakd.com/hive-154303/@advertisingbot2/winners-of-the-hive-marketing-campaign-240322-week-12-for-mukadder \n\r* https://peakd.com/advertising/@advertisingbot2/winners-of-the-hive-marketing-campaign-23120401 \n\r* https://peakd.com/hive-154303/@advertisingbot2/winners-of-marketing-campaing-23111001\n\r* https://peakd.com/hive-154303/@advertisingbot2/winners-of-the-advertising-contest-from-last-week\n\r* https://peakd.com/hive-154303/@advertisingbot2/winners-of-the-hive-marketing-campaign-240517-week-20-for-mahirabdullah",
+  "tags": "marketing campaign contest challenge hive advertising",
+  "authors": [
+    {
+      "author": "flordi",
+      "payed": "2.000 HIVE"
+    },
+    {
+      "author": "hermaryrc",
+      "payed": "2.000 HIVE"
+    },
+    {
+      "author": "scarletgrissel",
+      "payed": "2.000 HIVE"
+    },
+    {
+      "author": "barbyjr",
+      "payed": "2.000 HIVE"
+    },
+    {
+      "author": "luisfe",
+      "payed": "2.000 HIVE"
+    },
+    {
+      "author": "sayury",
+      "payed": "2.000 HIVE"
+    },
+    {
+      "author": "cashheaven",
+      "payed": "2.000 HIVE"
+    },
+    {
+      "author": "gr33nm4ster",
+      "payed": "2.000 HIVE"
+    },
+    {
+      "author": "sirkay1",
+      "payed": "2.000 HIVE"
+    },
+    {
+      "author": "oasiskp2",
+      "payed": "2.000 HIVE"
+    }
+  ],
+  "lastMembers": [
+    {
+      "advertiser": "barbyjr"
+    },
+    {
+      "advertiser": "luisfe"
+    },
+    {
+      "advertiser": "azabache2021"
+    },
+    {
+      "advertiser": "sayury"
+    },
+    {
+      "advertiser": "lunafrances"
+    },
+    {
+      "advertiser": "elioe"
+    },
+    {
+      "advertiser": "orlandobello"
+    },
+    {
+      "advertiser": "oasiskp2"
+    },
+    {
+      "advertiser": "cashheaven"
+    },
+    {
+      "advertiser": "fjworld"
+    },
+    {
+      "advertiser": "rubyjosleidy27"
+    },
+    {
+      "advertiser": "carmencitavdc"
+    },
+    {
+      "advertiser": "adaezeinchrist"
+    },
+    {
+      "advertiser": "dodokan"
+    },
+    {
+      "advertiser": "carmenrivas"
+    },
+    {
+      "advertiser": "hildemaroflores"
+    },
+    {
+      "advertiser": "konchix"
+    },
+    {
+      "advertiser": "gr33nm4ster"
+    }
+  ],
+  "campaignUrl": "https://peakd.com/hive-154303/@advertisingbot2/hive-marketing-campaign-240621-week-25-for-",
+  "currentWeek": 25,
+  "permlink": "hive-marketing-campaign-240621-week-25-for-",
+  "title": "Hive Marketing Campaign 240621 Week 25 For "
+}

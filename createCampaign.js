@@ -96,7 +96,7 @@ async function main() {
     console.error(error);
   }
   let campaignIdChanged = campaignId.replace("_", "");
-  let recipientChanged = recipient.replace(" ", "-").replace("_", "").toLowerCase();
+  let recipientChanged = recipient.replace(" ", "-").replace("_", "").replace("@","").toLowerCase();
   let campaignUrl = `https://peakd.com/hive-154303/@advertisingbot2/hive-marketing-campaign-${campaignIdChanged}-week-${currentWeek}-for-${recipientChanged}`;
   console.log(campaignUrl);
   addConfigParameters('./' + process.argv[2], config, campaignUrl, currentWeek)
