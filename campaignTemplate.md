@@ -1,6 +1,6 @@
 Hello everyone who wants to earn some small money,
 
-here I announce the next advertising contest for week [CURRENT_WEEK] from sponsor [SPONSOR], period: [DATE_FRAME].
+here I announce the next advertising job for week [CURRENT_WEEK] from sponsor [SPONSOR], period: [DATE_FRAME].
 
 ![Earn Money(2).png](https://files.peakd.com/file/peakd-hive/achimmertens/AKAr2pK3Nw7DhpREEcx2yQ1dSe3BQ4KKDFLKAWjNL9Ni952afaaKuqX68gTapsB.png)
 
@@ -32,7 +32,7 @@ Yes. We did it before. Here is the proof:
 
 # Inviting Former Members
 Hi [LASTMEMBERS],
-what do you think? Do you want to join the campaign again?
+what do you think? Do you want to join the job again?
 
 # Status of this project
 
