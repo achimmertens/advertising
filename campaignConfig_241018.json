@@ -1,36 +1,24 @@
 {
-  "startDate": "2024-07-19",
-  "campaignID": "240719",
-  "budget": 30,
+  "startDate": "2024-10-18",
+  "campaignID": "241018",
+  "budget": 20,
   "reward": "2.000",
-  "recipient": "@hive.helps",
-  "advertisingText": "Please follow @hive.helps as he organizes donations for charity projects.",
-  "optionalText": "@hive.helps is a initiative, that collects money and saves it for more interests and for supporting charity projects. Everything is transparant and one can see where the donations go.",
+  "recipient": "@ekojah",
+  "advertisingText": "Please follow @ekojah as he supports people in need.",
+  "optionalText": "The author, Ekojahs Foundation, directly provided financial assistance to over thirty individuals in need, including widows, orphans, and the elderly.",
   "sponsor": "@achimmertens",
-  "numberOfDays": 6,
-  "lastWeekCampaign": "This week I worked on training th AI to understand what charity text is and what not. At the moment, my bot can read some posts and check them with AI, but the results are not the quality I want them to have. But I am optimistic to bring it running.",
-  "lastWeekReport": "Last week I worked on training th AI too. It is not like programming a software, it is more like educating or agumenting with a child, that sometimes is smarter than you and convinces you, that it is right. So I gave up at least a part and let it its will ;-)",
+  "numberOfDays": 7,
+  "lastWeekCampaign": "In the last weeks I created the account @charitychecker. This is a bot wich I trained for my purpose to find people, that help other people. With this bot I found i.e. @ekojah, so he gets as a reward this advertising campaign for him.",
+  "lastWeekReport": "The last week I had some days off and used them to do some house chores, work in the garden and collect wood for the winter. I didn't sit much in front of my computer ;-)",
   "lastCampaigns": "*https://peakd.com/hive-154303/@advertisingbot2/hive-marketing-campaign-240621-week-25-for-\n\r* https://peakd.com/hive-154303/@advertisingbot2/winners-of-the-hive-marketing-campaign-240322-week-12-for-mukadder \n\r* https://peakd.com/advertising/@advertisingbot2/winners-of-the-hive-marketing-campaign-23120401 \n\r* https://peakd.com/hive-154303/@advertisingbot2/winners-of-marketing-campaing-23111001\n\r* https://peakd.com/hive-154303/@advertisingbot2/winners-of-the-advertising-contest-from-last-week",
-  "tags": "marketing campaign contest challenge hive advertising",
+  "tags": "marketing job campaign contest challenge hive advertising charity",
   "authors": [
     {
-      "author": "evaconde",
-      "payed": "2.000 HIVE"
-    },
-    {
-      "author": "luisfe",
-      "payed": "2.000 HIVE"
-    },
-    {
-      "author": "sayury",
-      "payed": "2.000 HIVE"
-    },
-    {
-      "author": "cashheaven",
-      "payed": "2.000 HIVE"
-    },
-    {
       "author": "gr33nm4ster",
+      "payed": "2.000 HIVE"
+    },
+    {
+      "author": "oasiskp2",
       "payed": "2.000 HIVE"
     }
   ],
@@ -100,10 +88,16 @@
     },
     {
       "advertiser": "sirkay1"
+    },
+    {
+      "advertiser": "evaconde"
+    },
+    {
+      "advertiser": "ayleensatelier"
     }
   ],
-  "campaignUrl": "https://peakd.com/hive-154303/@advertisingbot2/hive-marketing-campaign-240719-week-29-for-hive-helps",
-  "currentWeek": 29,
-  "permlink": "hive-marketing-campaign-240719-week-29-for-hive-helps",
-  "title": "Hive Marketing Campaign 240719 Week 29 For Hive Helps"
+  "campaignUrl": "https://peakd.com/hive-154303/@advertisingbot2/hive-marketing-job-241018-week-42-for-ekojah",
+  "currentWeek": 42,
+  "permlink": "hive-marketing-job-241018-week-42-for-ekojah",
+  "title": "Hive Marketing Job 241018 Week 42 For Ekojah"
 }

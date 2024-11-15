@@ -1,0 +1,102 @@
+[
+  [
+    7379,
+    {
+      "block": 87478826,
+      "op": [
+        "transfer",
+        {
+          "amount": "2.000 HIVE",
+          "from": "advertisingbot2",
+          "memo": "Thank you for doing advertising with campaign https://peakd.com/hive-154303/@advertisingbot2/hive-marketing-campaign-240719-week-29-for-hive-helps",
+          "to": "cashheaven"
+        }
+      ],
+      "op_in_trx": 0,
+      "timestamp": "2024-07-26T05:16:06",
+      "trx_id": "b9068500dbea5b5f080649932e7557b681ff24cc",
+      "trx_in_block": 5,
+      "virtual_op": false
+    }
+  ],
+  [
+    7380,
+    {
+      "block": 87478826,
+      "op": [
+        "transfer",
+        {
+          "amount": "2.000 HIVE",
+          "from": "advertisingbot2",
+          "memo": "Thank you for doing advertising with campaign https://peakd.com/hive-154303/@advertisingbot2/hive-marketing-campaign-240719-week-29-for-hive-helps",
+          "to": "evaconde"
+        }
+      ],
+      "op_in_trx": 0,
+      "timestamp": "2024-07-26T05:16:06",
+      "trx_id": "d3daf2844816dc827673293fb075654b7a978897",
+      "trx_in_block": 6,
+      "virtual_op": false
+    }
+  ],
+  [
+    7381,
+    {
+      "block": 87478826,
+      "op": [
+        "transfer",
+        {
+          "amount": "2.000 HIVE",
+          "from": "advertisingbot2",
+          "memo": "Thank you for doing advertising with campaign https://peakd.com/hive-154303/@advertisingbot2/hive-marketing-campaign-240719-week-29-for-hive-helps",
+          "to": "sayury"
+        }
+      ],
+      "op_in_trx": 0,
+      "timestamp": "2024-07-26T05:16:06",
+      "trx_id": "a1140e8ec9611db478e54a0fb03a1e5d68d54142",
+      "trx_in_block": 7,
+      "virtual_op": false
+    }
+  ],
+  [
+    7382,
+    {
+      "block": 87478826,
+      "op": [
+        "transfer",
+        {
+          "amount": "2.000 HIVE",
+          "from": "advertisingbot2",
+          "memo": "Thank you for doing advertising with campaign https://peakd.com/hive-154303/@advertisingbot2/hive-marketing-campaign-240719-week-29-for-hive-helps",
+          "to": "luisfe"
+        }
+      ],
+      "op_in_trx": 0,
+      "timestamp": "2024-07-26T05:16:06",
+      "trx_id": "3e808d17e4371a85f7358f928950ddae58a0887b",
+      "trx_in_block": 8,
+      "virtual_op": false
+    }
+  ],
+  [
+    7383,
+    {
+      "block": 87478826,
+      "op": [
+        "transfer",
+        {
+          "amount": "2.000 HIVE",
+          "from": "advertisingbot2",
+          "memo": "Thank you for doing advertising with campaign https://peakd.com/hive-154303/@advertisingbot2/hive-marketing-campaign-240719-week-29-for-hive-helps",
+          "to": "gr33nm4ster"
+        }
+      ],
+      "op_in_trx": 0,
+      "timestamp": "2024-07-26T05:16:06",
+      "trx_id": "09058633b6d730d678030d2709006d19446f6bc6",
+      "trx_in_block": 11,
+      "virtual_op": false
+    }
+  ]
+]
