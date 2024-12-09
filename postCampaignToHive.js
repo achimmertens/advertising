@@ -23,7 +23,7 @@ const parentPermlink = 'hive-154303' // Community = Hive Marketing
 //const parentPermlink = 'hive-153112' // Community = API Testing
 const author = 'advertisingbot2';
 const beneficiaries = [{ account: 'anobel', weight: 10000 }]; //const beneficiaries = [{ account: 'anobel', weight: 10000 }];
-const bodyFilePath = './Campaign' + campaignConfig.campaignID + '.md';  // Den Inhalt der body.md-Datei lesen
+const bodyFilePath = './campaigns/Campaign' + campaignConfig.campaignID + '.md';  // Den Inhalt der body.md-Datei lesen
 const body = fs.readFileSync(bodyFilePath, 'utf-8');
 const tags = campaignConfig.tags;
 console.log(tags);

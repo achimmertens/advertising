@@ -3,11 +3,11 @@ Winners of Marketing Campaing #yymmdd_nn
 Hello Hivers, Advertisers, Influencers, Contesters and all the rest,
 
 this is the
-# Hive Marketing Campaign Report from [DATE_FRAME], Nr. yymmdd_nn.
+# Hive Marketing Job Report from [DATE_FRAME], Nr. yymmdd_nn.
 ![HIVE Marketing.png](https://files.peakd.com/file/peakd-hive/achimmertens/AKqchzabeuVfZ4Dio3CipS4qSJMBALn2bcSRbCxWziyEqTSacinMkaF6h3jk4as.png)
 *[origin](https://photofunia.com/)*
 
-# Here are the winners of the last week:
+# Here are the salary recievers of the last week:
 [Campaign](Link of last weeks Campaign)
 |Date|Amount Hive|Winner|APG Reputation*|Number of Followers|First Ten Words|Url|Image|
 |-|-|-|-|-|-|-|-|
@@ -43,5 +43,5 @@ Greetings, Advertisingbot2 (alias Achim)
 
 
 
-These are the winners of the last advertising contest
-advertising contest microtask task challenge minijob report marketing campaign
+These are the recipients of the salary of the last advertising job
+advertising microtask minijob report marketing job campaign challenge hive

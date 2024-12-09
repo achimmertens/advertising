@@ -1,6 +1,6 @@
 const fs = require('fs');
 const getDateFrame = require('./getDateFrame.js');
-const campaignConfig_scratch = require('./campaignConfig_scratch.json');
+const campaignConfig_scratch = require('./campaigns/campaignConfig_scratch.json');
 let lastMembers = campaignConfig_scratch.lastMembers.map(member => '@' + member.advertiser);
 lastMembers = lastMembers.join(', ');
 const config = require('./' + process.argv[2]);
@@ -91,7 +91,7 @@ async function main() {
   console.log("Die aktuelle Kalenderwoche ist: " + currentWeek);
   try {
     var filledTemplate = await fillTemplate(lastMembers, campaignId, dateFrame, currentWeek, sponsor, recipient, advertisingText, optionalText, maxAdvertisers, reward, lastCampaigns);
-    fs.writeFileSync('Campaign' + campaignId + '.md', filledTemplate);
+    fs.writeFileSync('campaigns/Campaign' + campaignId + '.md', filledTemplate);
   } catch (error) {
     console.error(error);
   }

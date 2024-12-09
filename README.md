@@ -151,20 +151,21 @@ Now you can upload this MD-File to Hive.
 
 # Campaing Creation Summary
 
-- prepare the config file (copy it from campaignConfig_scratch.json and fill it until "lastWeekReport")
-- node createCampaign.js <name_of_campaignConfig.json> => A file CampaignYYMMDD.md is created. Check the content.
-- post CampaignYYMMDD_xx.md to hive with the @advertisingbot2 account via "node postCampaignToHive.js <name_of_campaignConfig.json>
-- check, if @advertisingbot2 has enough money.
-- wait until the campaign has finished
-- Write in some text about the status of the last week into <name_of_campaignConfig.json>
-- node createAdvertisingReport.js <name_of_campaignConfig.json> -> check the results in FilleReportTemplate_xxxxx.md
-- node payTheAuthors.js <name_of_campaignConfig.json>
-- node getTransaction.js <name_of_campaignConfig.json>
+1. prepare the config file (copy it from campaignConfig_scratch.json and fill it until "lastWeekReport")
+2. node createCampaign.js <name_of_campaignConfig.json> => A file CampaignYYMMDD.md is created. Check the content.
+3. post CampaignYYMMDD_xx.md to hive with the @advertisingbot2 account via "node postCampaignToHive.js <name_of_campaignConfig.json>
+4. Reblog this post with the @advertisingbot2 account
+5. check, if @advertisingbot2 has enough money.
+6. wait until the campaign has finished
+7. Write in some text about the status of the last week into <name_of_campaignConfig.json>
+8. node createAdvertisingReport.js <name_of_campaignConfig.json> -> check the results in FilleReportTemplate_xxxxx.md
+9. node payTheAuthors.js <name_of_campaignConfig.json>
+10. node getTransaction.js <name_of_campaignConfig.json>
 
-- node fillAdvertisingReportWithPaidAuthors.js <name_of_campaignConfig.json>
+11. node fillAdvertisingReportWithPaidAuthors.js <name_of_campaignConfig.json>
 
-- Now you can upload this MD-File to Hive.
-- Update the campaignConfig_scratch.json file with the URL from the latest report (Put it in the front of lastCampaings and remove the last entry).
+12. Now you can upload this MD-File to Hive.
+13. Update the campaignConfig_scratch.json file with the URL from the latest report (Put it in the front of lastCampaings and remove the last entry).
 
 
 
