@@ -158,13 +158,13 @@ Now you can upload this MD-File to Hive.
 5. check, if @advertisingbot2 has enough money.
 6. wait until the campaign has finished
 7. Write in some text about the status of the last week into <name_of_campaignConfig.json>
-8. node createAdvertisingReport.js <name_of_campaignConfig.json> -> check the results in FilleReportTemplate_xxxxx.md
+8. node createAdvertisingReport.js <name_of_campaignConfig.json> -> check the results in Report_yymmdd.md
 9. node payTheAuthors.js <name_of_campaignConfig.json>
 10. node getTransaction.js <name_of_campaignConfig.json>
 
 11. node fillAdvertisingReportWithPaidAuthors.js <name_of_campaignConfig.json>
 
-12. Now you can upload this MD-File to Hive.
+12. Now you can upload campaigns/Report_yymmdd.md to Hive.
 13. Update the campaignConfig_scratch.json file with the URL from the latest report (Put it in the front of lastCampaings and remove the last entry).
 
 

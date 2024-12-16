@@ -1,4 +1,4 @@
-Winners of Marketing Campaing #yymmdd_nn
+Rewarded Members of the Marketing Campaing #yymmdd_nn
 
 Hello Hivers, Advertisers, Influencers, Contesters and all the rest,
 
@@ -43,5 +43,5 @@ Greetings, Advertisingbot2 (alias Achim)
 
 
 
-These are the recipients of the salary of the last advertising job
-advertising microtask minijob report marketing job campaign challenge hive
+These are the members and their salaries of the last advertising contest
+[TAGS]

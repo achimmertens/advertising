@@ -5,7 +5,7 @@ if (process.argv.length < 3) {
   console.log("Please add a config file.");
   process.exit(1);
 }
-const campaignConfigScratch = require('./campaignConfig_scratch.json');
+const campaignConfigScratch = require('./campaigns/campaignConfig_scratch.json');
 const campaignConfig = require('./' + process.argv[2]);
 const budget = campaignConfig.budget; // Hive
 const reward = campaignConfig.reward; // Hive per participant
@@ -158,7 +158,7 @@ async function fillTemplate(campaignConfig, campaignID, campaignUrl, currentWeek
     }
     console.log("The configfile has been updated successfully.");
   });
-  fs.writeFile('./campaignConfig_scratch.json', updatedCampaignConfigScratch, 'utf8', (err) => {
+  fs.writeFile('./campaigns/campaignConfig_scratch.json', updatedCampaignConfigScratch, 'utf8', (err) => {
     if (err) {
       console.error("Error writing the file: " + err);
       return;
@@ -231,9 +231,9 @@ async function main() {
     var blacklistFilteredRecordset = blackList('advertisingbot2', dateFilteredRecordset);
     // Vorlage mit Recordset füllen
     var filledTemplate = await fillTemplate(campaignConfig, campaignID, campaignUrl, currentWeek, dateFrame, JSON.stringify(blacklistFilteredRecordset), maxAdvertisers,reward, budget, sponsor,recipient);
-    fs.writeFileSync('FilledReportTemplate_' + campaignID + '.md', filledTemplate);
+    fs.writeFileSync('./campaigns/Report_' + campaignID + '.md', filledTemplate);
     fs.writeFileSync('dateFilteredRecordset.json', JSON.stringify(dateFilteredRecordset));
-    console.log('FilledReportTemplate_' + campaignID + '.md was written successfully');
+    console.log('./campaigns/Report_' + campaignID + '.md was written successfully');
   } catch (error) {
     console.error(error);
   }
